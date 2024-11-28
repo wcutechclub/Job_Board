@@ -35,3 +35,7 @@ sans-serif
   --accent-green: #28a745;
   --accent-green-hover: #218838;
 }
+
+* {
+  box-sizing: border-box;
+}

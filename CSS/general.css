@@ -1,0 +1,37 @@
+/* 
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+Font
+sans-serif 
+*/
+:root {
+  --primary-color: #0044cc;
+  --primary-hover: #003bb5;
+  --muted-blue: #0056b3;
+  --dark-blue: #003366;
+  --deep-blue: #002744;
+
+  /* Background-colors */
+
+  --main-background: #e9ecef;
+
+  /*Background-Colors */
+  --soft-blue: #eaf4fe;
+  --light-grey: #f8f9fa;
+
+  /* Background-Colors for cards */
+  --white: #fff;
+
+  --text-primary: #212529;
+  --text-secondary: #343a40;
+  --light-text: #6c757d;
+
+  --red: #dc3545;
+  --yellow: #ffc107;
+  --accent-green: #28a745;
+  --accent-green-hover: #218838;
+}

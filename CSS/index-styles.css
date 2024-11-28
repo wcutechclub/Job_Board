@@ -1,0 +1,5 @@
+.container {
+  background-color: var(--main-background);
+  font-family: sans-serif;
+  color: var(--text-primary);
+}

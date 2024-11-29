@@ -1,0 +1,13 @@
+
+.container{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr;
+    font-size: 1.6rem;
+}
+
+.logo{
+    height: 100vh; 
+    width: auto;
+    object-fit: cover; 
+    display: block;
+}

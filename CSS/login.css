@@ -10,9 +10,12 @@
     height: 45vh;
     margin-top: 8rem;
     width: 50rem;
-    border-radius: 1rem;
+    border-radius: 0.6rem;
 }
+.Login .header{
+    text-align: center;
 
+}
 .login_container{
    margin-left: 5rem;
    margin-top: 3rem;
@@ -26,5 +29,21 @@
 
 .footer {
     display: flex;
-    gap: 2rem;
+    gap: 14rem;
+    margin-bottom: 1.2rem;
+}
+.email,
+.password{
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+.form__text{
+    margin-bottom: 0.4rem;
+}
+.signin{
+    padding: 1rem;
+    background-color: blue;
+    color: white;
+    border-radius: 0.8rem;
 }

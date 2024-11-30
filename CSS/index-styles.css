@@ -63,3 +63,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.nav-img {
+  max-width: 16rem;
+  height: 10rem;
+}

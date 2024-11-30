@@ -113,3 +113,12 @@ body {
   align-items: center;
   text-align: center;
 }
+
+.nav-login--btn {
+  /* background-color: #0066cc; */
+  background-color: #b3d9ff;
+  color: var(--text-primary) !important;
+  width: 16rem;
+  padding-right: 0rem !important;
+  padding-left: 4.6rem !important;
+}

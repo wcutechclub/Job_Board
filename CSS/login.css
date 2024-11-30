@@ -1,14 +1,27 @@
 
 .container{
     display: grid;
-    grid-template-columns: 0.5fr 2fr 2fr;
+    grid-template-columns: 0.3fr 1.3fr 1fr;
     font-size: 1.6rem;
+}
+.Login{
+    border: 0.1rem solid black;
+    background-color: white;
+    height: 45vh;
+    margin-top: 8rem;
+    width: 50rem;
+    border-radius: 1rem;
+}
+
+.login_container{
+   margin-left: 5rem;
+   margin-top: 3rem;
 }
 
 .form{
     display: flex;
     flex-direction: column;
-    width: 30rem;
+    width: 40rem;
 }
 
 .footer {

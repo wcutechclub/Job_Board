@@ -1,5 +1,65 @@
-.container {
-  background-color: var(--main-background);
+/* General */
+/* 
+  --primary-color: #0044cc;
+  --primary-hover: #003bb5;
+  --muted-blue: #0056b3;
+  --dark-blue: #003366;
+  --deep-blue: #002744;
+
+  Background-colors 
+
+  --main-background: #e9ecef;
+
+  Background-Colors 
+  --soft-blue: #eaf4fe;
+  --light-grey: #f8f9fa;
+
+   Background-Colors for cards 
+  --white: #fff;
+
+  --text-primary: #212529;
+  --text-secondary: #343a40;
+  --light-text: #6c757d;
+
+  --red: #dc3545;
+  --yellow: #ffc107;
+  --accent-green: #28a745;
+  --accent-green-hover: #218838;
+*/
+:root {
+  --gradient-primary: linear-gradient(to top left, #0066cc, #66ccff);
+}
+
+body {
   font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
   color: var(--text-primary);
+  overflow-x: hidden;
+  background-color: var(--light-grey);
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+/* /////////////////////////////////////////////////////
+/////////////////////////////////////////////////////// /*/
+
+/*
+////////////////////////////////////////////////
+                  Header
+///////////////////////////////////////////////                   
+*/
+.header {
+  background-color: var(--light-grey);
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+
+.nav-bar--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

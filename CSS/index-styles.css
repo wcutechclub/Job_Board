@@ -82,3 +82,14 @@ body {
   justify-content: space-between;
   column-gap: 2rem;
 }
+
+.nav-bar--btns:link,
+.nav-bar--btns:visited {
+  padding: 1.6rem;
+}
+
+.nav-bar--btns:hover,
+.nav-bar--btns:focus {
+  color: var(--muted-blue);
+  transform: scale(1.2);
+}

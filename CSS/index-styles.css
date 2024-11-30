@@ -76,3 +76,9 @@ body {
   font-weight: 500;
   transition: all 0.3s;
 }
+
+.nav-btns--container {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2rem;
+}

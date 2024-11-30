@@ -93,3 +93,23 @@ body {
   color: var(--muted-blue);
   transform: scale(1.2);
 }
+
+.nav-cta--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.nav-cta-btn:link,
+.nav-cta-btn:visited {
+  height: 4rem;
+  padding: 1.2rem 2.4rem;
+  color: var(--light-grey);
+  border-radius: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

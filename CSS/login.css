@@ -5,9 +5,13 @@
     font-size: 1.6rem;
 }
 
-.logo{
-    height: 100vh; 
-    width: auto;
-    object-fit: cover; 
-    display: block;
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+}
+
+.footer {
+    display: flex;
+    gap: 2rem;
 }

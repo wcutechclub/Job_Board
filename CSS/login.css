@@ -39,10 +39,33 @@ body {
 }
 .email,
 .password{
-    padding: 1rem;
-    border-radius: 0.5rem;
+    /* padding: 1rem;
+    border-radius: 0.5rem; */
+   
+}
+input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
     margin-bottom: 2rem;
     border: 1px solid rgb(220, 213, 213);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+  
+input[type="email"]:focus {
+    border-color: blue; /* Change border color when clicked */
+}
+input[type="password"] {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+  
+input[type="password"]:focus {
+    border-color: blue; /* Change border color when clicked */
 }
 .form__text{
     margin-bottom: 0.5rem;

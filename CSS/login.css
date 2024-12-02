@@ -1,16 +1,19 @@
-
+body {
+    background-color: rgb(252, 252, 252);
+}
 .container{
     display: grid;
     grid-template-columns: 0.3fr 1.3fr 1fr;
     font-size: 1.6rem;
 }
 .Login{
-    border: 0.1rem solid black;
+    border: 0.1rem solid rgb(252, 252, 252);
     background-color: white;
     height: 45vh;
     margin-top: 8rem;
     width: 50rem;
     border-radius: 0.6rem;
+    box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
 }
 .header{
     margin-bottom: 3rem;
@@ -69,7 +72,20 @@
 .alternative_text{
     margin-top: 1rem;
     margin-bottom: 2rem;
-    margin-left: 14rem;
+    /* margin-left: 14rem; */
+    display: flex;
+}
+.line{
+    margin-top: 1rem;
+    border-top: 0.1rem solid rgb(220, 213, 213);
+    width: 12rem;
+}
+.line_one {
+    margin-right: 2rem;
+
+}
+.line_two {
+    margin-left: 2rem;
 }
 .instruction{
     margin-top: 1rem;

@@ -6,6 +6,8 @@ body {
     grid-template-columns: 0.3fr 1.3fr 1fr;
     font-size: 1.6rem;
 }
+
+/* LOGIN FORM */
 .Login{
     border: 0.1rem solid rgb(252, 252, 252);
     background-color: white;
@@ -37,9 +39,10 @@ body {
 }
 .email,
 .password{
-    padding: 0.8rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
 }
 .form__text{
     margin-bottom: 0.5rem;
@@ -60,7 +63,7 @@ body {
 }
 .google,
 .github{
-    padding: 0.8rem;
+    padding: 1rem;
     width: 19rem;
     background-color: black;
     color: white;
@@ -68,6 +71,7 @@ body {
 }
 .askAccount {
     align-self: center;
+    color: rgb(127, 125, 125)
 }
 .alternative_text{
     margin-top: 1rem;
@@ -90,4 +94,34 @@ body {
 .instruction{
     margin-top: 1rem;
     margin-bottom: 7rem;
+    color: rgb(127, 125, 125);
+}
+.forget, .signup{
+    text-decoration: none;
+    color: blue;
+}
+
+/* Description */
+.description {
+    height: 45vh;
+    margin-top: 8rem;
+    margin-left: 10rem;
+}
+
+.jobBoard{
+    display: flex;
+    margin-left: 20rem;
+    font-size: 7rem;
+    margin-bottom: 1rem;
+}
+.jobBoard__desc{
+    margin-left: 22rem;
+    margin-bottom: 5rem;
+}
+.welcome {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.text_desc{
+    line-height: 2rem;
 }

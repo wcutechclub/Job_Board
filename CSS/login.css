@@ -12,9 +12,9 @@
     width: 50rem;
     border-radius: 0.6rem;
 }
-.Login .header{
-    text-align: center;
-
+.header{
+    margin-bottom: 3rem;
+    margin-left: 7rem;
 }
 .login_container{
    margin-left: 5rem;
@@ -39,11 +39,39 @@
     margin-bottom: 2rem;
 }
 .form__text{
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
 }
 .signin{
     padding: 1rem;
     background-color: blue;
     color: white;
     border-radius: 0.8rem;
+}
+.alternative_signin{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.google,
+.github{
+    padding: 0.8rem;
+    width: 19rem;
+    background-color: black;
+    color: white;
+    border-radius: 0.7rem;
+}
+.askAccount {
+    align-self: center;
+}
+.alternative_text{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 14rem;
+}
+.instruction{
+    margin-top: 1rem;
+    margin-bottom: 7rem;
 }

@@ -4,7 +4,7 @@ body {
 .container{
     display: grid;
     grid-template-columns: 0.3fr 1.3fr 1fr;
-    font-size: 1.6rem;
+    font-size: 1.6rem;  
 }
 
 /* LOGIN FORM */
@@ -12,7 +12,7 @@ body {
     border: 0.1rem solid rgb(252, 252, 252);
     background-color: white;
     height: 45vh;
-    margin-top: 8rem;
+    margin-top: 11rem;
     width: 50rem;
     border-radius: 0.6rem;
     box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
@@ -104,7 +104,7 @@ body {
 /* Description */
 .description {
     height: 45vh;
-    margin-top: 8rem;
+    margin-top: 11rem;
     margin-left: 10rem;
 }
 
@@ -124,4 +124,15 @@ body {
 }
 .text_desc{
     line-height: 2rem;
+}
+
+/* LOGO*/
+.logo{
+    background-color: rgb(41, 41, 127);
+    height: 70vh;
+}
+
+/* Footer */
+.footer_copyright{
+    background-color: yellow;
 }

@@ -1,5 +1,6 @@
 body {
     background-color: rgb(252, 252, 252);
+    font-family: sans-serif;
 }
 .container{
     display: grid;
@@ -34,14 +35,8 @@ body {
 
 .footer {
     display: flex;
-    gap: 14rem;
+    gap: 11rem;
     margin-bottom: 1.2rem;
-}
-.email,
-.password{
-    /* padding: 1rem;
-    border-radius: 0.5rem; */
-   
 }
 input[type="email"] {
     padding: 10px;
@@ -53,7 +48,7 @@ input[type="email"] {
 }
   
 input[type="email"]:focus {
-    border-color: blue; /* Change border color when clicked */
+    border-color: blue;
 }
 input[type="password"] {
     margin-bottom: 2rem;
@@ -65,7 +60,7 @@ input[type="password"] {
 }
   
 input[type="password"]:focus {
-    border-color: blue; /* Change border color when clicked */
+    border-color: blue; 
 }
 .form__text{
     margin-bottom: 0.5rem;
@@ -92,6 +87,7 @@ input[type="password"]:focus {
     color: white;
     border-radius: 0.7rem;
 }
+
 .askAccount {
     align-self: center;
     color: rgb(127, 125, 125)

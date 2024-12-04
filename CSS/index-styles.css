@@ -278,3 +278,18 @@ body {
   background-color: var(--main-background);
   position: relative;
 }
+
+.how-header {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 3.6rem;
+}
+
+.how-catagory--container {
+  max-width: 130rem;
+  column-gap: 11rem !important;
+}
+
+.how-left {
+  margin-right: 3.2rem;
+}

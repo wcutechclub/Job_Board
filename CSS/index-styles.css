@@ -96,7 +96,7 @@ body {
 }
 
 .margin--bottom {
-  /* margin-bottom: 4.8rem; */
+  margin-bottom: 4.8rem;
 }
 .grid {
   display: grid;
@@ -247,7 +247,6 @@ body {
 
 .hero-img {
   width: 60%;
-  /* height: 120%; */
 }
 
 .hero-secondary--header {
@@ -267,6 +266,22 @@ body {
 
 .hero-btn:hover {
   background-color: var(--primary-hover);
+}
+
+/* 
+//////////////////////////////////////////////////
+                      Features
+/////////////////////////////////////////////////
+*/
+
+.features-section {
+  background-color: var(--main-background);
+}
+
+.features {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
 }
 
 /*

@@ -295,6 +295,7 @@ body {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   transition: all 0.3s;
   border-radius: 11px;
+  padding: 3.8rem 2.6rem;
 }
 
 /*

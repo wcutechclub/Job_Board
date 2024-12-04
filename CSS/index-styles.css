@@ -293,3 +293,21 @@ body {
 .how-left {
   margin-right: 3.2rem;
 }
+.subheading-container {
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.subheading {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  margin-top: 2.4rem;
+  padding: 1.6rem;
+}
+.how-left--header {
+  justify-content: flex-end;
+}

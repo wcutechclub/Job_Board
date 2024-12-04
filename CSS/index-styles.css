@@ -448,6 +448,10 @@ body {
 }
 
 .test-img {
+  width: 10rem;
+  margin-bottom: 1.6rem;
+  border-radius: 50%;
+  border: var(--soft-blue) 1rem solid;
 }
 
 .test-card--detail-box {

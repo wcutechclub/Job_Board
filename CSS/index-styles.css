@@ -327,3 +327,35 @@ body {
 .how-left {
   column-gap: 5.2rem !important;
 }
+.how-cards--box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.6rem;
+}
+.icon-header-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.how-cards--header {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+}
+
+.how-icon {
+  height: 3rem;
+  width: 3rem;
+  margin-bottom: 2.4rem;
+}
+
+.how-card--detail {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-weight: 400;
+  align-self: center;
+}

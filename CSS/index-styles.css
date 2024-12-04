@@ -281,7 +281,13 @@ body {
 .features {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 0 3.2rem;
+  padding: 5.2rem 0;
+}
+
+.feat-paragraph {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
 }
 
 /*

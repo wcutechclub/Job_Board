@@ -290,6 +290,13 @@ body {
   margin-bottom: 3.2rem;
 }
 
+.feat-cards {
+  background-color: #eaf4fe;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  transition: all 0.3s;
+  border-radius: 11px;
+}
+
 /*
  //////////////////////////////////////////////////
         How It Works

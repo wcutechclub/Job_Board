@@ -311,6 +311,11 @@ body {
   border-radius: 11px;
 }
 
+.feat-btn:hover,
+.feat-btn:active {
+  background-color: var(--primary-hover);
+}
+
 /*
  //////////////////////////////////////////////////
         How It Works

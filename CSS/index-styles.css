@@ -320,3 +320,10 @@ body {
   left: 50%;
   top: 8%;
 }
+
+.how-right {
+  column-gap: 5.2rem !important;
+}
+.how-left {
+  column-gap: 5.2rem !important;
+}

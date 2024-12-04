@@ -25,6 +25,8 @@
   --yellow: #ffc107;
   --accent-green: #28a745;
   --accent-green-hover: #218838;
+
+   #b3d9ff additional color
 */
 :root {
   --gradient-primary: linear-gradient(to top left, #0066cc, #66ccff);
@@ -40,7 +42,6 @@ body {
   font-weight: 400;
   color: var(--text-primary);
   overflow-x: hidden;
-  background-color: var(--light-grey);
 }
 
 /* 
@@ -224,25 +225,18 @@ body {
                 Hero
 ////////////////////////////////////////////////////////
 */
-
 .hero-section {
-  /* background-color: #b3d9ff; */
   background-color: var(--light-grey);
-
-  height: 90vh;
-  display: flex;
-  align-items: center;
   padding: 4.8rem 0 9.6rem 0;
 }
 .hero {
   max-width: 130rem;
+  margin: 0 auto;
   padding: 0 3.2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 50%;
-  margin-left: 9.6rem;
-  column-gap: 5rem !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
 }
 
 .hero-img {
@@ -281,7 +275,7 @@ body {
 .features {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 5.2rem 0;
+  padding: 9.6rem 0;
 }
 
 .feat-paragraph {

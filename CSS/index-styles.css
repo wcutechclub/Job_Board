@@ -268,3 +268,13 @@ body {
 .hero-btn:hover {
   background-color: var(--primary-hover);
 }
+
+/*
+ //////////////////////////////////////////////////
+        How It Works
+ /////////////////////////////////////////////////
+ */
+.how-section {
+  background-color: var(--main-background);
+  position: relative;
+}

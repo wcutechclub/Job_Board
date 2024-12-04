@@ -311,3 +311,12 @@ body {
 .how-left--header {
   justify-content: flex-end;
 }
+
+.how-mid {
+  position: absolute;
+  height: 90%;
+  background-color: var(--primary-color);
+  width: 1%;
+  left: 50%;
+  top: 8%;
+}

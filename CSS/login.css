@@ -1,13 +1,57 @@
 body {
     background-color: rgb(252, 252, 252);
     font-family: sans-serif;
+    /* font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #4a90e2, #50c9c3);
+    color: #fff; */
+      
 }
 .container{
     display: grid;
     grid-template-columns: 0.3fr 1.3fr 1fr;
-    font-size: 1.6rem;  
+    font-size: 1.6rem; 
 }
 
+
+/*Logo*/
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 3rem;
+}
+
+.vertical-bar {
+    width: 10px;
+    height: 100%;
+    background-color: #ff6600; /* Orange accent */
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.letter {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.letter:hover {
+    transform: scale(1.2);
+    color: #ff6600; 
+}
+  
 /* LOGIN FORM */
 .Login{
     border: 0.1rem solid rgb(252, 252, 252);
@@ -145,13 +189,15 @@ input[type="password"]:focus {
     line-height: 2rem;
 }
 
-/* LOGO*/
-.logo{
-    background-color: rgb(41, 41, 127);
-    height: 70vh;
-}
-
-/* Footer */
 .footer_copyright{
-    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    width: 66%;
+    margin-left: 40rem;
+    margin-top: 10rem;
+}
+.fotter_line{
+    border-top: 0.1rem solid rgb(220, 213, 213);
+    margin-bottom: 1rem;
 }

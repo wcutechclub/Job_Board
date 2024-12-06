@@ -103,6 +103,10 @@ body {
 .margin--bottom {
   margin-bottom: 4.8rem;
 }
+
+.padding--top {
+  margin-top: 4.8rem;
+}
 .grid {
   display: grid;
   row-gap: 9.6rem;
@@ -434,6 +438,7 @@ body {
   align-items: center;
   flex-direction: column;
   padding-top: 3.2rem;
+  padding-bottom: 6.4rem;
 }
 
 .testimonial-header {
@@ -447,7 +452,10 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 4.6rem 4.8rem;
-  background-color: var(--soft-blue);
+  background-color: var(--muted-blue);
+  color: var(--light-grey);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
 }
 
 .test-img {
@@ -460,8 +468,41 @@ body {
 }
 
 .test-card--detail-box {
+  margin-top: 1.8rem;
 }
 .test-card--detail {
   font-size: 1.6rem;
   text-align: center;
+}
+
+/* /////////////////////////////////////////////////
+                  CTA
+ //////////////////////////////////////////////////*/
+
+.cta-section {
+}
+
+.cta {
+}
+
+.cta-header--container {
+}
+
+.cta-header {
+  margin-bottom: 4.8rem;
+}
+.cta-header2 {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.cta-btn--container {
+}
+
+.cta-btn {
+}
+
+.seek-cta--btn {
+}
+.post-cta--btn {
 }

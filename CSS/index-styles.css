@@ -144,6 +144,13 @@ body {
   align-items: center;
 }
 
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
 /* /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////// /*/
 
@@ -164,10 +171,6 @@ body {
   align-items: center;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
   padding: 0 4.8rem;
-}
-.nav-img {
-  max-width: 16rem;
-  height: 9rem;
 }
 
 .nav-btns--container {
@@ -481,7 +484,8 @@ body {
 
 .cta-section {
   /* background: linear-gradient(to top left, #eaf4fe, #e9ecef); */
-  background: linear-gradient(to bottom left, var(--soft-blue), #b3d9ff);
+  /* background: linear-gradient(to bottom left, var(--soft-blue), #b3d9ff); */
+  background-color: var(--light-grey);
 }
 
 .cta {

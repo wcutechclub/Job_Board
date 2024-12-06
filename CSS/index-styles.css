@@ -55,8 +55,8 @@ body {
   align-items: center;
 }
 
-.flex-center {
-  width: 100%;
+.flex-col {
+  flex-direction: column;
 }
 
 .container {
@@ -127,8 +127,8 @@ body {
 .grid-cols--3 {
   grid-template-columns: repeat(3, 1fr);
 }
-.grid-row--8 {
-  grid-template-rows: repeat(8, 1fr);
+.grid-cols--4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .icons {
@@ -288,6 +288,7 @@ body {
   max-width: 130rem;
   margin: 0 auto;
   padding: 9.6rem 0;
+  border-bottom: 1px solid #eee;
 }
 
 .feat-paragraph {
@@ -536,4 +537,63 @@ body {
 .post-cta--btn:hover,
 .post-cta--btn:focus {
   background-color: var(--accent-green-hover);
+}
+
+/* 
+/////////////////////////////////////////////////////////////
+                  FOOTER
+////////////////////////////////////////////////////////////
+*/
+.footer-section {
+  background-color: var(--deep-blue);
+  background-color: var(--light-grey);
+  border-top: 1px solid #eee;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+}
+
+.footer-header--container {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer-headers {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.footer {
+  padding-bottom: 4.8rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  transition: all 0.3s;
+  text-decoration: none;
+  list-style: none;
+  color: #767676;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link--text {
+  font-size: 1.6rem;
+  color: #767676;
+}
+
+.footer-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.social-col {
+  flex-direction: row;
 }

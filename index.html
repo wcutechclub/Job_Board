@@ -20,7 +20,7 @@
   <body>
     <header class="header" id="header">
       <nav class="nav-bar--container">
-        <div class="nav-img"></div>
+        <a href="#" class="logo">JOB BOARD</a>
 
         <div class="nav-btns--container">
           <a href="#" class="nav-bar--btns btn">Home</a>
@@ -36,17 +36,21 @@
     </header>
     <main>
       <section class="hero-section" id="hero">
-        <div class="hero grid-cols--2 container">
-          <div class="container">
+        <div class="hero grid-cols--2">
+          <div class="hero-text">
             <h1 class="primary-header hero-main--header">
-              Find Your Dream Job Today.
+              Find your dream job or connect with the right talent
             </h1>
-            <p class="secondary-header hero-secondary--header">
-              Explore thousands of jobs across industries and locations.
+            <p class="hero-description">
+              Seamlessly search for your next job or hire the best talent, with
+              a platform designed for both job seekers and employers.
             </p>
-            <a class="hero-btn btn" href="#">Learn More</a>
+            <div class="hero-btn--container">
+              <a class="hero-btn btn" href="#">Start Your Journey</a>
+              <a class="hero-btn hero-btn2 btn" href="#">Learn More &darr;</a>
+            </div>
           </div>
-          <div class="container">
+          <div class="img-box">
             <img
               class="hero-img"
               src="/img/hero-img.png"
@@ -57,6 +61,11 @@
       </section>
 
       <section class="features-section" id="features">
+        <div
+          class="feat-header--container sec-header--container container margin--bottom"
+        >
+          <span class="feat-header sec-header">FEATURES</span>
+        </div>
         <div class="features grid-cols--3 grid container">
           <div class="feat-cards feat-card1">
             <div class="icon-header-box">
@@ -101,7 +110,7 @@
         </div>
       </section>
 
-      <section class="how-section grid" id="how">
+      <section class="how-section" id="how">
         <div class="container">
           <h3 class="secondary-header how-header">
             <span class="how-header-1">Find Jobs.</span>
@@ -114,10 +123,10 @@
           <h4 class="subheading how-left--header">Job Seeker</h4>
           <h4 class="subheading how-right--header">Job Poster</h4>
         </div>
-        <div class="how-catagory--container container grid grid-cols--2">
+        <div class="how-container container grid grid-cols--2">
           <div class="how-mid"></div>
-
-          <div class="how-left grid grid-cols--2">
+          <!-- Left -->
+          <div class="how-left align-center grid grid-cols--2">
             <div class="how-cards--box how-left-cards">
               <div class="icon-header-box">
                 <ion-icon
@@ -127,12 +136,35 @@
                 <h3 class="how-cards--header">Search for Jobs</h3>
               </div>
               <p class="how-card--detail">
-                Use the search bar to explore roles by title, location, or
-                keywords.
+                Use the search bar to find jobs by title, location, or keywords.
               </p>
             </div>
             <img class="how-images" src="/img/how-it-works/search.jpg" alt="" />
+          </div>
 
+          <!-- Right -->
+          <div class="how-right align-center grid grid-cols--2">
+            <div class="how-cards--box">
+              <div class="icon-header-box">
+                <ion-icon
+                  class="icons how-icon"
+                  name="document-text-outline"
+                ></ion-icon>
+
+                <h3 class="how-cards--header">Post a Job</h3>
+              </div>
+              <p class="how-card--detail">
+                Create and share job listings to attract top candidates.
+              </p>
+            </div>
+            <img
+              class="how-images"
+              src="/img/how-it-works/post.jpg"
+              alt="man using pc"
+            />
+          </div>
+
+          <div class="how-left align-center grid grid-cols--2">
             <img
               class="how-images"
               src="/img/how-it-works/apply.jpg"
@@ -147,49 +179,13 @@
                 <h3 class="how-cards--header">Apply</h3>
               </div>
               <p class="how-card--detail">
-                Easily submit applications to jobs you are interested in.
+                Submit applications to roles you’re interested in with just a
+                few clicks.
               </p>
             </div>
-
-            <div class="how-cards--box how-left-cards">
-              <div class="icon-header-box">
-                <ion-icon
-                  class="icons how-icon"
-                  name="briefcase-outline"
-                ></ion-icon>
-                <h3 class="how-cards--header">Get Hired</h3>
-              </div>
-              <p class="how-card--detail">
-                Track your applications and land your dream job.
-              </p>
-            </div>
-            <img
-              class="how-images"
-              src="/img/how-it-works/get-hired.jpg"
-              alt=""
-            />
           </div>
 
-          <div class="how-right grid grid-cols--2">
-            <div class="how-cards--box">
-              <div class="icon-header-box">
-                <ion-icon
-                  class="icons how-icon"
-                  name="document-text-outline"
-                ></ion-icon>
-
-                <h3 class="how-cards--header">Post a Job</h3>
-              </div>
-              <p class="how-card--detail">
-                Create a job listing with all the details candidates need.
-              </p>
-            </div>
-            <img
-              class="how-images"
-              src="/img/how-it-works/post.jpg"
-              alt="man using pc"
-            />
-            <!-- //////////////////////////////////////// -->
+          <div class="how-right align-center grid grid-cols--2">
             <img
               class="how-images"
               src="/img/how-it-works/review-app.jpg"
@@ -204,35 +200,60 @@
                 <h3 class="how-cards--header">Review Resumes</h3>
               </div>
               <p class="how-card--detail">
-                Easily browse and filter resumes to find the perfect fit.
+                Filter and review resumes to find the perfect match for your
+                needs.
               </p>
             </div>
+          </div>
 
+          <div class="how-left align-center grid grid-cols--2">
+            <div class="how-cards--box how-left-cards">
+              <div class="icon-header-box">
+                <ion-icon
+                  class="icons how-icon"
+                  name="briefcase-outline"
+                ></ion-icon>
+                <h3 class="how-cards--header">Get Hired</h3>
+              </div>
+              <p class="how-card--detail">
+                Track your progress and secure your dream job effortlessly.
+              </p>
+            </div>
+            <img
+              class="how-images"
+              src="/img/how-it-works/get-hired.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="how-right how-right--last align-center grid grid-cols--2">
             <div class="how-cards--box">
               <div class="icon-header-box">
                 <ion-icon
-                  class="icons how-icons"
+                  class="icons how-icon"
                   name="people-outline"
                 ></ion-icon>
                 <h3 class="how-cards--header">Hire Top Talent</h3>
               </div>
               <p class="how-card--detail">
-                Schedule interviews and connect with candidates.
+                Connect with candidates and finalize hiring decisions quickly.
               </p>
             </div>
             <img
               class="how-images"
               src="/img/how-it-works/hire.jpg"
               alt="people shaking hands
-        "
+          "
             />
           </div>
         </div>
       </section>
 
       <section class="testimonials-section" id="testimonials">
-        <div class="testimonial-header--container container margin--bottom">
-          <span class="testimonial-header">Testimonials</span>
+        <div
+          class="testimonial-header--container sec-header--container container margin--bottom"
+        >
+          <span class="testimonial-header sec-header">Testimonials</span>
         </div>
         <div class="testimonials container grid grid-cols--3">
           <div class="testimonial-card">
@@ -305,5 +326,83 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer-section">
+      <div class="container footer-header--container footer-grid">
+        <span class="footer-headers">Connect With US</span>
+        <span class="footer-headers">About US</span>
+        <span class="footer-headers">Quick</span>
+        <span class="footer-headers">Support</span>
+      </div>
+
+      <div class="container footer footer-grid">
+        <ul class="social-col footer-nav">
+          <li>
+            <a class="footer-link" href="#">
+              <ion-icon class="footer-icon" name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a class="footer-link" href="#">
+              <ion-icon class="footer-icon" name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a class="footer-link" href="#">
+              <ion-icon class="footer-icon" name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a class="footer-link" href="#">
+              <ion-icon class="footer-icon" name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+        <ul class="abt-col footer-nav">
+          <li>
+            <a class="footer-link footer-link--text" href="#">Our Story</a>
+          </li>
+          <li>
+            <a class="footer-link footer-link--text" href="#">Careers</a>
+          </li>
+          <li>
+            <a class="footer-link footer-link--text" href="#">Blog</a>
+          </li>
+        </ul>
+        <ul class="quick-col footer-nav">
+          <li>
+            <a class="footer-link footer-link--text" href="#">Job Search</a>
+          </li>
+          <li>
+            <a class="footer-link footer-link--text" href="#">Post a Job</a>
+          </li>
+          <li>
+            <a class="footer-link footer-link--text" href="#">FAQs</a>
+          </li>
+          <li>
+            <a class="footer-link footer-link--text" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="support-col footer-nav">
+          <li>
+            <a class="footer-link footer-link--text" href="#">Help Center</a>
+          </li>
+          <li>
+            <a class="footer-link footer-link--text" href="#">Privacy Policy</a>
+          </li>
+          <li>
+            <a class="footer-link footer-link--text" href="#"
+              >Terms of Service</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom container flex">
+        <p class="copyright">
+          Copyright &copy; 2024 Job Board, All rights reserved.
+        </p>
+        <p class="copyright">Designed by WCUTC</p>
+      </div>
+    </footer>
   </body>
 </html>

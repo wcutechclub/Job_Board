@@ -151,6 +151,19 @@ body {
   text-decoration: none;
 }
 
+.sec-header--container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3.2rem;
+}
+
+.sec-header {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
 /* /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////// /*/
 
@@ -298,7 +311,7 @@ body {
 .features {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 9.6rem 0;
+  padding-bottom: 9.6rem;
   border-bottom: 1px solid #eee;
 }
 
@@ -441,17 +454,10 @@ body {
 }
 
 .testimonial-header--container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 3.2rem;
   padding-bottom: 6.4rem;
 }
 
 .testimonial-header {
-  font-size: 1.8rem;
-  text-transform: uppercase;
 }
 
 .testimonial-card {

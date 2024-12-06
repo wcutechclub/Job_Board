@@ -280,7 +280,6 @@ body {
 */
 
 .features-section {
-  /* background-color: var(--main-background); */
   background-color: var(--light-grey);
 }
 
@@ -331,28 +330,26 @@ body {
 .how-section {
   background-color: var(--light-grey);
   position: relative;
-  margin-bottom: 0 !important;
 }
 
 .how-header {
   text-align: center;
   margin-bottom: 0;
-  margin-top: 3.6rem;
+  padding-top: 3.6rem;
 }
 
-.how-catagory--container {
+.how-container {
   max-width: 130rem;
   column-gap: 11rem !important;
-  margin-bottom: 9.6rem;
+  row-gap: 2rem;
+  padding-bottom: 9.6rem;
 }
 
-.how-left {
-  margin-right: 3.2rem;
-}
 .subheading-container {
   width: 100%;
   align-items: center;
   justify-content: space-around;
+  padding-bottom: 4.6rem;
 }
 
 .subheading {
@@ -372,23 +369,18 @@ body {
   position: absolute;
   height: 90%;
   background-color: var(--primary-color);
-  width: 1%;
+  width: 0.5%;
   left: 50%;
   top: 8%;
+  border: var(--primary-color) 0.1rem;
 }
 
-.how-right {
-  column-gap: 5.2rem !important;
-}
-.how-left {
-  column-gap: 5.2rem !important;
-}
 .how-cards--box {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   padding: 1.6rem;
+  width: 100%;
 }
 .icon-header-box {
   display: flex;
@@ -417,10 +409,10 @@ body {
 }
 
 .how-images {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  /* height: 100%; */
   border-radius: 11px;
-  border: var(--main-background) 0.1rem solid;
+  /* border: var(--main-background) 0.1rem solid; */
 }
 
 /* //////////////////////////////////////////////////
@@ -484,16 +476,11 @@ body {
  //////////////////////////////////////////////////*/
 
 .cta-section {
-  /* background: linear-gradient(to top left, #eaf4fe, #e9ecef); */
-  /* background: linear-gradient(to bottom left, var(--soft-blue), #b3d9ff); */
   background-color: var(--light-grey);
 }
 
 .cta {
   row-gap: 7rem;
-}
-
-.cta-header--container {
 }
 
 .cta-header {
@@ -502,10 +489,6 @@ body {
 .cta-header2 {
   text-align: center;
   font-size: 2.4rem;
-}
-
-.cta-btn--container {
-  column-gap: 15rem;
 }
 
 .cta-btn:link,
@@ -545,7 +528,6 @@ body {
 ////////////////////////////////////////////////////////////
 */
 .footer-section {
-  background-color: var(--deep-blue);
   background-color: var(--light-grey);
   border-top: 1px solid #eee;
 }

@@ -597,3 +597,14 @@ body {
 .social-col {
   flex-direction: row;
 }
+
+.footer-bottom {
+  justify-content: space-between;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: #767676;
+  line-height: 1.6;
+  margin-top: auto;
+}

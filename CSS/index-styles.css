@@ -525,3 +525,11 @@ body {
 .post-cta--btn:visited {
   background-color: var(--accent-green);
 }
+.seek-cta--btn:hover,
+.seek-cta--btn:focus {
+  background-color: var(--primary-hover);
+}
+.post-cta--btn:hover,
+.post-cta--btn:focus {
+  background-color: var(--accent-green-hover);
+}

@@ -480,9 +480,12 @@ body {
  //////////////////////////////////////////////////*/
 
 .cta-section {
+  /* background: linear-gradient(to top left, #eaf4fe, #e9ecef); */
+  background: linear-gradient(to bottom left, var(--soft-blue), #b3d9ff);
 }
 
 .cta {
+  row-gap: 7rem;
 }
 
 .cta-header--container {
@@ -497,12 +500,28 @@ body {
 }
 
 .cta-btn--container {
+  column-gap: 15rem;
 }
 
-.cta-btn {
+.cta-btn:link,
+.cta-btn:visited {
+  transition: all 0.3;
+  border-radius: 1rem;
+  color: #fff !important;
+  height: 5rem;
+  padding: 1.2rem 2.4rem;
+  color: var(--light-grey);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.seek-cta--btn {
+.seek-cta--btn:link,
+.seek-cta--btn:visited {
+  background-color: var(--primary-color);
 }
-.post-cta--btn {
+.post-cta--btn:link,
+.post-cta--btn:visited {
+  background-color: var(--accent-green);
 }

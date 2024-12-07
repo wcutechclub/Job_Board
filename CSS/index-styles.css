@@ -273,6 +273,9 @@ body {
   height: 75%;
 }
 
+.hero-main--header {
+  margin-bottom: 6rem;
+}
 .hero-description {
   font-size: 2rem;
   line-height: 1.6;
@@ -281,6 +284,7 @@ body {
 
 .hero-btn--container {
   display: flex;
+  margin-top: 9.6rem;
 }
 
 .hero-btn:link,
@@ -293,10 +297,24 @@ body {
   color: var(--light-grey) !important;
   background-color: var(--primary-color);
   margin-right: 1.6rem;
+  align-self: center;
 }
 
-.hero-btn:hover {
+.hero-btn2:link,
+.hero-btn2:visited {
+  background-color: var(--soft-blue);
+  color: var(--text-primary) !important;
+  border: 0.3rem solid var(--soft-blue);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
   background-color: var(--primary-hover);
+}
+.hero-btn2:hover,
+.hero-btn2:focus {
+  border: 0.3rem solid var(--soft-blue);
+  background-color: var(--main-background);
 }
 
 /* 

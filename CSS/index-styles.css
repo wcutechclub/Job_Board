@@ -131,6 +131,10 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.align-center {
+  align-items: center;
+}
+
 .icons {
   height: 4.8rem;
   width: 4.8rem;
@@ -261,13 +265,10 @@ body {
   align-items: center;
 }
 
-.hero-main--header {
-}
 .hero-img {
   width: 75%;
 }
-.img-box {
-}
+
 .hero-text {
   height: 75%;
 }
@@ -404,8 +405,6 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 1.6rem;
-  width: 100%;
 }
 .icon-header-box {
   display: flex;
@@ -417,27 +416,29 @@ body {
 .how-cards--header {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2rem;
 }
 
 .how-icon {
   height: 3rem;
   width: 3rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2rem;
 }
 
 .how-card--detail {
   font-size: 1.6rem;
-  line-height: 1.8;
+  line-height: 1.3;
   font-weight: 400;
   align-self: center;
 }
 
 .how-images {
   width: 100%;
-  /* height: 100%; */
   border-radius: 11px;
-  /* border: var(--main-background) 0.1rem solid; */
+}
+
+.how-right--last {
+  margin-bottom: 9.6rem;
 }
 
 /* //////////////////////////////////////////////////
@@ -455,9 +456,6 @@ body {
 
 .testimonial-header--container {
   padding-bottom: 6.4rem;
-}
-
-.testimonial-header {
 }
 
 .testimonial-card {

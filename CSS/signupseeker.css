@@ -17,7 +17,7 @@ body {
 
 .vertical-bar {
     width: 10px;
-    height: 170%;
+    height: 100%;
     background-color: #0044cc;
     margin-right: 20px;
     border-radius: 5px;
@@ -65,3 +65,17 @@ body {
 }
 
 /*Signup*/
+.signup{
+    border: 0.1rem solid rgb(252, 252, 252);
+    background-color: #f8f9fa;
+    height: 60vh;
+    margin-top: 11rem;
+    width: 50rem;
+    border-radius: 0.6rem;
+    box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}

@@ -35,19 +35,18 @@
               <div class="header">
                 <h1>Sign Up</h1>
               </div>
-              <div class="alternative_signin">
-                <button class="google">
-                    <ion-icon name="logo-google" class="icon_logo"></ion-icon> Google</button>
-                <button class="github">
-                    <ion-icon name="logo-facebook" class="icon_logo"></ion-icon> Facebook</button>
+                <div class="alternative_signin">
+                    <button class="google">
+                        <ion-icon name="logo-google" class="icon_logo"></ion-icon> Google</button>
+                    <button class="github">
+                        <ion-icon name="logo-facebook" class="icon_logo"></ion-icon> Facebook</button>
+                </div>
+                <div class="alternative_text">
+                    <div class="line line_one"></div>
+                    <p>Or continue with</p>
+                    <div class="line line_two"></div>
+                </div>
             </div>
-            <div class="alternative_text">
-                <div class="line line_one"></div>
-                <p>Or continue with</p>
-                <div class="line line_two"></div>
-            </div>
-            </div>
-
             <form class="form">
                 <label class="form__text">First name</label>
                 <input class="form_input" required>
@@ -55,7 +54,7 @@
                 <input class="form_input" required>
                 <label  for="email" class="form__text">Email</label>
                 <input type="email" id="email" class="email" name="email" placeholder="Enter your email" required>
-                <label for="options">Industry</label>
+                <label for="options" class="form__text">Industry</label>
                 <select id="options" name="options">
                     <option value="1">Information Technology(IT) and Software Development</option>
                     <option value="2">Healthcare and Medical</option>
@@ -78,26 +77,20 @@
                     <option value="19">Writting and Editing</option>
                     <option value="20">Science and Research</option>
                 </select>
-                    <p>Select your gender:</p>
-                    <label>
-                        <input type="radio" name="gender" value="male">
-                        Male
+                    <p class="form__text">Select your gender</p>
+                    <label><input type="radio" name="gender" value="male" class="male">Male</label>
+                    <label><input type="radio" name="gender" value="female" class="female">Female
                     </label><br>
-                    <label>
-                        <input type="radio" name="gender" value="female">
-                        Female
-                    </label><br>
-                    <label for="profile_link">Profile link</label>
+                    <label for="profile_link" class="form__text">Profile link</label>
                     <input type="link">
-                    <label for="resume_link">Resume link</label>
+                    <label for="resume_link" class="form__text">Resume link</label>
                     <input type="link">
                     <label for="password" class="form__text">Password</label>
                     <input type="password" id="password" class="password" name="password" required>
                     <label for="password" class="form__text">Password confirmation</label>
                     <input type="password" id="confirm_password" class="confirm_password" name="password" required>
-                    <label for="bio">Bio</label>
+                    <label for="bio" class="form__text">Bio</label>
                     <textarea id="bio" name="bio" rows="5" cols="40" placeholder="Write about yourself..."></textarea>
-
                     <div class="footer">
                         <label for="rememberme">
                             <input type="checkbox" id="rememberme" name="rememberme" value="rememberme">I have read and agreed to JobBoard policy</label>

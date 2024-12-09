@@ -87,6 +87,23 @@
                         <input type="radio" name="gender" value="female">
                         Female
                     </label><br>
+                    <label for="profile_link">Profile link</label>
+                    <input type="link">
+                    <label for="resume_link">Resume link</label>
+                    <input type="link">
+                    <label for="password" class="form__text">Password</label>
+                    <input type="password" id="password" class="password" name="password" required>
+                    <label for="password" class="form__text">Password confirmation</label>
+                    <input type="password" id="confirm_password" class="confirm_password" name="password" required>
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio" rows="5" cols="40" placeholder="Write about yourself..."></textarea>
+
+                    <div class="footer">
+                        <label for="rememberme">
+                            <input type="checkbox" id="rememberme" name="rememberme" value="rememberme">I have read and agreed to JobBoard policy</label>
+                    </div>
+                    <button type="submit" class="signin">Sign up</button>
+                    <p class="askAccount">Already have an account<a href="#"class="login">Log in</a></p>
             </form>
 
         </section>

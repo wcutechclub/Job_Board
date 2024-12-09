@@ -142,6 +142,13 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+#options {
+    padding: 0.5rem;
+}
+.gender {
+    display: flex;
+    gap: 2rem;
+}
 /*Made the page*/
 .double_container {
     display: grid;

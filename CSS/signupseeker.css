@@ -121,7 +121,6 @@ body {
 .form-row {
     display: flex;
     gap: 10px; 
-    margin-bottom: 15px;
 }
 
 .form-group {
@@ -132,7 +131,7 @@ body {
 
 label {
     margin-bottom: 5px;
-    font-size: 14px;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
@@ -141,26 +140,112 @@ input {
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    background-color:  #f8f9fa;
+    margin-bottom: 1.5rem;
+}
+input[type="password"] {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+input[type="password"]:focus {
+    border-color: #003bb5; 
+}
+input[type="name"] {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+input[type="name"]:focus {
+    border-color: #003bb5; 
+}
+
+textarea {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+textarea:focus {
+    border-color: #003bb5; 
+}
+select {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+select:focus {
+    border-color: #003bb5; 
+}
+input[type="email"] {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+input[type="email"]:focus {
+    border-color: #003bb5; 
+}
+input[type="text"] {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+input[type="text"]:focus {
+    border-color: #003bb5; 
 }
 #options {
     padding: 0.8rem;
+    background-color:  #f8f9fa;
 }
 .gender {
     display: flex;
     gap: 2rem;
+    margin-bottom: 1rem;
 }
-input {
-    margin-bottom: 1.5rem;
+input::placeholder {
+    font-size: 1.6rem;
+
 }
 #options {
     margin-bottom: 1.5rem;
 }
 #bio{
     padding: 1rem;
+    background-color:  #f8f9fa;
 }
-.gender {
-    margin-bottom: 1.5rem;
+textarea::placeholder{
+    font-size: 1.6rem;
 }
+
 .signup_btn{
     padding: 2rem;
     background-color: #0044cc;
@@ -172,7 +257,7 @@ input {
     justify-content: center;
     color: #6c757d;
     gap: 0.8rem;
-    margin-top: 8rem;
+    margin-top: 6rem;
 }
 .login{
     text-decoration: none;
@@ -187,6 +272,9 @@ input {
     font-weight: bold;
     color: #0044cc;
     text-decoration: underline;
+}
+.form__text{
+    margin-bottom: 1rem;
 }
 /*Made the page*/
 .double_container {

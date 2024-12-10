@@ -52,16 +52,16 @@
                     <form class="form">
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="first-name">First Name</label>
+                                <label for="first-name" class="form__text">First Name</label>
                                 <input type="text" id="first-name" name="first-name" placeholder="First Name">
                             </div>
                             <div class="form-group">
-                                <label for="last-name">Last Name</label>
+                                <label for="last-name" class="form__text">Last Name</label>
                                 <input type="text" id="last-name" name="last-name" placeholder="Last Name">
                             </div>
                         </div>
                     <label  for="email" class="form__text">Email</label>
-                    <input type="email" id="email" class="email" name="email" placeholder="Enter your email" required>
+                    <input type="email" id="emailform__text" class="email" name="email" placeholder="Enter your email" required>
                     <label for="options" class="form__text">Industry</label>
                     <select id="options" name="options">
                         <option value="1">Information Technology(IT) and Software Development</option>
@@ -88,7 +88,7 @@
                      <label for="choose" class="gender">Select your gender</label>
                     <div class="gender">     
                             <label><input type="radio" name="gender" value="male"> Male</label>
-                            <label><input type="radio" name="gender" value="female"> Female</label><br>
+                            <label><input type="radio" name="gender" value="female"> Female</label>
                         </div>
                         <label for="profile_link" class="form__text">Profile link</label>
                         <input type="name" placeholder="https://www.linkedin.com/in/yourname">
@@ -105,13 +105,13 @@
                             </div>
                         </div>
                         <label for="bio" class="form__text">Bio</label>
-                        <textarea id="bio" name="bio" rows="5" cols="40"  placeholder="Write about yourself..."></textarea>
+                        <textarea id="bio" name="bio" rows="5" cols="40" type="text" placeholder="Write about yourself..."></textarea>
                         <div class="footer">
                             <label for="rememberme">
-                                <input type="checkbox" id="rememberme" name="rememberme" value="rememberme" class="policy"> I have read and agreed to <span class="job">JobBoard</span> policy</label>
+                                <input type="checkbox" id="rememberme" name="rememberme" value="rememberme" class="policy" required> I have read and agreed to <span class="job">JobBoard</span> policy</label>
                             </div>
                             <button type="submit" class="signup_btn">Sign up</button>
-                            <p class="askAccount">Already have an account<a href="#"class="login">Log in</a></p>
+                            <p class="askAccount">Already have an account<a href="login.html"class="login">Log in</a></p>
                     </form>
                     
                 </section>

@@ -42,12 +42,15 @@ body {
 /*Description*/
 .description {
     height: auto;
-    width: 25rem;
-    background-color:  #eaf4fe;
+    width: 35rem;
+    background-color: #eaf4fe;
     margin-top: 11rem;   
     border: 0.1rem solid rgb(252, 252, 252);
     border-radius: 0.6rem;
     box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
+}
+.description__div{
+    color: #212529;
 }
 
 
@@ -250,7 +253,6 @@ textarea::placeholder{
     color: #0044cc;
 }
 .policy{
-    margin-top: 1rem;
     margin-left: 1rem;
     margin-bottom: 2rem;
 }

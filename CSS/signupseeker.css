@@ -55,6 +55,8 @@ body {
     align-items: center;
     row-gap: 2rem;
     color: #212529;
+    margin-top: 4rem;
+    padding: 2.5rem;
 }
 .description__text{
     margin-top: 1rem;
@@ -242,9 +244,10 @@ textarea::placeholder{
 }
 
 .signup_btn{
-    padding: 2rem;
+    padding: 1rem;
     background-color: #0044cc;
     color: white;
+    font-size: 1.5rem;
     border-radius: 0.8rem;
 }
 .askAccount{

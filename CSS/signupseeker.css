@@ -155,8 +155,38 @@ input {
 #options {
     margin-bottom: 1.5rem;
 }
+#bio{
+    padding: 1rem;
+}
 .gender {
     margin-bottom: 1.5rem;
+}
+.signup_btn{
+    padding: 2rem;
+    background-color: #0044cc;
+    color: white;
+    border-radius: 0.8rem;
+}
+.askAccount{
+    display: flex;
+    justify-content: center;
+    color: #6c757d;
+    gap: 0.8rem;
+    margin-top: 8rem;
+}
+.login{
+    text-decoration: none;
+    color: #0044cc;
+}
+.policy{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+.job{
+    font-weight: bold;
+    color: #0044cc;
+    text-decoration: underline;
 }
 /*Made the page*/
 .double_container {

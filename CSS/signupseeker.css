@@ -41,36 +41,21 @@ body {
 }
 /*Description*/
 .description {
-    height: 45vh;
-    margin-top: 11rem;
-    margin-left: 10rem;
-    background-color: #003bb5;
-    height: 80vh;
+    height: auto;
+    width: 25rem;
+    background-color:  #eaf4fe;
+    margin-top: 11rem;   
+    border: 0.1rem solid rgb(252, 252, 252);
+    border-radius: 0.6rem;
+    box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
 }
 
-.jobBoard{
-    display: flex;
-    margin-left: 20rem;
-    font-size: 7rem;
-    margin-bottom: 1rem;
-}
-.jobBoard__desc{
-    margin-left: 22rem;
-    margin-bottom: 5rem;
-}
-.welcome {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-.text_desc{
-    line-height: 2rem;
-}
 
 /*Signup*/
 .signup{
     border: 0.1rem solid rgb(252, 252, 252);
     background-color: #f8f9fa;
-    height: 80vh;
+    height: auto;
     margin-top: 11rem;
     width: 100rem;
     border-radius: 0.6rem;
@@ -257,7 +242,8 @@ textarea::placeholder{
     justify-content: center;
     color: #6c757d;
     gap: 0.8rem;
-    margin-top: 6rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 .login{
     text-decoration: none;
@@ -280,5 +266,5 @@ textarea::placeholder{
 .double_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-left: 20rem;
+    margin-left: 30rem;
 }

@@ -143,11 +143,20 @@ input {
     border-radius: 4px;
 }
 #options {
-    padding: 0.5rem;
+    padding: 0.8rem;
 }
 .gender {
     display: flex;
     gap: 2rem;
+}
+input {
+    margin-bottom: 1.5rem;
+}
+#options {
+    margin-bottom: 1.5rem;
+}
+.gender {
+    margin-bottom: 1.5rem;
 }
 /*Made the page*/
 .double_container {

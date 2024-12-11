@@ -7,6 +7,7 @@ body {
     grid-template-columns: 0.3fr 1fr 2fr;
     font-size: 1.6rem; 
 }
+/**Logo*/
 .logo-container {
     display: flex;
     align-items: center;
@@ -37,4 +38,62 @@ body {
 .letter:hover {
     transform: scale(1.2);
     color:  #003bb5; 
+}
+/*Made the page*/
+.double_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 30rem;
+}
+/*Description*/
+.description {
+    height: auto;
+    width: 35rem;
+    background-color: #eaf4fe;
+    margin-top: 11rem;   
+    border: 0.1rem solid rgb(252, 252, 252);
+    border-radius: 0.6rem;
+    box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
+}
+.description__div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    color: #212529;
+    margin-top: 4rem;
+    padding: 4rem;
+}
+.description__text{
+    margin-top: 1rem;
+}
+
+/*Signup*/
+.signup{
+    border: 0.1rem solid rgb(252, 252, 252);
+    background-color: #f8f9fa;
+    height: auto;
+    margin-top: 11rem;
+    width: 100rem;
+    border-radius: 0.6rem;
+    box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
+}
+.header {
+   display: grid;
+   justify-content: center;
+   margin-bottom: 2rem;
+   margin-top: 2rem;
+}
+.signup_container{
+    display: grid;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.github,
+.google {
+    padding: 1rem;
+    width: 19rem;
+    background-color:  #212529;;
+    color:  #f8f9fa;
+    border-radius: 0.7rem;
 }

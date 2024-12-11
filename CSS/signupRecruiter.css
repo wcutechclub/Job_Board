@@ -136,3 +136,91 @@ label {
     font-size: 1.6rem;
     font-weight: bold;
 }
+
+input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color:  #f8f9fa;
+    margin-bottom: 1.5rem;
+}
+input[type="password"] {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+input[type="password"]:focus {
+    border-color: #003bb5; 
+}
+input[type="name"] {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+input[type="name"]:focus {
+    border-color: #003bb5; 
+}
+
+textarea {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+textarea:focus {
+    border-color: #003bb5; 
+}
+select {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+select:focus {
+    border-color: #003bb5; 
+}
+input[type="email"] {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+input[type="email"]:focus {
+    border-color: #003bb5; 
+}
+input[type="text"] {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+input[type="text"]:focus {
+    border-color: #003bb5; 
+}

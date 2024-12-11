@@ -222,6 +222,7 @@ input[type="text"]:focus {
 #options {
     padding: 0.8rem;
     background-color:  #f8f9fa;
+    margin-bottom: 1.5rem;
 }
 .gender {
     display: flex;
@@ -232,9 +233,7 @@ input::placeholder {
     font-size: 1.6rem;
 
 }
-#options {
-    margin-bottom: 1.5rem;
-}
+
 #bio{
     padding: 1rem;
     background-color:  #f8f9fa;

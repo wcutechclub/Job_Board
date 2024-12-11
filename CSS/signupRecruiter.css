@@ -224,3 +224,25 @@ input[type="text"] {
 input[type="text"]:focus {
     border-color: #003bb5; 
 }
+#options {
+    padding: 0.8rem;
+    background-color:  #f8f9fa;
+    margin-bottom: 1.5rem;
+}
+.gender {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+input::placeholder {
+    font-size: 1.6rem;
+
+}
+
+#bio{
+    padding: 1rem;
+    background-color:  #f8f9fa;
+}
+textarea::placeholder{
+    font-size: 1.6rem;
+}

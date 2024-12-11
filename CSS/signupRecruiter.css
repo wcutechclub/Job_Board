@@ -239,10 +239,47 @@ input::placeholder {
 
 }
 
-#bio{
+/* #bio{
     padding: 1rem;
     background-color:  #f8f9fa;
-}
+} */
 textarea::placeholder{
     font-size: 1.6rem;
+}
+.signup_btn{
+    padding: 1rem;
+    background-color: #0044cc;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 0.8rem;
+}
+.askAccount{
+    display: flex;
+    justify-content: center;
+    color: #6c757d;
+    gap: 0.8rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.login{
+    text-decoration: none;
+    color: #0044cc;
+}
+.policy{
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+.job{
+    font-weight: bold;
+    color: #0044cc;
+    text-decoration: underline;
+}
+.form__text{
+    margin-bottom: 1rem;
+}
+/*Made the page*/
+.double_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 30rem;
 }

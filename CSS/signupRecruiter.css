@@ -1,0 +1,40 @@
+body {
+    background-color:  #e9ecef;
+    font-family: sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 2fr;
+    font-size: 1.6rem; 
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 3rem;
+}
+
+.vertical-bar {
+    width: 10px;
+    height: 100%;
+    background-color: #0044cc;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.letter {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.letter:hover {
+    transform: scale(1.2);
+    color:  #003bb5; 
+}

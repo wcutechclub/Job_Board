@@ -21,20 +21,47 @@
               <span class="letter">D</span>
             </div>
         </div>
-        <div class="post__form">
-            <form class="form">
-                <div class="title">
-                    <label for="job_title" class="form__text">Job Title</label>
-                    <p class="description">A job title must describe one position only</p>
-                    <input type="text" id="job_input" name="job" class="description_input" placeholder='e.g. "Python Developer"'>
-                </div>
-                <div class="job_description">
-                    <label for="job_description" class="form__text">Job description</label>
-                    <p class="description">Provide a short description about the job. Keep<br>it short and to the point</p>
-                    <textarea name="job_desc_input" id="textarea_desc"></textarea>
-                </div>
-            </form>
-        </div>
+       <div class="form-container">
+            <div class="title">
+                <h3>Job title</h3>
+                <p>A job title must describe one position only</p>
+                <input type="text" placeholder="e.g. 'Kitchen staff'">
+            </div>
+            <div class="description">
+                <h3>Job description</h3>
+                <p>Provide a short description about the job. Keep it short and to the point.</p>
+                <textarea placeholder="Description"></textarea>
+            </div>
+            <label for="catagory">Job Catagory</label>
+            <p>Select a job category to help candidates find your job post easily.</p>
+            <div class="job_catagory">
+                <select id="options" name="options">
+                    <option value="1">Information Technology(IT) and Software Development</option>
+                    <option value="2">Healthcare and Medical</option>
+                    <option value="3">Finance and Accouting</option>
+                    <option value="4">Marketing and Advertising</option>
+                    <option value="5">Sales and Business Develepoment</option>
+                    <option value="6">Education and Training</option>
+                    <option value="7">Engineering</option>
+                    <option value="8">Customer Service</option>
+                    <option value="9">Human Resources(HR) and Recuritment</option>
+                    <option value="10">Creative Arts and Design</option>
+                    <option value="11">Construction and Skilled Trades</option>
+                    <option value="12">Hospitality and Tourism</option>
+                    <option value="13">Retial and E-Commerce</option>
+                    <option value="14">Data Sciecne and Analytics</option>
+                    <option value="15">Legal and Compliance</option>
+                    <option value="16">Logistics and Supply Chain</option>
+                    <option value="17">Real Estate</option>
+                    <option value="18">Public Relation (PR) and Communication</option>
+                    <option value="19">Writting and Editing</option>
+                    <option value="20">Science and Research</option>
+                </select>
+            </div>
+            <div class="employe_type">
+                <label for="employe_type"></label>
+            </div>
+       </div>
     </div>
 </body>
 </html>

@@ -1,0 +1,16 @@
+body {
+    background-color:  #e9ecef;
+    font-family: sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+}
+
+/*Logo*/
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 3rem;
+}

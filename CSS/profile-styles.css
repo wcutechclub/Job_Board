@@ -5,6 +5,7 @@ body {
   color: var(--text-primary);
   overflow-x: hidden;
 }
+
 .flex {
   display: flex;
   align-items: center;
@@ -64,8 +65,6 @@ body {
 }
 .grid {
   display: grid;
-  row-gap: 9.6rem;
-  column-gap: 6.4rem;
 }
 .grid:not(:last-child) {
   margin-bottom: 9.6rem;
@@ -100,7 +99,6 @@ body {
 .icons {
   height: 3.2rem;
   width: 3.2rem;
-
   color: var(--text-primary);
 }
 
@@ -135,4 +133,20 @@ body {
 .nav-bar--btns:focus {
   color: var(--muted-blue);
   transform: scale(1.2);
+}
+
+/* ///////////////////////////////////////////////////////////////////
+///////////////////////////  Main ///////////////////////////////////*/
+
+.main-container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+}
+
+.profile-pic {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: #fff solid 0.5rem;
 }

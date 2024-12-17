@@ -1,0 +1,138 @@
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.primary-header,
+.secondary-header,
+.tertiary-header {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.primary-header {
+  font-size: 5.2rem;
+  margin-bottom: 3.2rem;
+  line-height: 1.05;
+}
+
+.secondary-header {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.tertiary-header {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.margin--bottom {
+  margin-bottom: 4.8rem;
+}
+
+.padding--top {
+  margin-top: 4.8rem;
+}
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid-center--v {
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-cols--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-cols--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-cols--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.align-center {
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.icons {
+  height: 3.2rem;
+  width: 3.2rem;
+
+  color: var(--text-primary);
+}
+
+/* ///////////////////////////////////////////////////////////
+///////////////////////////////  Navigation  /////////////////////// */
+.header {
+  background-color: var(--main-background);
+}
+
+.nav-bar--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  padding: 0 4.8rem;
+  height: 9.6rem;
+}
+
+.nav-btns--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.nav-bar--btns:link,
+.nav-bar--btns:visited {
+  padding: 1.6rem;
+}
+
+.nav-bar--btns:hover,
+.nav-bar--btns:focus {
+  color: var(--muted-blue);
+  transform: scale(1.2);
+}

@@ -24,15 +24,16 @@
         </div>
        <div class="form-container">
             <div class="title grid--col-2">
-                <h3>Job title</h3><br><p>A job title must describe one position only</p>
+                <h3 class="title_header">Job title</h3><br><p>A job title must describe one position only</p>
                 <input type="text" placeholder="e.g. 'Kitchen staff'">
             </div>
+            <div class="line"></div>
             <div class="description grid--col-2">
-                <h3>Job description</h3><br><p>Provide a short description about the job. Keep it short and to the point.</p>
+                <h3 class="title_header">Job description</h3><br><p>Provide a short description about the job. Keep it short and to the point.</p>
                 <textarea placeholder="Description"></textarea>
             </div>
             <div class="job_catagory grid--col-2">
-                <label for="catagory">Job Catagory</label><br><p>Select a job category to help candidates find your job post easily.</p>
+                <label for="catagory" class="title_header">Job Catagory</label><br><p>Select a job category to help candidates find your job post easily.</p>
                 <select id="options" name="options">
                     <option value="1">Information Technology(IT) and Software Development</option>
                     <option value="2">Healthcare and Medical</option>
@@ -56,17 +57,21 @@
                     <option value="20">Science and Research</option>
                 </select>
             </div>
+            <div class="line"></div>
+
             <div class="employe_type grid--col-2">
-                <label for="employe_type">Employment Type</label><br><p>Select the type of employment for this role</p>
+                <label for="employe_type" class="title_header">Employment Type</label><br><p>Select the type of employment for this role</p>
                 <select name="option" id="type_option">
                     <option value="1">Full Time</option>
                     <option value="2">Part Time</option>
                     <option value="3">Contractual</option>t
                 </select>
             </div>
+            <div class="line"></div>
+
             <div class="location">
                 <div class="location_detail">
-                    <label for="location-status">Location</label><br><p>What is the location status of the job?</p>
+                    <label for="location-status" class="title_header">Location</label><br><p>What is the location status of the job?</p>
                 </div>
                 <div class="loation_checkbox">
                     <input type="radio" id="onsite" name="location-status" value="On-site">
@@ -76,8 +81,10 @@
                 </div>
 
             </div>
+            <div class="line"></div>
+
             <div class="salary_range grid--col-2">
-                <label for="salary-range">Salary</label><br><p>What is the salary range for this position?</p>
+                <label for="salary-range" class="title_header">Salary</label><br><p>What is the salary range for this position?</p>
                 <input type="text" id="salary-range" name="salary-range" placeholder="Enter salary range (e.g., $50,000 - $60,000)" value="Negotiable"><br>
             </div>
        </div>

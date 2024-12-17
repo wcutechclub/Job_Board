@@ -43,8 +43,11 @@ body {
 .form-container{
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
-.title{
+.grid--col-2{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
 }

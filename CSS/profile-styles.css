@@ -191,6 +191,16 @@ body {
   width: 50%;
 }
 
+.resume-btn {
+  height: 4rem;
+  padding: 1.2rem 2.4rem;
+  color: #fff !important;
+  font-weight: 500 !important;
+  border-radius: 1.1rem;
+  background-color: #0066cc;
+  margin-top: 1.6rem;
+}
+
 /*/ /////////////////////////////////////////////// ///////
 /////////////// Edit Profile Detail /////////////////////*/
 .edit-profile-detail--container {

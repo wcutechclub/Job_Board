@@ -38,3 +38,13 @@ body {
     transform: scale(1.2);
     color:  #003bb5; 
 }
+
+/*Body*/
+.form-container{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

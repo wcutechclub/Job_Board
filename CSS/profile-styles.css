@@ -140,7 +140,8 @@ body {
 .main-container {
   max-width: 130rem;
   margin: 0 auto;
-  /* padding: 3.2rem; */
+  color: var(--text-primary);
+  font-family: "Roboto", sans-serif;
 }
 
 .profile-pic {
@@ -166,7 +167,31 @@ body {
   font-size: 3.4rem;
   font-weight: 600;
 }
-/*//////////////////////////////////////////////// ///////
+
+.email-link__container {
+  display: flex;
+  margin-top: 1.2rem;
+}
+.email-link {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--light-text);
+}
+.profile-detail {
+  margin-top: 1.6rem;
+}
+
+.bio-header {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.bio {
+  font-size: 1.6rem;
+  width: 50%;
+}
+
+/*/ /////////////////////////////////////////////// ///////
 /////////////// Edit Profile Detail /////////////////////*/
 .edit-profile-detail--container {
   opacity: 0;

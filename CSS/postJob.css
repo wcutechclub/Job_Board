@@ -61,3 +61,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.title_header{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.line{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-top: 0.1rem solid rgb(220, 213, 213);
+}

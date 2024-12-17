@@ -17,8 +17,7 @@ body {
 
 .container {
   max-width: 120rem;
-  margin: 0 auto;
-  padding: 0 3.2rem;
+  align-items: center;
 }
 
 .primary-header,
@@ -141,7 +140,7 @@ body {
 .main-container {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 3.2rem;
+  /* padding: 3.2rem; */
 }
 
 .profile-pic {
@@ -149,13 +148,28 @@ body {
   height: 15rem;
   border-radius: 50%;
   border: #fff solid 0.5rem;
+  margin-top: 2.4rem;
 }
 
+/*//////////////////////////////////////////////// ///////
+/////////////// Main Profile Detail /////////////////////*/
+
+.main-profile--detail__container {
+  margin-top: 2rem;
+}
+.name-container {
+  display: flex;
+  column-gap: 1.2rem;
+}
+
+.name {
+  font-size: 3.4rem;
+  font-weight: 600;
+}
+/*//////////////////////////////////////////////// ///////
+/////////////// Edit Profile Detail /////////////////////*/
 .edit-profile-detail--container {
   opacity: 0;
-  max-width: 120rem;
-  padding: 3.2rem;
-  align-items: center;
   column-gap: 9.6rem;
   row-gap: 1.6rem;
   width: 100%;

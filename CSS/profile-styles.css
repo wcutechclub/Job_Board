@@ -259,21 +259,3 @@ main {
 .email-link:focus {
   color: var(--primary-hover);
 }
-/*/ /////////////////////////////////////////////// ///////
-/////////////// Edit Profile Detail /////////////////////*/
-.edit-profile-detail--container {
-  opacity: 0;
-  column-gap: 9.6rem;
-  row-gap: 1.6rem;
-  width: 100%;
-}
-
-.profile-detail--text {
-  font-size: 2rem;
-}
-
-.detail-header {
-}
-
-.name {
-}

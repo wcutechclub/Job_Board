@@ -16,8 +16,8 @@ body {
 }
 
 .container {
-  max-width: 120rem;
-  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 
 .primary-header,
@@ -136,12 +136,14 @@ body {
 
 /* ///////////////////////////////////////////////////////////////////
 ///////////////////////////  Main ///////////////////////////////////*/
-
+main {
+  position: relative;
+}
 .main-container {
-  max-width: 130rem;
-  margin: 0 auto;
   color: var(--text-primary);
   font-family: "Roboto", sans-serif;
+  border: 1px solid #eee;
+  padding: 0 1.2rem;
 }
 
 .profile-pic {
@@ -150,13 +152,22 @@ body {
   border-radius: 50%;
   border: #fff solid 0.5rem;
   margin-top: 2.4rem;
+  position: absolute;
+  top: 10%;
 }
 
 /*//////////////////////////////////////////////// ///////
 /////////////// Main Profile Detail /////////////////////*/
 
+.gradient {
+  height: 15rem;
+  background-color: #0066cc;
+  border-top-left-radius: 1.1rem;
+  border-top-right-radius: 1.1rem;
+}
 .main-profile--detail__container {
-  margin-top: 2rem;
+  margin-top: 8rem;
+  margin-left: 1.6rem;
 }
 .name-container {
   display: flex;
@@ -188,10 +199,10 @@ body {
 
 .bio {
   font-size: 1.6rem;
-  width: 50%;
 }
 
-.resume-btn {
+.resume-btn:link,
+.resume-btn:visited {
   height: 4rem;
   padding: 1.2rem 2.4rem;
   color: #fff !important;
@@ -201,6 +212,10 @@ body {
   margin-top: 1.6rem;
 }
 
+.resume-btn:hover,
+.resume-btn:focus {
+  background-color: var(--muted-blue);
+}
 /*/ /////////////////////////////////////////////// ///////
 /////////////// Edit Profile Detail /////////////////////*/
 .edit-profile-detail--container {

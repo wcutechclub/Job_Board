@@ -50,12 +50,11 @@ body {
     border: 0.1rem solid rgb(252, 252, 252);
     border-radius: 0.6rem;
     box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
+    padding: 2rem;
 }
 .grid--col-2{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
 }
 .location{
     display: grid;
@@ -69,4 +68,7 @@ body {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-top: 0.1rem solid rgb(220, 213, 213);
+}
+.input_fields{
+    padding: 0.5rem;
 }

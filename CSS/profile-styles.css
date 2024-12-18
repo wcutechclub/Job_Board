@@ -194,11 +194,11 @@ main {
   font-weight: 600;
 }
 
-.email-link__container {
+.name-email__container {
   display: flex;
   margin-top: 1.2rem;
 }
-.email-link {
+.name-email__link {
   font-size: 1.6rem;
   text-decoration: none;
   color: var(--light-text);
@@ -207,13 +207,14 @@ main {
   margin-top: 1.6rem;
 }
 
-.bio-header {
+.detail-header {
   font-size: 1.6rem;
   margin-bottom: 1.2rem;
 }
 
 .bio {
   font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 .resume-btn:link,
@@ -230,6 +231,24 @@ main {
 .resume-btn:hover,
 .resume-btn:focus {
   background-color: var(--muted-blue);
+}
+
+.contact-header {
+  margin-top: 1.8rem;
+}
+
+.email-link:link,
+.email-link:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  letter-spacing: 0.1rem;
+  transition: all 0.3;
+}
+
+.email-link:hover,
+.email-link:focus {
+  color: var(--primary-hover);
 }
 /*/ /////////////////////////////////////////////// ///////
 /////////////// Edit Profile Detail /////////////////////*/

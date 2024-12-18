@@ -156,6 +156,18 @@ main {
   top: 10%;
 }
 
+.edit-icon {
+  color: #fff;
+  margin-right: 1.6rem;
+  margin-top: 1.6rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.edit-icon:hover,
+.edit-icon:focus {
+  transform: scale(1.2);
+}
 /*//////////////////////////////////////////////// ///////
 /////////////// Main Profile Detail /////////////////////*/
 
@@ -164,6 +176,9 @@ main {
   background-color: #0066cc;
   border-top-left-radius: 1.1rem;
   border-top-right-radius: 1.1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 .main-profile--detail__container {
   margin-top: 8rem;

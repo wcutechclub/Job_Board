@@ -144,6 +144,7 @@ main {
   font-family: "Roboto", sans-serif;
   border: 1px solid #eee;
   padding: 0 1.2rem;
+  margin-bottom: 1.6rem;
 }
 
 .profile-pic {
@@ -180,9 +181,15 @@ main {
   align-items: flex-start;
   justify-content: flex-end;
 }
+
+.empty {
+  height: 8rem;
+}
 .main-profile--detail__container {
-  margin-top: 8rem;
+  margin-top: 2.4rem;
   margin-left: 1.6rem;
+  display: flex;
+  flex-direction: column;
 }
 .name-container {
   display: flex;
@@ -194,27 +201,28 @@ main {
   font-weight: 600;
 }
 
-.name-email__container {
-  display: flex;
-  margin-top: 1.2rem;
+.gender-header {
+  margin-bottom: 1.2rem !important;
+  margin-top: 1.6rem !important;
 }
-.name-email__link {
+.gender {
   font-size: 1.6rem;
-  text-decoration: none;
-  color: var(--light-text);
 }
+
 .profile-detail {
   margin-top: 1.6rem;
 }
 
 .detail-header {
   font-size: 1.6rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
+  margin-top: 1.2rem;
 }
 
 .bio {
   font-size: 1.6rem;
   line-height: 1.5;
+  width: 100%;
 }
 
 .resume-btn:link,
@@ -222,7 +230,7 @@ main {
   height: 4rem;
   padding: 1.2rem 2.4rem;
   color: #fff !important;
-  font-weight: 500 !important;
+  font-weight: 400 !important;
   border-radius: 1.1rem;
   background-color: #0066cc;
   margin-top: 1.6rem;
@@ -239,6 +247,7 @@ main {
 
 .email-link:link,
 .email-link:visited {
+  display: block;
   font-size: 1.6rem;
   text-decoration: none;
   color: var(--primary-color);

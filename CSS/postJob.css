@@ -55,6 +55,7 @@ body {
 .grid--col-2{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 .location{
     display: grid;
@@ -71,4 +72,10 @@ body {
 }
 .input_fields{
     padding: 0.5rem;
+}
+.form__text{
+    color: #6c757d;
+    font-size: 1.6rem;
+    margin-top: 0.2rem;
+
 }

@@ -26,8 +26,8 @@
               <section class="description">
                   <div class="description__div">
                       <h2>Welcome to JobBoard!</h2>
-                      <h4>Your bridge to career opportunities.</h4>   
-                      <div class="description__text"></div>                     
+                      <h4>Your bridge to career opportunities.</h4>
+                      <div class="description__text"></div>
                         <h3 class="description__text" >🌟 For Job Seekers:</h3>
                        <p>Create your profile, showcase your skills, and connect with top recruiters. Your dream job is just a few clicks away!</p>
                        <h3  class="description__text">🔒 Your Privacy Matters:</h3>
@@ -53,7 +53,7 @@
                                     <div class="line line_two"></div>
                                 </div>
                             </div>
-                    <form class="form">
+                    <form class="signup_form">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="first-name" class="form__text">First Name</label>
@@ -66,7 +66,7 @@
                         </div>
                     <label  for="email" class="form__text">Email</label>
                     <input type="email" id="emailform__text" class="email" name="email" placeholder="Enter your email" required>
-                    <label for="options" class="form__text">Industry</label>
+                    <label for="job-category" class="form__text">Industry</label>
                     <select id="options" name="options">
                         <option value="1">Information Technology(IT) and Software Development</option>
                         <option value="2">Healthcare and Medical</option>
@@ -89,8 +89,8 @@
                         <option value="19">Writting and Editing</option>
                         <option value="20">Science and Research</option>
                     </select>
-                     <label for="choose" class="genders">Select your gender</label>
-                    <div class="gender">     
+                    <label for="gender" class="genders">Select your gender</label>
+                    <div class="gender">
                             <label><input type="radio" name="gender" value="M"> Male</label>
                             <label><input type="radio" name="gender" value="F"> Female</label>
                         </div>
@@ -104,8 +104,8 @@
                                 <input  type="password" id="password" class="password" name="password" placeholder="Enter your password" required>
                             </div>
                             <div class="form-group">
-                                <label ffor="password" class="form__text">Password confirmation</label>
-                                <input  type="password" id="password" class="confirm_password" name="password" placeholder="Confirm password" required>
+                                <label for="confirm_password" class="form__text">Password confirmation</label>
+                                <input  type="password" id="c_password" class="confirm_password" name="password" placeholder="Confirm password" required>
                             </div>
                         </div>
                         <label for="bio" class="form__text">Bio</label>
@@ -117,13 +117,14 @@
                             <button type="submit" class="signup_btn">Sign up</button>
                             <p class="askAccount">Already have an account<a href="login.html"class="login">Log in</a></p>
                     </form>
-                    
+
                 </section>
             </div>
     </div>
 
-    
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/signup.js"></script>
 </body>
 </html>

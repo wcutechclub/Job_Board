@@ -1,0 +1,253 @@
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.primary-header,
+.secondary-header,
+.tertiary-header {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.primary-header {
+  font-size: 5.2rem;
+  margin-bottom: 3.2rem;
+  line-height: 1.05;
+}
+
+.secondary-header {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.tertiary-header {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.margin--bottom {
+  margin-bottom: 4.8rem;
+}
+
+.padding--top {
+  margin-top: 4.8rem;
+}
+.grid {
+  display: grid;
+}
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid-center--v {
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-cols--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-cols--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-cols--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.align-center {
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.icons {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: var(--text-primary);
+}
+
+/* ///////////////////////////////////////////////////////////
+///////////////////////////////  Navigation  /////////////////////// */
+.header {
+  background-color: var(--main-background);
+}
+
+.nav-bar--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  padding: 0 4.8rem;
+  height: 9.6rem;
+}
+
+.nav-btns--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.nav-bar--btns:link,
+.nav-bar--btns:visited {
+  padding: 1.6rem;
+}
+
+.nav-bar--btns:hover,
+.nav-bar--btns:focus {
+  color: var(--muted-blue);
+  transform: scale(1.2);
+}
+
+/* ///////////////////////////////////////////////////////////////////
+///////////////////////////  Main ///////////////////////////////////*/
+main {
+  position: relative;
+}
+.main-container {
+  color: var(--text-primary);
+  font-family: "Roboto", sans-serif;
+  border: 1px solid #eee;
+  padding: 0 1.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.profile-pic {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: #fff solid 0.5rem;
+  margin-top: 2.4rem;
+  position: absolute;
+  top: 10%;
+}
+
+.edit-icon {
+  color: #fff;
+  margin-right: 1.6rem;
+  margin-top: 1.6rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.edit-icon:hover,
+.edit-icon:focus {
+  transform: scale(1.2);
+}
+/*//////////////////////////////////////////////// ///////
+/////////////// Main Profile Detail /////////////////////*/
+
+.gradient {
+  height: 15rem;
+  background-color: #0066cc;
+  border-top-left-radius: 1.1rem;
+  border-top-right-radius: 1.1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.empty {
+  height: 8rem;
+}
+.main-profile--detail__container {
+  margin-top: 2.4rem;
+  margin-left: 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+.name-container {
+  display: flex;
+  column-gap: 1.2rem;
+}
+
+.name {
+  font-size: 3.4rem;
+  font-weight: 600;
+}
+
+.profile-detail {
+  margin-top: 1.6rem;
+}
+
+.detail-header {
+  font-size: 1.6rem;
+  margin-bottom: 1.4rem;
+  margin-top: 1.2rem;
+}
+
+.bio {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.resume-btn:link,
+.resume-btn:visited {
+  height: 4rem;
+  padding: 1.2rem 2.4rem;
+  color: #fff !important;
+  font-weight: 400 !important;
+  border-radius: 1.1rem;
+  background-color: #0066cc;
+  margin-top: 3rem;
+}
+
+.resume-btn:hover,
+.resume-btn:focus {
+  background-color: var(--muted-blue);
+}
+
+.contact-header {
+  margin-top: 1.8rem;
+}
+
+.email-link:link,
+.email-link:visited {
+  display: block;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  letter-spacing: 0.1rem;
+  transition: all 0.3;
+}
+
+.email-link:hover,
+.email-link:focus {
+  color: var(--primary-hover);
+}

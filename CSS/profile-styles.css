@@ -201,14 +201,6 @@ main {
   font-weight: 600;
 }
 
-.gender-header {
-  margin-bottom: 1.2rem !important;
-  margin-top: 1.6rem !important;
-}
-.gender {
-  font-size: 1.6rem;
-}
-
 .profile-detail {
   margin-top: 1.6rem;
 }

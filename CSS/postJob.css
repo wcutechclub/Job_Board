@@ -79,3 +79,15 @@ body {
     margin-top: 0.2rem;
 
 }
+.post {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #0044cc;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 0.8rem;
+    width: 50%;
+}

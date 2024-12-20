@@ -40,17 +40,29 @@ body {
 }
 
 /*Body*/
+.contaner--two{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    margin-top: 10rem;   
+}
+.text{
+    font-size: 1.5rem;
+    background-color: #eaf4fe;
+    border: 0.1rem solid rgb(252, 252, 252);
+    border-radius: 0.6rem;
+    box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
+
+}
 .form-container{
     display: flex;
-    flex-direction: column;
-    height: auto;
-    width: 50%;
-    background-color: #eaf4fe;
-    margin-top: 8rem;   
+    background-color: #fff;
     border: 0.1rem solid rgb(252, 252, 252);
     border-radius: 0.6rem;
     box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
     padding: 2rem;
+    flex-direction: column;
+    height: auto;
+    width: 50%;
 }
 .grid--col-2{
     display: grid;

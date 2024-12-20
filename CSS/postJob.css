@@ -45,13 +45,14 @@ body {
     grid-template-columns: 0.2fr 1fr;
     margin-top: 10rem;   
 }
-.text{
+.side-text{
     font-size: 1.5rem;
     background-color: #eaf4fe;
     border: 0.1rem solid rgb(252, 252, 252);
     border-radius: 0.6rem;
     box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
-
+    flex: 1;
+    padding: 20px;
 }
 .form-container{
     display: flex;

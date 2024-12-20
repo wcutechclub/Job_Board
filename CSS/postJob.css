@@ -62,7 +62,7 @@ body {
 .side-text p {
     margin: 15px 0; 
     line-height: 1.8;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 .form-container{
     display: flex;
@@ -73,7 +73,8 @@ body {
     padding: 2rem;
     flex-direction: column;
     height: auto;
-    width: 50%;
+    width: 60%;
+    row-gap: 2rem;
 }
 .grid--col-2{
     display: grid;
@@ -85,7 +86,7 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 .title_header{
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     font-weight: bold;
 }
 .line{

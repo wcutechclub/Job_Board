@@ -54,6 +54,16 @@ body {
     flex: 1;
     padding: 20px;
 }
+.side-text h3 {
+    color: #0056b3;
+    margin-bottom: 3rem;
+}
+
+.side-text p {
+    margin: 15px 0; 
+    line-height: 1.8;
+    font-size: 1.6rem;
+}
 .form-container{
     display: flex;
     background-color: #fff;

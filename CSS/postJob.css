@@ -95,7 +95,7 @@ body {
     border-top: 0.1rem solid rgb(220, 213, 213);
 }
 .input_fields{
-    padding: 0.5rem;
+    padding: 1rem;
 }
 .form__text{
     color: #6c757d;
@@ -114,4 +114,47 @@ body {
     font-size: 1.5rem;
     border-radius: 0.8rem;
     width: 50%;
+}
+input[type="text"] {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+input[type="text"]:focus {
+    border-color: #003bb5; 
+}
+
+textarea {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+textarea:focus {
+    border-color: #003bb5; 
+}
+select {
+    margin-bottom: 2rem;
+    border: 1px solid rgb(220, 213, 213);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color:  #f8f9fa;
+}
+  
+select:focus {
+    border-color: #003bb5; 
+}
+.loation_checkbox{
+    font-size: 1.5rem;
 }

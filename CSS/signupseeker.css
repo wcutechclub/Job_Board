@@ -6,6 +6,7 @@ body {
     display: grid;
     grid-template-columns: 0.3fr 1fr 2fr;
     font-size: 1.6rem; 
+    max-width: 120rem;
 }
 /*Logo*/
 .logo-container {
@@ -44,7 +45,7 @@ body {
     height: auto;
     width: 35rem;
     background-color: #eaf4fe;
-    margin-top: 11rem;   
+    margin-top: 8rem;   
     border: 0.1rem solid rgb(252, 252, 252);
     border-radius: 0.6rem;
     box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
@@ -68,7 +69,7 @@ body {
     border: 0.1rem solid rgb(252, 252, 252);
     background-color: #f8f9fa;
     height: auto;
-    margin-top: 11rem;
+    margin-top: 8rem;
     width: 100rem;
     border-radius: 0.6rem;
     box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);

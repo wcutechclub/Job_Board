@@ -15,5 +15,7 @@ btnLogin.addEventListener("click", function(e){
     e.preventDefault()
     userDetail.email = inputEmail.value;
     userDetail.password = inputPassword.value
+    console.log(userDetail)
+    inputEmail.value=""
+    inputPassword.value=""
 })
-

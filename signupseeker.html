@@ -1,129 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/signupseeker.css">
-    <link rel="stylesheet" href="CSS/general.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/signupseeker.css" />
+    <link rel="stylesheet" href="CSS/general.css" />
     <title>Signup</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="logo-container">
-            <div class="vertical-bar"></div>
-            <div class="logo">
-              <span class="letter">J</span>
-              <span class="letter">O</span>
-              <span class="letter">B</span>
-              <span class="letter">B</span>
-              <span class="letter">O</span>
-              <span class="letter">A</span>
-              <span class="letter">R</span>
-              <span class="letter">D</span>
+      <div class="logo-container">
+        <div class="vertical-bar"></div>
+        <div class="logo">
+          <span class="letter">J</span>
+          <span class="letter">O</span>
+          <span class="letter">B</span>
+          <span class="letter">B</span>
+          <span class="letter">O</span>
+          <span class="letter">A</span>
+          <span class="letter">R</span>
+          <span class="letter">D</span>
+        </div>
+      </div>
+      <div class="double_container">
+        <section class="description">
+          <div class="description__div">
+            <h2>Welcome to JobBoard!</h2>
+            <h4>Your bridge to career opportunities.</h4>
+            <div class="description__text"></div>
+            <h3 class="description__text">🌟 For Job Seekers:</h3>
+            <p>
+              Create your profile, showcase your skills, and connect with top
+              recruiters. Your dream job is just a few clicks away!
+            </p>
+            <h3 class="description__text">🔒 Your Privacy Matters:</h3>
+            <p>
+              We value your data and ensure its security. Start your journey
+              with us today—sign up to unlock limitless opportunities!
+            </p>
+          </div>
+        </section>
+        <section class="signup">
+          <div class="signup_container">
+            <div class="header">
+              <h1>Sign Up</h1>
+            </div>
+            <div class="alternative_signin">
+              <button class="google">
+                <ion-icon name="logo-google" class="icon_logo"></ion-icon>
+                Google
+              </button>
+              <button class="github">
+                <ion-icon name="logo-facebook" class="icon_logo"></ion-icon>
+                Facebook
+              </button>
+            </div>
+            <div class="alternative_text">
+              <div class="line line_one"></div>
+              <p>Or continue with</p>
+              <div class="line line_two"></div>
             </div>
           </div>
-          <div class="double_container">
-              <section class="description">
-                  <div class="description__div">
-                      <h2>Welcome to JobBoard!</h2>
-                      <h4>Your bridge to career opportunities.</h4>   
-                      <div class="description__text"></div>                     
-                        <h3 class="description__text" >🌟 For Job Seekers:</h3>
-                       <p>Create your profile, showcase your skills, and connect with top recruiters. Your dream job is just a few clicks away!</p>
-                       <h3  class="description__text">🔒 Your Privacy Matters:</h3>
-                    <p>We value your data and ensure its security.
-                        Start your journey with us today—sign up to unlock limitless opportunities!
-                    </p>
-                    </div>
-                </section>
-                <section class="signup">
-                    <div class="signup_container">
-                        <div class="header">
-                            <h1>Sign Up</h1>
-                        </div>
-                        <div class="alternative_signin">
-                            <button class="google">
-                                <ion-icon name="logo-google" class="icon_logo"></ion-icon> Google</button>
-                                <button class="github">
-                                    <ion-icon name="logo-facebook" class="icon_logo"></ion-icon> Facebook</button>
-                                </div>
-                                <div class="alternative_text">
-                                    <div class="line line_one"></div>
-                                    <p>Or continue with</p>
-                                    <div class="line line_two"></div>
-                                </div>
-                            </div>
-                    <form class="form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="first-name" class="form__text">First Name</label>
-                                <input type="text" id="first-name" name="first-name" class="fname" placeholder="First Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="last-name" class="form__text lname">Last Name</label>
-                                <input type="text" id="last-name" name="last-name" class="lname" placeholder="Last Name">
-                            </div>
-                        </div>
-                    <label  for="email" class="form__text">Email</label>
-                    <input type="email" id="emailform__text" class="email" name="email" placeholder="Enter your email" required>
-                    <label for="options" class="form__text">Industry</label>
-                    <select id="options" name="options">
-                        <option value="1">Information Technology(IT) and Software Development</option>
-                        <option value="2">Healthcare and Medical</option>
-                        <option value="3">Finance and Accouting</option>
-                        <option value="4">Marketing and Advertising</option>
-                        <option value="5">Sales and Business Develepoment</option>
-                        <option value="6">Education and Training</option>
-                        <option value="7">Engineering</option>
-                        <option value="8">Customer Service</option>
-                        <option value="9">Human Resources(HR) and Recuritment</option>
-                        <option value="10">Creative Arts and Design</option>
-                        <option value="11">Construction and Skilled Trades</option>
-                        <option value="12">Hospitality and Tourism</option>
-                        <option value="13">Retial and E-Commerce</option>
-                        <option value="14">Data Sciecne and Analytics</option>
-                        <option value="15">Legal and Compliance</option>
-                        <option value="16">Logistics and Supply Chain</option>
-                        <option value="17">Real Estate</option>
-                        <option value="18">Public Relation (PR) and Communication</option>
-                        <option value="19">Writting and Editing</option>
-                        <option value="20">Science and Research</option>
-                    </select>
-                     <label for="choose" class="genders">Select your gender</label>
-                    <div class="gender">     
-                            <label><input type="radio" name="gender" value="M"> Male</label>
-                            <label><input type="radio" name="gender" value="F"> Female</label>
-                        </div>
-                        <label for="profile_link" class="form__text">Profile link</label>
-                        <input type="name" class="profile" placeholder="https://www.linkedin.com/in/yourname">
-                        <label for="resume_link" class="form__text">Resume link</label>
-                        <input type="name"  class="resume" placeholder="https://www.yourwebsite.com/resume.pd">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="password" class="form__text">Password</label>
-                                <input  type="password" id="password" class="password" name="password" placeholder="Enter your password" required>
-                            </div>
-                            <div class="form-group">
-                                <label ffor="password" class="form__text">Password confirmation</label>
-                                <input  type="password" id="password" class="confirm_password" name="password" placeholder="Confirm password" required>
-                            </div>
-                        </div>
-                        <label for="bio" class="form__text">Bio</label>
-                        <textarea id="bio" name="bio" rows="5" cols="40" type="text" placeholder="Write about yourself..."></textarea>
-                        <div class="footer">
-                            <label for="rememberme">
-                                <input type="checkbox" id="rememberme" name="rememberme" value="rememberme" class="policy" required> I have read and agreed to <span class="job">JobBoard</span> policy</label>
-                            </div>
-                            <button type="submit" class="signup_btn">Sign up</button>
-                            <p class="askAccount">Already have an account<a href="login.html"class="login">Log in</a></p>
-                    </form>
-                    
-                </section>
+          <form class="form center-container">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name" class="form__text">First Name</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  class="fname"
+                  placeholder="First Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="last-name" class="form__text lname"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  class="lname"
+                  placeholder="Last Name"
+                />
+              </div>
             </div>
+            <label for="email" class="form__text">Email</label>
+            <input
+              type="email"
+              id="emailform__text"
+              class="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <label for="options" class="form__text">Industry</label>
+            <select id="options" name="options">
+              <option value="1">
+                Information Technology(IT) and Software Development
+              </option>
+              <option value="2">Healthcare and Medical</option>
+              <option value="3">Finance and Accouting</option>
+              <option value="4">Marketing and Advertising</option>
+              <option value="5">Sales and Business Develepoment</option>
+              <option value="6">Education and Training</option>
+              <option value="7">Engineering</option>
+              <option value="8">Customer Service</option>
+              <option value="9">Human Resources(HR) and Recuritment</option>
+              <option value="10">Creative Arts and Design</option>
+              <option value="11">Construction and Skilled Trades</option>
+              <option value="12">Hospitality and Tourism</option>
+              <option value="13">Retial and E-Commerce</option>
+              <option value="14">Data Sciecne and Analytics</option>
+              <option value="15">Legal and Compliance</option>
+              <option value="16">Logistics and Supply Chain</option>
+              <option value="17">Real Estate</option>
+              <option value="18">Public Relation (PR) and Communication</option>
+              <option value="19">Writting and Editing</option>
+              <option value="20">Science and Research</option>
+            </select>
+            <label for="choose" class="genders">Select your gender</label>
+            <div class="gender">
+              <label><input type="radio" name="gender" value="M" /> Male</label>
+              <label
+                ><input type="radio" name="gender" value="F" /> Female</label
+              >
+            </div>
+            <label for="profile_link" class="form__text">Profile link</label>
+            <input
+              type="name"
+              class="profile"
+              placeholder="https://www.linkedin.com/in/yourname"
+            />
+            <label for="resume_link" class="form__text">Resume link</label>
+            <input
+              type="name"
+              class="resume"
+              placeholder="https://www.yourwebsite.com/resume.pd"
+            />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="password" class="form__text">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  class="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label ffor="password" class="form__text"
+                  >Password confirmation</label
+                >
+                <input
+                  type="password"
+                  id="password"
+                  class="confirm_password"
+                  name="password"
+                  placeholder="Confirm password"
+                  required
+                />
+              </div>
+            </div>
+            <label for="bio" class="form__text">Bio</label>
+            <textarea
+              id="bio"
+              name="bio"
+              rows="5"
+              cols="40"
+              type="text"
+              placeholder="Write about yourself..."
+            ></textarea>
+            <div class="footer">
+              <label for="rememberme">
+                <input
+                  type="checkbox"
+                  id="rememberme"
+                  name="rememberme"
+                  value="rememberme"
+                  class="policy"
+                  required
+                />
+                I have read and agreed to
+                <span class="job">JobBoard</span> policy</label
+              >
+            </div>
+            <button type="submit" class="signup_btn">Sign up</button>
+            <p class="askAccount">
+              Already have an account<a href="login.html" class="login"
+                >Log in</a
+              >
+            </p>
+          </form>
+        </section>
+      </div>
     </div>
 
-    
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

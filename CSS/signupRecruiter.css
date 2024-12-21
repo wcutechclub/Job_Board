@@ -4,11 +4,18 @@ body {
   background-color: #e9ecef;
   font-family: sans-serif;
 }
+
 .container {
   display: grid;
+  max-width: 130rem;
   grid-template-columns: 0.3fr 1fr 2fr;
-  column-gap: 15rem;
+  column-gap: 10rem;
   font-size: 1.6rem;
+}
+
+.center-container {
+  margin: 0 auto;
+  padding: 0 3.2rem;
 }
 
 /********************************************************
@@ -25,8 +32,8 @@ body {
   height: 100%;
   background-color: #0044cc;
   margin-right: 2rem;
-  /* border-radius: 5px; */
 }
+
 .logo {
   display: flex;
   flex-direction: column;
@@ -45,90 +52,105 @@ body {
   transform: scale(1.2);
   color: #003bb5;
 }
-/*Made the page*/
+
+/************************************************************
+*********************** Description *******************************/
 .double_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* margin-left: 15rem; */
+  padding: 1.6rem 3.2rem;
+  width: 100%;
 }
 
-/*Description*/
 .description {
-  height: auto;
   width: 35rem;
+  padding: 0 3.5rem;
   background-color: #eaf4fe;
-  margin-top: 11rem;
   border: 0.1rem solid rgb(252, 252, 252);
   border-radius: 0.6rem;
-  box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
+  box-shadow: 1rem 1rem 2rem rgba(214, 214, 214, 0.5);
 }
+
+.description-header {
+  width: 100%;
+}
+
 .description__div {
   display: flex;
   flex-direction: column;
-  align-items: center;
   row-gap: 2rem;
   color: #212529;
   margin-top: 4rem;
-  padding: 4rem;
+  width: 100%;
 }
 .description__text {
   margin-top: 1rem;
 }
 
-/*Signup*/
+/***********************************************************
+******************** Signup ********************************/
 .signup {
   border: 0.1rem solid rgb(252, 252, 252);
   background-color: #f8f9fa;
-  height: auto;
-  margin-top: 11rem;
-  width: 100rem;
+  /* width: 100rem; */
   border-radius: 0.6rem;
-  box-shadow: 10px 10px 20px rgba(214, 214, 214, 0.5);
+  box-shadow: 1rem 1rem 2rem rgba(214, 214, 214, 0.5);
 }
+
 .header {
   display: grid;
   justify-content: center;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
+
 .signup_container {
   display: grid;
   justify-content: center;
   margin-top: 2rem;
 }
+
 .github,
 .google {
   padding: 1rem;
-  width: 19rem;
+  width: 20rem;
   background-color: #212529;
   color: #f8f9fa;
   border-radius: 0.7rem;
 }
+
 .alternative_text {
+  display: flex;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  display: flex;
 }
+
 .line {
   margin-top: 1rem;
   border-top: 0.1rem solid rgb(220, 213, 213);
   width: 12rem;
 }
+
 .line_one {
   margin-right: 2rem;
 }
+
 .line_two {
   margin-left: 2rem;
 }
+
+/* **********************************************************
+********************* FORM ********************************* */
+
 .form {
   display: grid;
   grid-template-columns: 1fr;
-  margin-left: 8rem;
-  width: 85rem;
+  width: 70rem;
 }
+
 .form-row {
   display: flex;
-  gap: 10px;
+  gap: 1rem;
 }
 
 .form-group {

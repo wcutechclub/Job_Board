@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="CSS/signupseeker.css" />
     <link rel="stylesheet" href="CSS/general.css" />
     <title>Signup</title>
+
+    <script defer src="signupseeker.js"></script>
   </head>
   <body>
     <div class="container">
@@ -82,7 +84,7 @@
                   type="text"
                   id="last-name"
                   name="last-name"
-                  class="lname"
+                  class="last--name"
                   placeholder="Last Name"
                 />
               </div>
@@ -97,35 +99,83 @@
               required
             />
             <label for="options" class="form__text">Industry</label>
-            <select id="options" name="options">
-              <option value="1">
+            <select id="options" class="industry-type" name="options">
+              <option class="industry-option" value="1">
                 Information Technology(IT) and Software Development
               </option>
-              <option value="2">Healthcare and Medical</option>
-              <option value="3">Finance and Accouting</option>
-              <option value="4">Marketing and Advertising</option>
-              <option value="5">Sales and Business Develepoment</option>
-              <option value="6">Education and Training</option>
-              <option value="7">Engineering</option>
-              <option value="8">Customer Service</option>
-              <option value="9">Human Resources(HR) and Recuritment</option>
-              <option value="10">Creative Arts and Design</option>
-              <option value="11">Construction and Skilled Trades</option>
-              <option value="12">Hospitality and Tourism</option>
-              <option value="13">Retial and E-Commerce</option>
-              <option value="14">Data Sciecne and Analytics</option>
-              <option value="15">Legal and Compliance</option>
-              <option value="16">Logistics and Supply Chain</option>
-              <option value="17">Real Estate</option>
-              <option value="18">Public Relation (PR) and Communication</option>
-              <option value="19">Writting and Editing</option>
-              <option value="20">Science and Research</option>
+              <option class="industry-option" value="2">
+                Healthcare and Medical
+              </option>
+              <option class="industry-option" value="3">
+                Finance and Accouting
+              </option>
+              <option class="industry-option" value="4">
+                Marketing and Advertising
+              </option>
+              <option class="industry-option" value="5">
+                Sales and Business Develepoment
+              </option>
+              <option class="industry-option" value="6">
+                Education and Training
+              </option>
+              <option class="industry-option" value="7">Engineering</option>
+              <option class="industry-option" value="8">
+                Customer Service
+              </option>
+              <option class="industry-option" value="9">
+                Human Resources(HR) and Recuritment
+              </option>
+              <option class="industry-option" value="10">
+                Creative Arts and Design
+              </option>
+              <option class="industry-option" value="11">
+                Construction and Skilled Trades
+              </option>
+              <option class="industry-option" value="12">
+                Hospitality and Tourism
+              </option>
+              <option class="industry-option" value="13">
+                Retial and E-Commerce
+              </option>
+              <option class="industry-option" value="14">
+                Data Sciecne and Analytics
+              </option>
+              <option class="industry-option" value="15">
+                Legal and Compliance
+              </option>
+              <option class="industry-option" value="16">
+                Logistics and Supply Chain
+              </option>
+              <option class="industry-option" value="17">Real Estate</option>
+              <option class="industry-option" value="18">
+                Public Relation (PR) and Communication
+              </option>
+              <option class="industry-option" value="19">
+                Writting and Editing
+              </option>
+              <option class="industry-option" value="20">
+                Science and Research
+              </option>
             </select>
             <label for="choose" class="genders">Select your gender</label>
             <div class="gender">
-              <label><input type="radio" name="gender" value="M" /> Male</label>
               <label
-                ><input type="radio" name="gender" value="F" /> Female</label
+                ><input
+                  class="gender-input"
+                  type="radio"
+                  name="gender"
+                  value="M"
+                />
+                Male</label
+              >
+              <label
+                ><input
+                  class="gender-input"
+                  type="radio"
+                  name="gender"
+                  value="F"
+                />
+                Female</label
               >
             </div>
             <label for="profile_link" class="form__text">Profile link</label>
@@ -145,7 +195,7 @@
                 <label for="password" class="form__text">Password</label>
                 <input
                   type="password"
-                  id="password"
+                  id="password1"
                   class="password"
                   name="password"
                   placeholder="Enter your password"

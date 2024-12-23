@@ -503,6 +503,7 @@ body {
 .test-card--detail {
   font-size: 1.6rem;
   text-align: center;
+  line-height: 1.2;
 }
 
 /* /////////////////////////////////////////////////

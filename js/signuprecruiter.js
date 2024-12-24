@@ -8,16 +8,16 @@ const inputLastName = document.getElementById("last-name");
 const inputEmail = document.querySelector(".email");
 const passwordInput = document.querySelector(".password");
 const confirmPasswordInput = document.querySelector(".confirm_password");
-const inputResumeLink = document.querySelector(".resume");
-
-///////////////////////////////////////////////////////
-const industryType = document.querySelector(".industry-type");
-const genderInput = document.querySelector(".gender-input");
 
 const inputProfileLink = document.querySelector(".profile");
 const inputBio = document.getElementById("bio");
 
 const btn = document.querySelector(".signup_btn");
+
+function getSelectedGender() {
+  const selectedGender = document.querySelector('input[name="gender"]:checked');
+  return selectedGender ? selectedGender.value : null; // Return value or null if nothing is selected
+}
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -26,16 +26,12 @@ form.addEventListener("submit", async function (e) {
       first_name: inputFirstName.value,
       last_name: inputLastName.value,
       email: inputEmail.value,
-      gender: genderInput.value,
+      gender: getSelectedGender(),
       password: passwordInput.value,
       bio: inputBio.value,
-      job_category: industryType.value,
-      resume_url: inputResumeLink.value,
       profile_pic_url: inputProfileLink.value,
-      user_type: "JF",
+      user_type: "JP",
     };
-    console.log(signUpData);
-    
     try {
       const response = await fetch( 'http://localhost:8000/user/create/', {
         method: 'POST',

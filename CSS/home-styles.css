@@ -90,9 +90,8 @@
 }
 
 .icons {
-  height: 4.8rem;
-  width: 4.8rem;
-  margin-bottom: 3.2rem;
+  height: 4rem;
+  width: 4rem;
   margin-right: 1.6rem;
   color: var(--text-primary);
 }
@@ -107,6 +106,15 @@
 .main-container {
   color: var(--text-primary);
   font-family: "Roboto", sans-serif;
+}
+
+input {
+  outline: none;
+}
+
+input:hover,
+input:focus {
+  border: none;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////
@@ -140,4 +148,32 @@
 .nav-bar--btns:focus {
   color: var(--muted-blue);
   transform: scale(1.2);
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-self: center;
+}
+
+.search-icon {
+  position: absolute;
+  width: 2.6rem;
+  height: 2.6rem;
+  margin-left: 1.2rem;
+  color: var(--light-text);
+}
+
+.search-input {
+  width: 45rem;
+  padding: 1.2rem 4.8rem;
+  border: 0.1rem solid #fff;
+  border-radius: 1.8rem;
+  transition: all 0.3s;
+}
+
+.search-input:hover,
+.search-input:focus {
+  border: 0.1rem solid #555;
 }

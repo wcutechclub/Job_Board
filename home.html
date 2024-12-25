@@ -18,15 +18,44 @@
       <header class="header section">
         <nav class="nav-bar--container">
           <a class="nav-bar--btns btn" href="#">Home</a>
+
+          <div class="search-box">
+            <label for="search">
+              <ion-icon
+                class="search-icon icons"
+                name="search-outline"
+              ></ion-icon>
+            </label>
+            <input
+              class="search-input"
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Search"
+            />
+          </div>
           <div class="nav-btns--container">
             <a class="nav-bar--btns btn" href="#">Profile</a>
             <a class="nav-bar--btns btn" href="#">My Jobs</a>
             <a class="nav-bar--btns btn" href="#">
-              <ion-icon class="icons" name="log-out-outline"></ion-icon>
+              <ion-icon
+                class="icons logout-btn"
+                name="log-out-outline"
+              ></ion-icon>
             </a>
           </div>
         </nav>
       </header>
     </div>
+
+    <!-- Script -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

@@ -91,7 +91,7 @@ input:focus {
 }
 
 .hidden {
-  opacity: 0;
+  display: none;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////
@@ -165,11 +165,13 @@ input:focus {
 
 .side-bar--container {
   background-color: var(--soft-blue);
+  transition: all 0.3s;
   height: 100vh;
 }
 
 .dropdown {
   padding: 1.6rem 3.2rem;
+  transition: all 0.5s;
 }
 
 .dropdown-header__box {
@@ -177,6 +179,7 @@ input:focus {
   align-items: center;
   margin-bottom: 1.6rem;
   position: relative;
+  cursor: pointer;
 }
 
 .dropdown-icon {
@@ -184,12 +187,17 @@ input:focus {
   width: 2.2rem;
   margin-left: 3.2rem;
   margin-top: 0.8rem;
-  transition: all 0.2s;
+  transition: opacity 0.3s ease;
 }
 
 .icon-down {
   position: absolute;
   left: 47.5%;
+}
+
+.icon-visible {
+  opacity: 1;
+  visibility: hidden;
 }
 
 .dropdown-header {
@@ -199,10 +207,21 @@ input:focus {
 
 .job-type__box {
   gap: 1rem;
+  transform: translateY(-1rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.job-type__box--active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .job-type {
   font-size: 1.6rem;
+  cursor: pointer;
 }
 .job-type--checkbox {
   display: flex;
@@ -210,6 +229,7 @@ input:focus {
   gap: 1rem;
 }
 .job-type-input {
+  cursor: pointer;
   height: 1.6rem;
   width: 1.6rem;
 }

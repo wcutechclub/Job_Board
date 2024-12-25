@@ -104,5 +104,40 @@
   text-decoration: none;
 }
 
+.main-container {
+  color: var(--text-primary);
+  font-family: "Roboto", sans-serif;
+}
+
 /* ////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////// HEADER ////////////////////////////////////////////*/
+.header {
+  background-color: var(--main-background);
+}
+
+.nav-bar--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  padding: 0 4.8rem;
+  height: 9.6rem;
+}
+
+.nav-btns--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.nav-bar--btns:link,
+.nav-bar--btns:visited {
+  padding: 1.6rem;
+}
+
+.nav-bar--btns:hover,
+.nav-bar--btns:focus {
+  color: var(--muted-blue);
+  transform: scale(1.2);
+}

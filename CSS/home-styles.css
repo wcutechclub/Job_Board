@@ -204,3 +204,12 @@ input:focus {
 .job-type {
   font-size: 1.6rem;
 }
+.job-type--checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.job-type-input {
+  height: 1.6rem;
+  width: 1.6rem;
+}

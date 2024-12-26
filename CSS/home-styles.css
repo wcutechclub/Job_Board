@@ -78,6 +78,11 @@ input:focus {
   height: 9.6rem;
 }
 
+.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
 .nav-btns--container {
   display: flex;
   justify-content: space-between;
@@ -124,24 +129,32 @@ input:focus {
   border: 0.1rem solid #555;
 }
 
-/*
-//////////////////////////////////////////////////////////////////////
- ///////////////////////////// Side-Bar  //////////////////////////////////*/
 .main {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  /* max-width: 130rem; */
+  overflow-y: hidden;
+  height: 100vh;
 }
 
 .side-bar--container {
-  background-color: var(--soft-blue);
   transition: all 0.3s;
-  height: 100vh;
+  overflow: hidden;
+  border-right: 0.01rem solid var(--main-background);
+  margin: 1.6rem 0;
 }
+
+.job-cards--container {
+  padding: 0 3.2rem;
+  overflow-y: auto;
+}
+/*
+//////////////////////////////////////////////////////////////////////
+ ///////////////////////////// Side-Bar  //////////////////////////////////*/
 
 .dropdown {
   padding: 1.6rem 3.2rem;
   transition: all 0.5s;
+  margin-top: 1.6rem;
 }
 
 .dropdown-header__box {
@@ -209,23 +222,14 @@ input:focus {
 /*
 //////////////////////////////////////////////////////////////////////
  ///////////////////////////// Job Cards  //////////////////////////////////*/
-.job-cards--container {
-  padding: 1.6rem;
-}
 
-/* .job-cards:not(:first-child) {
-  border-top: 0.1rem solid #555;
-} */
 .job-cards {
   padding: 1.6rem 2.4rem;
   gap: 1.2rem;
-  border-bottom: 0.01rem solid #555;
+  border-bottom: 0.01rem solid #dee2e6;
 }
 .card-text {
   font-size: 1.6rem;
-}
-
-.post-date {
 }
 
 .light-text {
@@ -259,14 +263,8 @@ input:focus {
   align-items: center;
 }
 
-.job-location {
-}
-
 .type {
   margin-left: 1.6rem;
-}
-
-.job-type {
 }
 
 .salary-range {

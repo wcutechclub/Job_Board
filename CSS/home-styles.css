@@ -176,6 +176,7 @@ input:focus {
 }
 
 .job-type__box {
+  position: absolute;
   gap: 1rem;
   transform: translateY(-1rem);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -184,6 +185,7 @@ input:focus {
 }
 
 .job-type__box--active {
+  position: relative;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -246,6 +248,9 @@ input:focus {
   margin-right: 1.6rem;
 }
 
+.date {
+  font-size: 1.3rem;
+}
 .cards-icon {
   width: 2.4rem;
   height: 2.4rem;

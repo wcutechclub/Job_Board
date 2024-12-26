@@ -46,19 +46,19 @@
       <main class="main">
         <div class="side-bar--container">
           <div class="dropdown flex-col">
-            <div class="dropdown-header__box">
-              <span class="dropdown-header">Job Type </span>
+            <div class="dropdown-header__box-type dropdown-header__box">
+              <span class="dropdown-header">Job Type</span>
               <ion-icon
-                class="dropdown-icon icon-down"
+                class="dropdown-icon icon-down-type icon-down"
                 name="chevron-down-outline"
               ></ion-icon>
               <ion-icon
-                class="dropdown-icon icon-up icon-visible"
+                class="dropdown-icon icon-up icon-up-type icon-visible"
                 name="chevron-up-outline"
               ></ion-icon>
             </div>
 
-            <div class="job-type__box flex-col">
+            <div class="job-type__box job-type__box-type flex-col">
               <div class="job-type--checkbox">
                 <input type="checkbox" id="CON" class="job-type-input" />
                 <label class="job-type" for="CON">Contractual</label>
@@ -73,10 +73,38 @@
               </div>
             </div>
           </div>
+
+          <div class="dropdown flex-col">
+            <div class="dropdown-header__box dropdown-header__box-location">
+              <span class="dropdown-header">Location</span>
+              <ion-icon
+                class="dropdown-icon icon-down icon-down-location"
+                name="chevron-down-outline"
+              ></ion-icon>
+              <ion-icon
+                class="dropdown-icon icon-up icon-up-location icon-visible"
+                name="chevron-up-outline"
+              ></ion-icon>
+            </div>
+
+            <div class="job-type__box job-type__box-location flex-col">
+              <div class="job-type--checkbox">
+                <input type="checkbox" id="CON" class="job-type-input" />
+                <label class="job-type" for="CON">On-Site</label>
+              </div>
+              <div class="job-type--checkbox">
+                <input type="checkbox" id="FT" class="job-type-input" />
+                <label class="job-type" for="FT">Remote</label>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="job-cards--container">
           <div class="job-cards flex-col">
-            <span class="post-date light-text">Dec 1</span>
+            <div class="flex-container">
+              <span class="light-text date">Posted on</span>
+              <span class="post-date date light-text">Dec 1</span>
+            </div>
             <h2 class="job-title card-text">
               Front-End Development With React
             </h2>

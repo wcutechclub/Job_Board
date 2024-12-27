@@ -2,7 +2,8 @@
 
 const inputEmail = document.querySelector(".email");
 const inputPassword = document.querySelector(".password");
-const btnLogin = document.querySelector(".signin");
+const btnLogin = document.querySelector( ".signin" );
+const errorMessage = document.querySelector( ".error_message-container" );
 
 let headers = {
     'Accept': 'application/json',
@@ -31,13 +32,16 @@ btnLogin.addEventListener("click", async function (e) {
             console.log("Login successful:", data);
 
             const token = data.token;
+            const userId = data.user_id;
 
             localStorage.setItem("authToken", token);
+            localStorage.setItem("userId", userId);
 
             window.location.href = "/profile.html";
         } else {
-            const errorData = await response.json();
-            alert("Login failed: " + (errorData.detail || "Please check your credentials."));
+            inputEmail.classList.add( 'error' );
+            inputPassword.classList.add( 'error' );
+            errorMessage.innerHTML = '<p>Please ensure that your email and password are correct.</p>';
         }
     } catch (error) {
         console.error("Error: ", error);

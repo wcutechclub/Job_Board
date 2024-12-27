@@ -47,6 +47,7 @@ const data = {
   description:
     "Develop and maintain user-facing | | features for a web application | | using React.js.",
 };
+
 const data1 = {
   title: "IS",
   catagory: "Information Technology",
@@ -57,6 +58,7 @@ const data1 = {
   description:
     "Develop and maintain user-facing | | features for a web application | | using React.js.",
 };
+
 const data2 = {
   title: "Health",
   catagory: "Health Care",

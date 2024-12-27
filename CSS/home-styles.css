@@ -189,19 +189,19 @@ input:focus {
 }
 
 .job-type__box {
-  position: absolute;
+  position: relative;
   gap: 1rem;
-  transform: translateY(-1rem);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
 }
 
 .job-type__box--active {
-  position: relative;
-  opacity: 1;
-  visibility: visible;
+  position: absolute;
   transform: translateY(0);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-1rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .job-type {
@@ -228,6 +228,11 @@ input:focus {
   gap: 1.2rem;
   border-bottom: 0.01rem solid #dee2e6;
 }
+
+.job-cards:last-child {
+  margin-bottom: 3.2rem;
+}
+
 .card-text {
   font-size: 1.6rem;
 }
@@ -255,10 +260,12 @@ input:focus {
 .date {
   font-size: 1.3rem;
 }
+
 .cards-icon {
   width: 2.4rem;
   height: 2.4rem;
 }
+
 .icon--text {
   align-items: center;
 }

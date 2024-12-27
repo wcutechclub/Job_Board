@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/home-styles.css" />
+    <link rel="stylesheet" href="/CSS/general.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="/js/home.js"></script>
+    <title>HOME</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="header section">
+        <nav class="nav-bar--container">
+          <a class="nav-bar--btns btn" href="#">Home</a>
+          <div class="search-box">
+            <ion-icon class="search-icon" name="search-outline"></ion-icon>
+            <label for="search"> </label>
+            <input
+              class="search-input"
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Search"
+            />
+          </div>
+          <div class="nav-btns--container">
+            <a class="nav-bar--btns btn" href="#">My Jobs</a>
+            <a class="nav-bar--btns btn" href="#">Profile</a>
+            <a class="nav-bar--btns btn" href="#">
+              <ion-icon
+                class="icons logout-btn"
+                name="log-out-outline"
+              ></ion-icon>
+            </a>
+          </div>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="side-bar--container">
+          <div class="dropdown flex-col">
+            <div class="dropdown-header__box-type dropdown-header__box">
+              <span class="dropdown-header">Job Type</span>
+              <ion-icon
+                class="dropdown-icon icon-down-type icon-down icon-visible"
+                name="chevron-down-outline"
+              ></ion-icon>
+              <ion-icon
+                class="dropdown-icon icon-up icon-up-type"
+                name="chevron-up-outline"
+              ></ion-icon>
+            </div>
+
+            <div class="job-type__box job-type__box-type flex-col">
+              <div class="job-type--checkbox">
+                <input type="checkbox" id="CON" class="job-type-input" />
+                <label class="job-type" for="CON">Contractual</label>
+              </div>
+              <div class="job-type--checkbox">
+                <input type="checkbox" id="FT" class="job-type-input" />
+                <label class="job-type" for="FT">Full Time</label>
+              </div>
+              <div class="job-type--checkbox">
+                <input type="checkbox" id="PT" class="job-type-input" />
+                <label class="job-type" for="PT">Part Time</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown flex-col">
+            <div class="dropdown-header__box dropdown-header__box-location">
+              <span class="dropdown-header">Location</span>
+              <ion-icon
+                class="dropdown-icon icon-down icon-down-location icon-visible"
+                name="chevron-down-outline"
+              ></ion-icon>
+              <ion-icon
+                class="dropdown-icon icon-up icon-up-location"
+                name="chevron-up-outline"
+              ></ion-icon>
+            </div>
+
+            <div class="job-type__box job-type__box-location flex-col">
+              <div class="job-type--checkbox">
+                <input type="checkbox" id="CON" class="job-type-input" />
+                <label class="job-type" for="CON">On-Site</label>
+              </div>
+              <div class="job-type--checkbox">
+                <input type="checkbox" id="FT" class="job-type-input" />
+                <label class="job-type" for="FT">Remote</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="job-cards--container">
+          <div class="job-cards flex-col">
+            <div class="flex-container">
+              <span class="light-text date">Posted on</span>
+              <span class="post-date date light-text">Dec 1</span>
+            </div>
+            <h2 class="job-title card-text">
+              Front-End Development With React
+            </h2>
+            <div class="flex-container">
+              <span class="job-category card-text">Software Engineering</span>
+
+              <div class="flex-container">
+                <span class="card-text salary salary-type light-text"
+                  >Fixed Salary -</span
+                >
+                <span class="salary-range salry card-text light-text"
+                  >70,000$ - 80,000$</span
+                >
+              </div>
+            </div>
+            <div class="flex-container">
+              <div class="flex-container icon--text">
+                <!-- <span class="card-text location">Location -</span> -->
+                <ion-icon class="cards-icon" name="location-outline"></ion-icon>
+                <span class="job-location card-text">Remote</span>
+              </div>
+              <div class="flex-container type">
+                <span class="card-text type">Type -</span>
+                <span class="job-type card-text">Full Time</span>
+              </div>
+            </div>
+
+            <p class="description card-text">
+              Develop and maintain user-facing | | features for a web
+              application | | using React.js.
+            </p>
+
+            <a class="btn apply-btn" href="#">Apply</a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Script -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

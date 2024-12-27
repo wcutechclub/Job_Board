@@ -1,6 +1,7 @@
 body {
     background-color:  #e9ecef;
     font-family: sans-serif;
+    position: relative;
 }
 
 .container{
@@ -174,7 +175,7 @@ input[type="password"]:focus {
 
 /* Error Message*/
 input[type="email"].error{
-    border-color: red;  
+    border-color: red;
 }
 
 input[type="password"].error{

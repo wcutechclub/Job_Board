@@ -32,8 +32,10 @@ btnLogin.addEventListener("click", async function (e) {
             console.log("Login successful:", data);
 
             const token = data.token;
+            const userId = data.user_id;
 
             localStorage.setItem("authToken", token);
+            localStorage.setItem("userId", userId);
 
             window.location.href = "/profile.html";
         } else {

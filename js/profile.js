@@ -5,7 +5,10 @@ const bioText = document.querySelector( '.bio' );
 const userEmail = document.querySelector( '.email-link' );
 const userResume = document.querySelector( '.resume-btn' );
 
-const token = localStorage.getItem("authToken");
+const logoutBtn = document.querySelector( '.logout-btn' );
+
+const token = localStorage.getItem( "authToken" );
+const userId = localStorage.getItem( "userId" );
 
 if ( !token ) {
   alert( "You need to log in!" );
@@ -24,7 +27,6 @@ fetch("http://localhost:8000/user/me/", {
     throw new Error("Failed to fetch profile data");
 })
   .then( data => {
-  console.log(data);
   firstName.innerText = data.first_name;
   lastName.innerText = data.last_name;
   bioText.innerText = data.bio;
@@ -34,3 +36,21 @@ fetch("http://localhost:8000/user/me/", {
 })
 .catch(error => console.error("Error:", error));
 
+logoutBtn.addEventListener( 'click', async function (e) {
+  e.preventDefault();
+  await fetch( 'http://localhost:8000/user/logout/', {
+    method: 'POST',
+    headers: {
+      "Authorization": `Token ${ token }`,
+      "Content-Type": "application/json",
+    },
+  } ).then( response => {
+    if ( response.ok ) {
+      localStorage.clear(token);
+      localStorage.clear( userId );
+      window.location.href = 'index.html';
+      return;
+    };
+    throw new Error( "Faild to logout." );
+  } )
+})

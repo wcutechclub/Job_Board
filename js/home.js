@@ -26,6 +26,9 @@ const dropdownLocationContent = document.querySelector(
 const jobCard = document.querySelector(".job-cards--container");
 
 const searchInput = document.getElementById( "search" );
+
+const logoutBtn = document.querySelector( '.logout-btn' );
+
 //////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 
@@ -115,3 +118,22 @@ const displayJobs = function (data) {
 };
 
 getJobs(displayJobs);
+
+logoutBtn.addEventListener( 'click', async function (e) {
+  e.preventDefault();
+  await fetch( 'http://localhost:8000/user/logout/', {
+    method: 'POST',
+    headers: {
+      "Authorization": `Token ${ token }`,
+      "Content-Type": "application/json",
+    },
+  } ).then( response => {
+    if ( response.ok ) {
+      localStorage.clear(token);
+      localStorage.clear( userId );
+      window.location.href = 'index.html';
+      return;
+    };
+    throw new Error( "Faild to logout." );
+  } )
+})

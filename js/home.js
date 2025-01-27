@@ -72,9 +72,21 @@ const displayJobType = type => {
   if ( type === "PT" ) return "Part Time";
 }
 
-const displayJobs = function (data) {
+const displayJobs = function ( data ) {
   if ( jobCard.innerHTML ) {
     jobCard.innerHTML = '';
+  }
+
+  if ( !data.length ) {
+    jobCard.insertAdjacentHTML(
+      "beforeend",
+      `<div class="invalid__job-container">
+      <h2>Oops! No Jobs Found</h2 >
+      <p>It looks We couldn't find any jobs matching your search.
+      Try using different keywords or check our
+      popular job categories fro more options.
+      </div > ` );
+    return;
   }
 
   data.forEach( function ( job ) {

@@ -172,12 +172,14 @@ body {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 600;
-  text-decoration: none;
   transition: all 0.3s;
+  padding: 0.8rem 1.6rem;
+  color: #fff;
+  border-radius: 1.1rem;
 }
 
 .edit-btn {
-  background-color: var(--accent-green);
+  background-color: var(--primary-color);
 }
 
 .close-btn {

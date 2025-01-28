@@ -154,6 +154,17 @@ body {
   height: 100vh;
 }
 
+.main-header-container {
+  padding: 1.6rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-header {
+  font-size: 2.4rem;
+}
+
 .job-cards--container {
   padding: 0 3.2rem;
   overflow-y: auto;

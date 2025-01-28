@@ -147,13 +147,6 @@ body {
  /////////////////////////////////////////////////////////////////////////////////////////
  */
 
-.main {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  overflow-y: hidden;
-  height: 100vh;
-}
-
 .main-header-container {
   padding: 1.6rem;
   width: 100%;
@@ -163,6 +156,32 @@ body {
 
 .main-header {
   font-size: 2.4rem;
+}
+
+.filter-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.filter-text {
+  font-size: 1.6rem;
+}
+
+.cards-btn {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.edit-btn {
+  background-color: var(--accent-green);
+}
+
+.close-btn {
+  background-color: var(--red);
 }
 
 .job-cards--container {
@@ -224,26 +243,3 @@ body {
 .status-close {
   background-color: var(--red);
 }
-
-/* 
-.cards-icon {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-
-.icon--text {
-  align-items: center;
-}
-
-.type {
-  margin-left: 1.6rem;
-}
-
-.salary-range {
-  font-size: 1.2rem;
-}
-
-.description {
-  margin-top: 1.2rem;
-  letter-spacing: 0.05rem;
-} */

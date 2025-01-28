@@ -101,6 +101,12 @@ body {
   color: var(--text-primary);
 }
 
+.flex-container {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
 /* 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -141,14 +147,29 @@ body {
  /////////////////////////////////////////////////////////////////////////////////////////
  */
 
+.main {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+.job-cards--container {
+  padding: 0 3.2rem;
+  overflow-y: auto;
+}
+
 .job-cards {
   padding: 1.6rem 2.4rem;
-  gap: 1.2rem;
   border-bottom: 0.01rem solid #dee2e6;
+  gap: 1.6rem;
 }
 
 .job-cards:last-child {
   margin-bottom: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }
 
 .card-text {
@@ -157,7 +178,7 @@ body {
 
 .light-text {
   font-size: 1.6rem;
-  color: var(--light-text);
+  color: var(--text-primary);
 }
 
 .job-title {
@@ -179,6 +200,21 @@ body {
   font-size: 1.3rem;
 }
 
+.status {
+  margin-left: 1.6rem;
+  padding: 0.3rem 1rem;
+  color: #fff;
+  border-radius: 11px;
+}
+
+.status-active {
+  background-color: var(--accent-green);
+}
+.status-close {
+  background-color: var(--red);
+}
+
+/* 
 .cards-icon {
   width: 2.4rem;
   height: 2.4rem;
@@ -199,33 +235,4 @@ body {
 .description {
   margin-top: 1.2rem;
   letter-spacing: 0.05rem;
-}
-
-.apply-btn:link,
-.apply-btn:visited {
-  align-self: flex-end;
-  margin-top: 1.6rem;
-  background-color: var(--primary-color);
-  width: fit-content;
-  padding: 0.8rem 2.4rem;
-  color: #fff;
-  border-radius: 1rem;
-  transition: all 0.3s;
-}
-
-.apply-btn:hover,
-.apply-btn:focus {
-  background-color: var(--primary-hover);
-}
-
-.main {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  overflow-y: hidden;
-  height: 100vh;
-}
-
-.job-cards--container {
-  padding: 0 3.2rem;
-  overflow-y: auto;
-}
+} */

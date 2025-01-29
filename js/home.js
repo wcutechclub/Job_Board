@@ -49,8 +49,8 @@ dropdownLocation.addEventListener("click", function () {
 
 ////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
-const getJobs = async function (render) {
-  fetch( "http://localhost:8000/jobs/", {
+const getJobs = async function (sourceLink) {
+  fetch( sourceLink, {
     method: 'GET',
     headers: {
       "Authorization": `Token ${token}`,
@@ -62,7 +62,7 @@ const getJobs = async function (render) {
       throw new Error( "Failed to fetch this page" );
     } )
     .then( data => {
-      render(data);
+      displayJobs(data);
   })
 }
 
@@ -72,8 +72,24 @@ const displayJobType = type => {
   if ( type === "PT" ) return "Part Time";
 }
 
-const displayJobs = function (data) {
-  data.forEach(function (job) {
+const displayJobs = function ( data ) {
+  if ( jobCard.innerHTML ) {
+    jobCard.innerHTML = '';
+  }
+
+  if ( !data.length ) {
+    jobCard.insertAdjacentHTML(
+      "beforeend",
+      `<div class="invalid__job-container">
+      <h2>Oops! No Jobs Found</h2 >
+      <p>It looks We couldn't find any jobs matching your search.
+      Try using different keywords or check our
+      popular job categories fro more options.
+      </div > ` );
+    return;
+  }
+
+  data.forEach( function ( job ) {
     const html = `
   <div class="job-cards flex-col">
             <div class="flex-container">
@@ -117,7 +133,8 @@ const displayJobs = function (data) {
   });
 };
 
-getJobs(displayJobs);
+// getJobs(displayJobs);
+getJobs("http://localhost:8000/jobs/");
 
 logoutBtn.addEventListener( 'click', async function (e) {
   e.preventDefault();
@@ -136,4 +153,12 @@ logoutBtn.addEventListener( 'click', async function (e) {
     };
     throw new Error( "Faild to logout." );
   } )
-})
+} )
+
+const searchQuery = document.getElementById( 'search' );
+
+searchQuery.addEventListener( 'keydown', async function (e) {
+  if ( e.key === 'Enter' ) {
+    getJobs( `http://localhost:8000/jobs?search=${ this.value }` );
+  }
+} );

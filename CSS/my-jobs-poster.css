@@ -279,6 +279,13 @@ body {
   border-radius: 11px;
 }
 
+.applicant-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
 .status-active {
   background-color: var(--accent-green);
 }

@@ -4,6 +4,11 @@ const filterDropdown = document.querySelector(".filter-dropdown");
 const sortBox = document.querySelector(".sort-dropdown--container");
 const sortDropdown = document.querySelector(".sort-dropdown");
 
+// Applicants
+const numApplicants = document.querySelector(".num-applicants");
+const applicantsBtn = document.querySelector(".applicants-btn");
+const applicantsList = document.querySelector(".applicant-list");
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -17,4 +22,8 @@ filterBox.addEventListener("click", function () {
 
 sortBox.addEventListener("click", function () {
   dropdown(sortDropdown);
+});
+
+applicantsBtn.addEventListener("click", function () {
+  dropdown(applicantsList);
 });

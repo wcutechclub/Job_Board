@@ -279,6 +279,9 @@ body {
   border-radius: 11px;
 }
 
+.applicants-btn {
+  cursor: pointer;
+}
 .applicant-list {
   display: flex;
   flex-direction: column;

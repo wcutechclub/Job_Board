@@ -27,32 +27,42 @@
         <h2 class="main-header">MY JOBS</h2>
       </div>
       <div class="filter-box">
-        <div class="filter-dropdown--container">
-          <div class="flex-container">
-            <span class="filter-text">Filter: </span>
-            <span class="filter-text all">All Jobs</span>
-            <span class="filter-text active filter-deactivate">Active</span>
-            <span class="filter-text close filter-deactivate">Close</span>
+        <div class="dropdown-container">
+          <div class="flex-container filter-dropdown--container">
+            <span class="filter-text">Filter</span>
             <ion-icon name="caret-down-outline"></ion-icon>
           </div>
           <div class="filter-dropdown dropdown dropdown__box--active">
-            <span class="filter-text alldr">All Jobs</span>
-            <span class="filter-text activedr">Active</span>
-            <span class="filter-text close">Close</span>
+            <div class="checkbox">
+              <input type="checkbox" id="all" class="filter-input" />
+              <label class="filter-text" for="all">All Jobs</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="active" class="filter-input" />
+              <label class="filter-text" for="active">Active</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="close" class="filter-input" />
+              <label class="filter-text" for="close">Close</label>
+            </div>
           </div>
         </div>
 
-        <div class="sort-dropdown--container">
-          <div class="flex-container">
+        <div class="dropdown-container">
+          <div class="flex-container sort-dropdown--container">
             <span class="filter-text">Sort By: </span>
-            <span class="filter-text date">Date Posted</span>
-            <span class="filter-text filter-deactivate name">Name</span>
             <ion-icon name="caret-down-outline"></ion-icon>
             <!-- <ion-icon name="caret-up-outline"></ion-icon> -->
           </div>
           <div class="sort-dropdown dropdown dropdown__box--active">
-            <span class="filter-text datedr">Date Posted</span>
-            <span class="filter-text namedr">Name</span>
+            <div class="checkbox">
+              <input type="checkbox" id="date" class="sort-input" />
+              <label class="filter-text" for="date">Date Posted</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="name" class="sort-input" />
+              <label class="filter-text" for="name">Name</label>
+            </div>
           </div>
         </div>
       </div>

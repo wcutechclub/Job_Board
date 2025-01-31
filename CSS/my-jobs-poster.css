@@ -183,22 +183,17 @@ body {
   cursor: pointer;
 }
 
-.filter-dropdown--container {
-  position: relative;
-}
 .filter-dropdown {
-  position: absolute;
-  left: 37.5%;
   margin-top: 0.5rem;
 }
 
-.sort-dropdown--container {
-  position: relative;
+.checkbox {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .sort-dropdown {
-  position: absolute;
-  left: 37.5%;
   margin-top: 0.5rem;
 }
 

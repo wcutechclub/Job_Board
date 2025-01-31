@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/CSS/my-jobs-poster.css" />
     <link rel="stylesheet" href="/CSS/general.css" />
+    <script defer src="/js/myjobsposter.js"></script>
     <title>My Jobs</title>
   </head>
   <body>
@@ -26,18 +27,36 @@
         <h2 class="main-header">MY JOBS</h2>
       </div>
       <div class="filter-box">
-        <div class="flex-container">
-          <span class="filter-text">Filter: </span>
-          <span class="filter-text">All Jobs</span>
-          <ion-icon name="caret-down-outline"></ion-icon>
+        <div class="filter-dropdown--container">
+          <div class="flex-container">
+            <span class="filter-text">Filter: </span>
+            <span class="filter-text all">All Jobs</span>
+            <span class="filter-text active filter-deactivate">Active</span>
+            <span class="filter-text close filter-deactivate">Close</span>
+            <ion-icon name="caret-down-outline"></ion-icon>
+          </div>
+          <div class="filter-dropdown dropdown dropdown__box--active">
+            <span class="filter-text alldr">All Jobs</span>
+            <span class="filter-text activedr">Active</span>
+            <span class="filter-text close">Close</span>
+          </div>
         </div>
-        <div class="flex-container">
-          <span class="filter-text">Sort By: </span>
-          <span class="filter-text">Date Posted</span>
-          <ion-icon name="caret-down-outline"></ion-icon>
-          <!-- <ion-icon name="caret-up-outline"></ion-icon> -->
+
+        <div class="sort-dropdown--container">
+          <div class="flex-container">
+            <span class="filter-text">Sort By: </span>
+            <span class="filter-text date">Date Posted</span>
+            <span class="filter-text filter-deactivate name">Name</span>
+            <ion-icon name="caret-down-outline"></ion-icon>
+            <!-- <ion-icon name="caret-up-outline"></ion-icon> -->
+          </div>
+          <div class="sort-dropdown dropdown dropdown__box--active">
+            <span class="filter-text datedr">Date Posted</span>
+            <span class="filter-text namedr">Name</span>
+          </div>
         </div>
       </div>
+
       <div class="job-cards--container">
         <div class="job-cards">
           <div class="flex-container">

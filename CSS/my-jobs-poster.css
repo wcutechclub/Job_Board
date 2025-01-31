@@ -162,6 +162,7 @@ body {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  margin-bottom: 2.4rem;
 }
 .filter-text {
   font-size: 1.6rem;
@@ -177,6 +178,7 @@ body {
   flex-direction: column;
   gap: 0.2rem;
   transition: all 0.5s;
+  position: absolute;
 }
 
 .dropdown-container {

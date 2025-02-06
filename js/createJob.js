@@ -44,9 +44,11 @@ form.addEventListener( 'submit', async function ( e ) {
             modal.insertAdjacentHTML( "beforeend", `
                 <h3>Job Created Successful</h3>
                 <p>Your ${ data.title } job created successfully.
-                Check 'My Jobs page if there any applyer.
-                <a>Add a new job</a>
-                <a>Back to home</a>`);
+                Check 'My Jobs' page if there any applyer.
+                <div class="popup-cta">
+                    <a href="#" class="popup-btn acpt-btn">Add a new job</a>
+                    <a href="#" class="popup-btn rcjt-btn">Back to home</a>
+                </div>`);
             backDrop.classList.add( 'backdrop' );
             modal.classList.add( 'modal' );
         } else {

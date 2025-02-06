@@ -42,8 +42,8 @@ form.addEventListener( 'submit', async function ( e ) {
         if ( response.ok ) {
             const data = await response.json();
             modal.insertAdjacentHTML( "beforeend", `
-                <h3>Job Created Successful</h3>
-                <p>Your ${ data.title } job created successfully.
+                <h3>Job Created Successfully!</h3>
+                <p>Your <span> ${ data.title } </span> job created successfully.
                 Check 'My Jobs' page if there any applyer.
                 <div class="popup-cta">
                     <a href="#" class="popup-btn acpt-btn">Add a new job</a>

@@ -188,4 +188,51 @@ select:focus {
   height: 20rem;
   background-color: #fff;
   border-radius: 12px;
+  padding: 2rem;
+}
+
+.modal h3{
+  font-size: 1.8rem;
+  color: #212529;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1.2rem;
+}
+
+.modal p{
+  font-size: 1.4rem;
+  margin-top: 1.4rem;
+}
+
+.popup-cta{
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.popup-btn{
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 1rem;
+  color: #111;
+  transition: 300ms;
+}
+
+.acpt-btn{
+  background-color: #28a745;
+  color: #fff;
+}
+
+.acpt-btn:hover,
+.acpt-btn:active{
+  background-color: #218838;
+}
+
+.rcjt-btn:hover,
+.rcjt-btn:active{
+  background-color: #218838;
+  color: #fff;
 }

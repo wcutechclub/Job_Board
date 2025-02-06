@@ -15,6 +15,9 @@ const jobType = document.querySelector( '.job-type' );
 const jobLocation = document.querySelector( '.location-input' );
 const jobSalary = document.querySelector( '.salary-input' );
 
+const backDrop = document.getElementById( 'backdrop' );
+const modal = document.getElementById( 'modal' );
+
 
 form.addEventListener( 'submit', async function ( e ) {
     e.preventDefault();
@@ -38,8 +41,14 @@ form.addEventListener( 'submit', async function ( e ) {
         } );
         if ( response.ok ) {
             const data = await response.json();
-            console.log( data );
-            console.log( 'Job create successful!' );
+            modal.insertAdjacentHTML( "beforeend", `
+                <h3>Job Created Successful</h3>
+                <p>Your ${ data.title } job created successfully.
+                Check 'My Jobs page if there any applyer.
+                <a>Add a new job</a>
+                <a>Back to home</a>`);
+            backDrop.classList.add( 'backdrop' );
+            modal.classList.add( 'modal' );
         } else {
             const errorData = await response.json();
             console.log( errorData );

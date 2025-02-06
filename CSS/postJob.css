@@ -236,3 +236,7 @@ select:focus {
   background-color: #218838;
   color: #fff;
 }
+
+.modal span{
+  font-weight: bold;
+}

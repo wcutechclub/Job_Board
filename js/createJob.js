@@ -44,7 +44,7 @@ form.addEventListener( 'submit', async function ( e ) {
             modal.insertAdjacentHTML( "beforeend", `
                 <h3>Job Created Successfully!</h3>
                 <p>Your <span> ${ data.title } </span> job created successfully.
-                Check 'My Jobs' page if there any applyer.
+                Check 'My Jobs' page if there any applyer.</p>
                 <div class="popup-cta">
                     <a href="#" class="popup-btn acpt-btn">Add a new job</a>
                     <a href="#" class="popup-btn rcjt-btn">Back to home</a>
@@ -52,9 +52,15 @@ form.addEventListener( 'submit', async function ( e ) {
             backDrop.classList.add( 'backdrop' );
             modal.classList.add( 'modal' );
         } else {
-            const errorData = await response.json();
-            console.log( errorData );
-            console.log( 'Job create falied!' );
+            modal.insertAdjacentHTML( "beforeend", `
+                <h3>Job Creation Alert: Action Required.</h3>
+                <p>Oops! It looks like there were some issues your job creation. Please
+                double check your inputs and enusre all required fields are filled out.</p>.
+                <div class="popup-cta">
+                    <a href="#" class="popup-btn acpt-btn">Ok</a>
+                </div>`);
+            backDrop.classList.add( 'backdrop' );
+            modal.classList.add( 'modal' );
         }
     } catch ( error ) {
         console.log("Error: ", error);

@@ -122,6 +122,7 @@ body {
   font-size: 1.5rem;
   border-radius: 0.8rem;
   width: 50%;
+  cursor: pointer;
 }
 
 input[type="text"] {

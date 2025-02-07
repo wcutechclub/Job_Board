@@ -84,7 +84,7 @@ const displayJobs = function ( data ) {
       <h2>Oops! No Jobs Found</h2 >
       <p>It looks We couldn't find any jobs matching your search.
       Try using different keywords or check our
-      popular job categories fro more options.
+      popular job categories for more options.
       </div > ` );
     return;
   }

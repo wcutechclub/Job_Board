@@ -37,7 +37,7 @@ btnLogin.addEventListener("click", async function (e) {
             localStorage.setItem("authToken", token);
             localStorage.setItem("userId", userId);
 
-            window.location.href = "/profile.html";
+            window.location.href = "/home.html";
         } else {
             inputEmail.classList.add( 'error' );
             inputPassword.classList.add( 'error' );

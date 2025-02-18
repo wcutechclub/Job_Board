@@ -4,6 +4,10 @@ const filterDropdown = document.querySelector(".filter-dropdown");
 const sortBox = document.querySelector(".sort-dropdown--container");
 const sortDropdown = document.querySelector(".sort-dropdown");
 
+const iconUpFilter = document.querySelector(".icon-up-filter");
+const iconDownFilter = document.querySelector(".icon-down-filter");
+const iconUpSort = document.querySelector(".icon-up-sort");
+const iconDownSort = document.querySelector(".icon-down-sort");
 // Card
 const statusContent = document.querySelector(".status");
 
@@ -15,8 +19,10 @@ const applicantsList = document.querySelector(".applicant-list");
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-const dropdown = function (btn) {
-  btn.classList.toggle("dropdown__box--active");
+const dropdown = function (dropdownBtn, iconUp, iconDown) {
+  dropdownBtn.classList.toggle("dropdown__box--active");
+  iconUp.classList.toggle("hide-icon");
+  iconDown.classList.toggle("hide-icon");
 };
 
 const statusChangeColor = function () {
@@ -32,11 +38,11 @@ const statusChangeColor = function () {
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////
 filterBox.addEventListener("click", function () {
-  dropdown(filterDropdown);
+  dropdown(filterDropdown, iconUpFilter, iconDownFilter);
 });
 
 sortBox.addEventListener("click", function () {
-  dropdown(sortDropdown);
+  dropdown(sortDropdown, iconUpSort, iconDownSort);
 });
 
 applicantsBtn.addEventListener("click", function () {

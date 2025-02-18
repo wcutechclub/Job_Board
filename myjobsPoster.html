@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/my-jobs-poster.css" />
+    <link rel="stylesheet" href="/CSS/general.css" />
+    <script defer src="/js/myjobsposter.js"></script>
+    <title>My Jobs</title>
+  </head>
+  <body>
+    <header class="header section">
+      <nav class="nav-bar--container">
+        <a class="nav-bar--btns btn" href="#">Home</a>
+        <div class="nav-btns--container">
+          <a class="nav-bar--btns btn" href="#">My Jobs</a>
+          <a class="nav-bar--btns btn" href="#">Profile</a>
+          <a class="nav-bar--btns btn" href="#">
+            <ion-icon class="icons" name="log-out-outline"></ion-icon>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="main-header-container">
+        <h2 class="main-header">MY JOBS</h2>
+      </div>
+      <div class="filter-box">
+        <div class="dropdown-container">
+          <div class="flex-container filter-dropdown--container">
+            <span class="filter-text">Filter</span>
+            <ion-icon name="caret-down-outline"></ion-icon>
+          </div>
+          <div class="filter-dropdown dropdown">
+            <div class="checkbox">
+              <input type="checkbox" id="all" class="filter-input" />
+              <label class="filter-text" for="all">All Jobs</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="active" class="filter-input" />
+              <label class="filter-text" for="active">Active</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="close" class="filter-input" />
+              <label class="filter-text" for="close">Close</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown-container">
+          <div class="flex-container sort-dropdown--container">
+            <span class="filter-text">Sort By </span>
+            <ion-icon name="caret-down-outline"></ion-icon>
+            <!-- <ion-icon name="caret-up-outline"></ion-icon> -->
+          </div>
+          <div class="sort-dropdown dropdown">
+            <div class="checkbox">
+              <input type="checkbox" id="date" class="sort-input" />
+              <label class="filter-text" for="date">Date Posted</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="name" class="sort-input" />
+              <label class="filter-text" for="name">Name</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="job-cards--container">
+        <div class="job-cards">
+          <div class="flex-container">
+            <span class="light-text date">Posted on</span>
+            <span class="post-date date light-text">Dec 1</span>
+          </div>
+          <h2 class="job-title card-text">Front-End Development With React</h2>
+          <div class="flex-container">
+            <span class="job-category card-text">Software Engineering</span>
+          </div>
+          <div class="flex-container">
+            <span class="light-text card-text">Status</span>
+            <span class="light-text card-text btn status-active status"
+              >Active</span
+            >
+          </div>
+          <div class="applicants-container">
+            <div class="flex-container applicants-btn">
+              <span class="light-text card-text">Applicants:</span>
+              <span class="light-text card-text num-applicants">100</span>
+              <ion-icon name="caret-down-outline"></ion-icon>
+            </div>
+            <div class="applicant-list dropdown__box--active">
+              <span class="applicants-name light-text card-text">Jhon Doe</span>
+              <span class="applicants-name light-text card-text">Jhon Doe</span>
+            </div>
+          </div>
+
+          <div class="flex-container btns-container">
+            <span class="btn cards-btn edit-btn">Edit</span>
+            <span class="btn cards-btn close-btn">Close</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Script -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

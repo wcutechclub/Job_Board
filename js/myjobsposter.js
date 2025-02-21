@@ -100,6 +100,10 @@ const displayJobs = function (data) {
         </div>
 `;
     jobCard.insertAdjacentHTML("beforeend", html);
+    // Chnges te background color of the status
+    const statusContent = document.querySelector(".status");
+    const newStatus = jobCard.lastElementChild.querySelector(".status");
+    statusChangeColor(newStatus);
   });
 };
 

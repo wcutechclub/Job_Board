@@ -218,6 +218,10 @@ body {
   gap: 1.6rem;
 }
 
+/*
+//////////////////////////////////////////////////////////////////////
+ ///////////////////////////// Job Cards  //////////////////////////////////*/
+
 .cards-btn {
   display: inline-block;
   color: #fff;
@@ -281,6 +285,28 @@ body {
 
 .date {
   font-size: 1.3rem;
+}
+
+.cards-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.icon--text {
+  align-items: center;
+}
+
+.type {
+  margin-left: 1.6rem;
+}
+
+.salary-range {
+  font-size: 1.2rem;
+}
+
+.description {
+  margin-top: 1.2rem;
+  letter-spacing: 0.05rem;
 }
 
 .status {

@@ -173,3 +173,15 @@ document.addEventListener("click", function (e) {
 });
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
+// Make Job Details Editable
+const editJobCards = function (jobCard) {
+  // const titlle
+};
+// Event Delegation for Edit Button
+document.addEventListener("click", function (e) {
+  const target = e.target;
+  if (target.closest(".edit-btn")) {
+  }
+});
+
+// Save the Edited Job Details

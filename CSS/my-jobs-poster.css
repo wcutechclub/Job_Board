@@ -343,6 +343,7 @@ body {
   display: flex;
   gap: 3.2rem;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .accept-reject__container {

@@ -124,15 +124,30 @@ const displayJobs = function (data) {
               >
               <ion-icon name="caret-down-outline"></ion-icon>
             </div>
-            <div class="applicant-list dropdown__box--active">
-              <span class="applicants-name light-text card-text"
-                >${
-                  //Function that gets the name of applicants
-                  "John"
-                }</span
-              >
+           <div class="applicant-list dropdown__box--active">
+              <div class="applicant-details">
+                <span class="applicants-name light-text card-text"
+                  >Jhon Doe</span
+                >
+                <div class="applicant-details__btns">
+                  <a href="#" class="light-text card-text resume-link"
+                    >Show Resume</a
+                  >
+                  <div class="flex-container accept-reject__container">
+                    <a
+                      href="#"
+                      class="light-text card-text accept-btn status-active applicant-details__btn"
+                      >Accept</a
+                    >
+                    <a
+                      href="#"
+                      class="light-text card-text reject-btn status-close applicant-details__btn"
+                      >Reject</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
 
           <div class="flex-container btns-container">
             <span class="btn cards-btn edit-btn">Edit</span>

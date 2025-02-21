@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/CSS/my-jobs-poster.css" />
     <link rel="stylesheet" href="/CSS/general.css" />
-    <script defer src="/js/myjobsposter.js"></script>
     <title>My Jobs</title>
   </head>
   <body>
@@ -13,7 +12,7 @@
       <nav class="nav-bar--container">
         <a class="nav-bar--btns btn" href="#">Home</a>
         <div class="nav-btns--container">
-          <a class="nav-bar--btns btn" href="#">My Jobs</a>
+          <a class="nav-bar--btns btn underline" href="#">My Jobs</a>
           <a class="nav-bar--btns btn" href="#">Profile</a>
           <a class="nav-bar--btns btn" href="#">
             <ion-icon class="icons" name="log-out-outline"></ion-icon>
@@ -30,7 +29,14 @@
         <div class="dropdown-container">
           <div class="flex-container filter-dropdown--container">
             <span class="filter-text">Filter</span>
-            <ion-icon name="caret-down-outline"></ion-icon>
+            <ion-icon
+              class="icon-down-filter icon-arr"
+              name="caret-down-outline"
+            ></ion-icon>
+            <ion-icon
+              class="icon-up-filter hide-icon icon-arr"
+              name="caret-up-outline"
+            ></ion-icon>
           </div>
           <div class="filter-dropdown dropdown">
             <div class="checkbox">
@@ -51,8 +57,14 @@
         <div class="dropdown-container">
           <div class="flex-container sort-dropdown--container">
             <span class="filter-text">Sort By </span>
-            <ion-icon name="caret-down-outline"></ion-icon>
-            <!-- <ion-icon name="caret-up-outline"></ion-icon> -->
+            <ion-icon
+              class="icon-down-sort icon-arr"
+              name="caret-down-outline"
+            ></ion-icon>
+            <ion-icon
+              class="icon-up-sort hide-icon icon-arr"
+              name="caret-up-outline"
+            ></ion-icon>
           </div>
           <div class="sort-dropdown dropdown">
             <div class="checkbox">
@@ -68,30 +80,73 @@
       </div>
 
       <div class="job-cards--container">
-        <div class="job-cards">
+        <!-- <div class="job-cards">
           <div class="flex-container">
             <span class="light-text date">Posted on</span>
-            <span class="post-date date light-text">Dec 1</span>
+            <span class="post-date date light-text">${job.created_at}</span>
           </div>
-          <h2 class="job-title card-text">Front-End Development With React</h2>
+          <h2 class="job-title card-text">${job.title}</h2>
           <div class="flex-container">
-            <span class="job-category card-text">Software Engineering</span>
+            <span class="job-category card-text">${job.job_category}</span>
+
+            <div class="flex-container">
+              <span class="card-text salary salary-type light-text"
+                >monthly -</span
+              >
+              <span class="salary-range salry card-text light-text">
+                ${job.salary_range}</span
+              >
+            </div>
           </div>
+
+          <div class="flex-container">
+            <div class="flex-container icon--text">
+              <ion-icon class="cards-icon" name="location-outline"></ion-icon>
+              <span class="job-location card-text">${job.location}</span>
+            </div>
+            <div class="flex-container type">
+              <span class="card-text type">Type -</span>
+              <span class="job-type card-text">${job.type}</span>
+            </div>
+          </div>
+
+          <p class="description card-text">${job.description}</p>
+
           <div class="flex-container">
             <span class="light-text card-text">Status</span>
             <span class="light-text card-text btn status-active status"
-              >Active</span
+              >${job.status}</span
             >
           </div>
           <div class="applicants-container">
             <div class="flex-container applicants-btn">
               <span class="light-text card-text">Applicants:</span>
-              <span class="light-text card-text num-applicants">100</span>
+              <span class="light-text card-text num-applicants">10</span>
               <ion-icon name="caret-down-outline"></ion-icon>
             </div>
-            <div class="applicant-list dropdown__box--active">
-              <span class="applicants-name light-text card-text">Jhon Doe</span>
-              <span class="applicants-name light-text card-text">Jhon Doe</span>
+            <div class="applicant-list dropdown__box--activ">
+              <div class="applicant-details">
+                <span class="applicants-name light-text card-text"
+                  >Jhon Doe</span
+                >
+                <div class="applicant-details__btns">
+                  <a href="#" class="light-text card-text resume-link"
+                    >Show Resume</a
+                  >
+                  <div class="flex-container accept-reject__container">
+                    <a
+                      href="#"
+                      class="light-text card-text accept-btn status-active applicant-details__btn"
+                      >Accept</a
+                    >
+                    <a
+                      href="#"
+                      class="light-text card-text reject-btn status-close applicant-details__btn"
+                      >Reject</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -99,7 +154,7 @@
             <span class="btn cards-btn edit-btn">Edit</span>
             <span class="btn cards-btn close-btn">Close</span>
           </div>
-        </div>
+        </div> -->
       </div>
     </main>
 
@@ -112,5 +167,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="/js/myjobsposter.js"></script>
   </body>
 </html>

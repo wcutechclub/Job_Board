@@ -260,7 +260,7 @@ const editJobCards = function (jobCard) {
   const location = jobCard.querySelector(".job-location");
   const type = jobCard.querySelector(".job-type");
   const description = jobCard.querySelector(".description");
-  const status = jobCard.querySelector(".status");
+  // const status = jobCard.querySelector(".status");
 
   title.innerHTML = `<input type="text" class="edit-title light-text" value="${title.textContent}">`;
   jobCategory.innerHTML = `<input type="text" class="edit-category light-text" value="${jobCategory.textContent}">`;
@@ -268,7 +268,7 @@ const editJobCards = function (jobCard) {
   location.innerHTML = `<input type="text" class="edit-location light-text" value="${location.textContent}">`;
   type.innerHTML = `<input type="text" class="edit-type light-text" value="${type.textContent}">`;
   description.innerHTML = `<input type="text" class="edit-description light-text" value="${description.textContent}">`;
-  status.innerHTML = `<input type="text" class="edit-status light-text" value="${status.textContent}">`;
+  // status.innerHTML = `<input type="text" class="edit-status light-text" value="${status.textContent}">`;
 
   const editBtn = jobCard.querySelector(".edit-btn");
   editBtn.textContent = "Save";
@@ -282,7 +282,7 @@ const saveChanges = function (jobCard) {
   const locationInput = jobCard.querySelector(".edit-location");
   const typeInput = jobCard.querySelector(".edit-type");
   const descriptionInput = jobCard.querySelector(".edit-description");
-  const statusInput = jobCard.querySelector(".edit-status");
+  // const statusInput = jobCard.querySelector(".edit-status");
 
   jobCard.querySelector(".job-title").textContent = titleInput.value;
   jobCard.querySelector(".job-category").textContent = jobCategoryInput.value;
@@ -290,12 +290,89 @@ const saveChanges = function (jobCard) {
   jobCard.querySelector(".job-location").textContent = locationInput.value;
   jobCard.querySelector(".job-type").textContent = typeInput.value;
   jobCard.querySelector(".description").textContent = descriptionInput.value;
-  jobCard.querySelector(".status").textContent = statusInput.value;
+  // jobCard.querySelector(".status").textContent = statusInput.value;
 
   const editBtn = jobCard.querySelector("[data-mode='save']");
   editBtn.textContent = "Edit";
   editBtn.setAttribute("data-mode", "edit");
 };
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////  Errors    ///////////////////////////////////////////////
+// Empty Fields – Ensure no input field is left blank
+// Invalid Salary Format – Salary should only contain numbers (and optionally, currency symbols).
+// Invalid Status – Status should only be "Active" or "Close."
+// Excessive Input Length – Limit character length for job title, description, and other fields.
+// Invalid Job Type – Only allow predefined job types like "Full-Time," "Part-Time," etc.
+// Incorrect Location Format – Location should not be just numbers; it should contain letters.
+// Potential XSS Injection – Prevent users from entering malicious scripts or HTML tags.
+
+const addLowerCase = function (arr) {
+  arr.forEach((el) => {
+    const lowerEl = el.toLowerCase();
+    if (!arr.includes(lowerEl)) arr.push(lowerEl);
+  });
+};
+
+const errorHandler = function (jobCard) {
+  const titleInput = jobCard.querySelector(".edit-title");
+  const jobCategoryInput = jobCard.querySelector(".edit-category");
+  const salaryRangeInput = jobCard.querySelector(".edit-salaryRange");
+  const locationInput = jobCard.querySelector(".edit-location");
+  const typeInput = jobCard.querySelector(".edit-type");
+  const descriptionInput = jobCard.querySelector(".edit-description");
+  const statusInput = jobCard.querySelector(".edit-status");
+
+  if (!titleInput.value) {
+    alert("Job Title cannot be Empty");
+    return false;
+  }
+
+  if (!descriptionInput.value) {
+    alert("Job description cannot be Empty");
+    return false;
+  }
+
+  if (titleInput.value.length > 299) {
+    alert("Title is to long");
+    return false;
+  }
+
+  const salaryPattern =
+    /^\$?\s*\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?\s*-\s*\$?\s*\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?\s*$/;
+
+  if (!salaryPattern.test(salaryRangeInput.value)) {
+    alert("Invalid salary format! Please enter a number or fixes spaces.");
+    return false;
+  }
+
+  const typeInputs = [
+    "Full-Time",
+    "Part-Time",
+    "Contractual",
+    "Full Time",
+    "Part Time",
+    "PT",
+    "FT",
+    "CT",
+  ];
+  addLowerCase(typeInputs);
+  if (!typeInputs.includes(typeInput.value)) {
+    alert("Invalid job type");
+    return false;
+  }
+
+  const locationInputs = ["Onsite", "Remote"];
+  addLowerCase(locationInputs);
+
+  if (!locationInputs.includes(locationInput.value)) {
+    alert("Invalid location");
+    return false;
+  }
+  return true;
+};
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 document.addEventListener("click", function (e) {
   const target = e.target;
@@ -305,7 +382,10 @@ document.addEventListener("click", function (e) {
 
   if (target.getAttribute("data-mode") === "edit") {
     editJobCards(jobCard);
-  } else if (target.getAttribute("data-mode") === "save") {
+  } else if (
+    target.getAttribute("data-mode") === "save" &&
+    errorHandler(jobCard)
+  ) {
     saveChanges(jobCard);
   }
 });

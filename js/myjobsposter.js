@@ -41,18 +41,30 @@ const data1 = {
   created_at: "1.12.2024",
   title: "Frontend",
   job_category: "Software Egineering",
+  salary_range: "$100 - $150",
+  location: "Remote",
+  description: "Engineering",
+  type: "FT",
   status: "Active",
 };
 const data2 = {
   created_at: "1.12.2024",
   title: "Frontend",
   job_category: "Software Egineering",
+  salary_range: "$100 - $150",
+  location: "Remote",
+  description: "Engineering",
+  type: "FT",
   status: "Active",
 };
 const data3 = {
   created_at: "1.12.2024",
   title: "Frontend",
   job_category: "Software Egineering",
+  salary_range: "$100 - $150",
+  location: "Remote",
+  description: "Engineering",
+  type: "FT",
   status: "Close",
 };
 
@@ -66,10 +78,35 @@ const displayJobs = function (data) {
             <span class="light-text date">Posted on</span>
             <span class="post-date date light-text">${job.created_at}</span>
           </div>
-          <h2 class="job-title card-text"> ${job.title}</h2>
+          <h2 class="job-title card-text">${job.title}</h2>
           <div class="flex-container">
             <span class="job-category card-text">${job.job_category}</span>
+
+            <div class="flex-container">
+              <span class="card-text salary salary-type light-text"
+                >monthly -</span
+              >
+              <span class="salary-range salry card-text light-text">
+                ${job.salary_range}</span
+              >
+            </div>
           </div>
+
+          <div class="flex-container">
+            <div class="flex-container icon--text">
+              <ion-icon class="cards-icon" name="location-outline"></ion-icon>
+              <span class="job-location card-text">${job.location}</span>
+            </div>
+            <div class="flex-container type">
+              <span class="card-text type">Type -</span>
+              <span class="job-type card-text"
+                >${job.type}</span
+              >
+            </div>
+          </div>
+
+          <p class="description card-text">${job.description}</p>
+
           <div class="flex-container">
             <span class="light-text card-text">Status</span>
             <span class="light-text card-text btn status-active status"
@@ -78,18 +115,22 @@ const displayJobs = function (data) {
           </div>
           <div class="applicants-container">
             <div class="flex-container applicants-btn">
-            <span class="light-text card-text">Applicants:</span>
-              <span class="light-text card-text num-applicants">${
-                //Function that gets the number of applicants
-                "100"
-              }</span>
+              <span class="light-text card-text">Applicants:</span>
+              <span class="light-text card-text num-applicants"
+                >${
+                  //Function that gets the number of applicants
+                  "100"
+                }</span
+              >
               <ion-icon name="caret-down-outline"></ion-icon>
             </div>
             <div class="applicant-list dropdown__box--active">
-              <span class="applicants-name light-text card-text">${
-                //Function that gets the name of applicants
-                "John"
-              }</span>
+              <span class="applicants-name light-text card-text"
+                >${
+                  //Function that gets the name of applicants
+                  "John"
+                }</span
+              >
             </div>
           </div>
 

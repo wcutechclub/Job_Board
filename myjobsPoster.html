@@ -79,7 +79,83 @@
         </div>
       </div>
 
-      <div class="job-cards--container"></div>
+      <div class="job-cards--container">
+        <div class="job-cards">
+          <div class="flex-container">
+            <span class="light-text date">Posted on</span>
+            <span class="post-date date light-text">${job.created_at}</span>
+          </div>
+          <h2 class="job-title card-text">${job.title}</h2>
+          <div class="flex-container">
+            <span class="job-category card-text">${job.job_category}</span>
+
+            <div class="flex-container">
+              <span class="card-text salary salary-type light-text"
+                >monthly -</span
+              >
+              <span class="salary-range salry card-text light-text">
+                ${job.salary_range}</span
+              >
+            </div>
+          </div>
+
+          <div class="flex-container">
+            <div class="flex-container icon--text">
+              <ion-icon class="cards-icon" name="location-outline"></ion-icon>
+              <span class="job-location card-text">${job.location}</span>
+            </div>
+            <div class="flex-container type">
+              <span class="card-text type">Type -</span>
+              <span class="job-type card-text">${job.type}</span>
+            </div>
+          </div>
+
+          <p class="description card-text">${job.description}</p>
+
+          <div class="flex-container">
+            <span class="light-text card-text">Status</span>
+            <span class="light-text card-text btn status-active status"
+              >${job.status}</span
+            >
+          </div>
+          <div class="applicants-container">
+            <div class="flex-container applicants-btn">
+              <span class="light-text card-text">Applicants:</span>
+              <span class="light-text card-text num-applicants">10</span>
+              <ion-icon name="caret-down-outline"></ion-icon>
+            </div>
+            <div class="applicant-list dropdown__box--activ">
+              <div class="applicant-details">
+                <span class="applicants-name light-text card-text"
+                  >Jhon Doe</span
+                >
+                <div class="applicant-details__btns">
+                  <a
+                    href="#"
+                    class="light-text card-text resume-link applicant-details__btn"
+                    >Show Resume</a
+                  >
+                  <a
+                    href="#"
+                    class="light-text card-text accept-btn status-active applicant-details__btn"
+                    >Accept</a
+                  >
+                  <a
+                    href="#"
+                    class="light-text card-text reject-btn status-close applicant-details__btn"
+                    >Reject</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-container btns-container">
+            <span class="btn cards-btn edit-btn">Edit</span>
+            <span class="btn cards-btn close-btn">Close</span>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Script -->

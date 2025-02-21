@@ -190,6 +190,7 @@ document.addEventListener("click", function (e) {
 ////////////////////////////////////////////////////////////////////////
 // Make Job Details Editable
 const editJobCards = function (jobCard) {
+  // Select the  elements
   const title = jobCard.querySelector(".job-title");
   const jobCategory = jobCard.querySelector(".job-category ");
   const salaryRange = jobCard.querySelector(".salary-range");
@@ -197,11 +198,27 @@ const editJobCards = function (jobCard) {
   const type = jobCard.querySelector(".job-type");
   const description = jobCard.querySelector(".description");
   const status = jobCard.querySelector(".status");
+  const editBtn = jobCard.querySelector(".edit-btn");
+
+  // Change the el to inputs
+  title.innerHTML = `<input type="text" class="edit-title light-text " value="${title.textContent}">`;
+  jobCategory.innerHTML = `<input type="text" class="edit-category light-text " value="${jobCategory.textContent}">`;
+  salaryRange.innerHTML = `<input type="text" class="edit-salaryRange light-text " value="${salaryRange.textContent}">`;
+  location.innerHTML = `<input type="text" class="edit-location light-text " value="${location.textContent}">`;
+  type.innerHTML = `<input type="text" class="edit-type light-text " value="${type.textContent}">`;
+  description.innerHTML = `<input type="text" class="edit-description light-text " value="${description.textContent}">`;
+  status.innerHTML = `<input type="text" class="edit-status light-text " value="${status.textContent}">`;
+
+  // change the edit text to save
+  editBtn.textContent = "Save";
+  editBtn.classList.add("save-btn");
+  editBtn.classList.remove("edit-btn");
 };
 // Event Delegation for Edit Button
 document.addEventListener("click", function (e) {
   const target = e.target;
-  if (target.closest(".edit-btn")) {
+  if (e.target.classList.contains("edit-btn")) {
+    editJobCards(jobCard);
   }
 });
 

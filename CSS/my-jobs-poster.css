@@ -326,9 +326,51 @@ body {
   margin-top: 1rem;
 }
 
+.applicant-details {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+
 .status-active {
   background-color: var(--accent-green);
 }
 .status-close {
   background-color: var(--red);
+}
+
+.applicant-details__btns {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.applicant-details__btn:link,
+.applicant-details__btn:visited {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2rem;
+  transition: all 0.3s;
+}
+
+.accept-btn:hover,
+.accept-btn:focus {
+  background-color: var(--accent-green-hover);
+}
+
+.reject-btn:hover,
+.reject-btn:focus {
+  background-color: #c82333;
+}
+.resume-link:link,
+.resume-link:visited {
+  color: var(--primary-color);
+  transition: all 0.3s;
+}
+
+.resume-link:hover,
+.resume-link:focus {
+  color: var(--dark-blue);
+  text-decoration: none;
 }

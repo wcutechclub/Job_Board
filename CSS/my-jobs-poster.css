@@ -245,18 +245,14 @@ body {
 .job-cards {
   padding: 1.6rem 2.4rem;
   border-bottom: 0.01rem solid #dee2e6;
-  gap: 1.6rem;
-}
-
-.job-cards:first-child {
-  margin-top: 4.6rem;
-}
-
-.job-cards:last-child {
   margin-bottom: 3.2rem;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+}
+
+.job-cards:first-child {
+  margin-top: 8.2rem;
 }
 
 .card-text {

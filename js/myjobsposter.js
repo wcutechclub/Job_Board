@@ -86,7 +86,7 @@ const displayJobs = function (data) {
               <span class="card-text salary salary-type light-text"
                 >monthly -</span
               >
-              <span class="salary-range salry card-text light-text">
+              <span class="salary-range salary card-text light-text">
                 ${job.salary_range}</span
               >
             </div>
@@ -190,7 +190,13 @@ document.addEventListener("click", function (e) {
 ////////////////////////////////////////////////////////////////////////
 // Make Job Details Editable
 const editJobCards = function (jobCard) {
-  // const titlle
+  const title = jobCard.querySelector(".job-title");
+  const jobCategory = jobCard.querySelector(".job-category ");
+  const salaryRange = jobCard.querySelector(".salary-range");
+  const location = jobCard.querySelector(".job-location");
+  const type = jobCard.querySelector(".job-type");
+  const description = jobCard.querySelector(".description");
+  const status = jobCard.querySelector(".status");
 };
 // Event Delegation for Edit Button
 document.addEventListener("click", function (e) {

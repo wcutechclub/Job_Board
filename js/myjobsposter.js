@@ -148,7 +148,7 @@ const displayJobs = function (data) {
                 </div>
               </div>
             </div>
-
+          </div>
           <div class="flex-container btns-container">
             <span class="btn cards-btn edit-btn">Edit</span>
             <span class="btn cards-btn close-btn">Close</span>

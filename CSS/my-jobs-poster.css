@@ -316,22 +316,24 @@ body {
   border-radius: 11px;
 }
 
+.applicants-container {
+  gap: 1.6rem;
+}
 .applicants-btn {
   cursor: pointer;
-  margin-bottom: 2rem;
 }
 .applicant-list {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 1rem;
-  margin-bottom: 2rem;
 }
 
 .applicant-details {
   display: flex;
   align-items: center;
   gap: 10rem;
+  transition: all 0.3s;
 }
 
 .status-active {
@@ -356,7 +358,7 @@ body {
   color: #fff;
   text-decoration: none;
   border-radius: 2rem;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
 .accept-btn:hover,
@@ -371,7 +373,7 @@ body {
 .resume-link:link,
 .resume-link:visited {
   color: var(--primary-color);
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
 .resume-link:hover,

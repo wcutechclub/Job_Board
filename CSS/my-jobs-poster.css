@@ -341,10 +341,13 @@ body {
 
 .applicant-details__btns {
   display: flex;
-  gap: 2rem;
+  gap: 3.2rem;
   align-items: center;
 }
 
+.accept-reject__container {
+  gap: 1rem;
+}
 .applicant-details__btn:link,
 .applicant-details__btn:visited {
   padding: 0.5rem 1rem;

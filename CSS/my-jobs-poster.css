@@ -318,12 +318,14 @@ body {
 
 .applicants-btn {
   cursor: pointer;
+  margin-bottom: 2rem;
 }
 .applicant-list {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .applicant-details {
@@ -343,7 +345,6 @@ body {
   display: flex;
   gap: 3.2rem;
   align-items: center;
-  margin-bottom: 2rem;
 }
 
 .accept-reject__container {

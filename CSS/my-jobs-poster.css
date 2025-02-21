@@ -207,6 +207,21 @@ body {
   transform: translateY(-1rem);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+.hide-icon {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.btns-container {
+  gap: 1.6rem;
+}
+
+/*
+//////////////////////////////////////////////////////////////////////
+ ///////////////////////////// Job Cards  //////////////////////////////////*/
+
 .cards-btn {
   display: inline-block;
   color: #fff;
@@ -216,6 +231,7 @@ body {
   padding: 0.8rem 1.6rem;
   color: #fff;
   border-radius: 1.1rem;
+  cursor: pointer;
 }
 
 .edit-btn {
@@ -228,20 +244,19 @@ body {
 
 .job-cards--container {
   padding: 0 3.2rem;
-  overflow-y: auto;
 }
 
 .job-cards {
   padding: 1.6rem 2.4rem;
   border-bottom: 0.01rem solid #dee2e6;
-  gap: 1.6rem;
-}
-
-.job-cards:last-child {
   margin-bottom: 3.2rem;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+}
+
+.job-cards:first-child {
+  margin-top: 8.2rem;
 }
 
 .card-text {
@@ -272,6 +287,28 @@ body {
   font-size: 1.3rem;
 }
 
+.cards-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.icon--text {
+  align-items: center;
+}
+
+.type {
+  margin-left: 1.6rem;
+}
+
+.salary-range {
+  font-size: 1.2rem;
+}
+
+.description {
+  margin-top: 1.2rem;
+  letter-spacing: 0.05rem;
+}
+
 .status {
   margin-left: 1.6rem;
   padding: 0.3rem 1rem;
@@ -279,6 +316,9 @@ body {
   border-radius: 11px;
 }
 
+.applicants-container {
+  gap: 1.6rem;
+}
 .applicants-btn {
   cursor: pointer;
 }
@@ -289,9 +329,55 @@ body {
   margin-top: 1rem;
 }
 
+.applicant-details {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  transition: all 0.3s;
+}
+
 .status-active {
   background-color: var(--accent-green);
 }
 .status-close {
   background-color: var(--red);
+}
+
+.applicant-details__btns {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.accept-reject__container {
+  gap: 1rem;
+}
+.applicant-details__btn:link,
+.applicant-details__btn:visited {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.accept-btn:hover,
+.accept-btn:focus {
+  background-color: var(--accent-green-hover);
+}
+
+.reject-btn:hover,
+.reject-btn:focus {
+  background-color: #c82333;
+}
+.resume-link:link,
+.resume-link:visited {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.resume-link:hover,
+.resume-link:focus {
+  color: var(--dark-blue);
+  text-decoration: none;
 }

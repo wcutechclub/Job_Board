@@ -1,71 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/login.css">
-    <link rel="stylesheet" href="./CSS/general.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/login.css" />
+    <link rel="stylesheet" href="./CSS/general.css" />
     <title>Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="logo-container">
-            <div class="vertical-bar"></div>
-            <div class="logo">
-              <span class="letter">J</span>
-              <span class="letter">O</span>
-              <span class="letter">B</span>
-              <span class="letter">B</span>
-              <span class="letter">O</span>
-              <span class="letter">A</span>
-              <span class="letter">R</span>
-              <span class="letter">D</span>
-            </div>
+      <div class="logo-container">
+        <div class="vertical-bar"></div>
+        <div class="logo">
+          <span class="letter">J</span>
+          <span class="letter">O</span>
+          <span class="letter">B</span>
+          <span class="letter">B</span>
+          <span class="letter">O</span>
+          <span class="letter">A</span>
+          <span class="letter">R</span>
+          <span class="letter">D</span>
+        </div>
+      </div>
+      <section class="Login">
+        <div class="login_container">
+          <div class="header">
+            <h1>Sign In To Your Account</h1>
           </div>
-        <section class="Login">
-            <div class="login_container">
+          <div class="alternative_signin">
+            <button class="google">
+              <ion-icon name="logo-google" class="icon_logo"></ion-icon> Google
+            </button>
+            <button class="github">
+              <ion-icon name="logo-facebook" class="icon_logo"></ion-icon>
+              Facebook
+            </button>
+          </div>
+          <div class="alternative_text">
+            <div class="line line_one"></div>
+            <p>Or continue with</p>
+            <div class="line line_two"></div>
+          </div>
+          <form class="form">
+            <label for="email" class="form__text">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
 
-                <div class="header">
-                    <h1>Sign In To Your Account</h1>
-                </div>
-                <div class="alternative_signin">
-                    <button class="google">
-                        <ion-icon name="logo-google" class="icon_logo"></ion-icon> Google</button>
-                    <button class="github">
-                        <ion-icon name="logo-facebook" class="icon_logo"></ion-icon> Facebook</button>
-                </div>
-                <div class="alternative_text">
-                    <div class="line line_one"></div>
-                    <p>Or continue with</p>
-                    <div class="line line_two"></div>
-                </div>
-                <form class="form">
-                    <label  for="email" class="form__text">Email</label>
-                    <input type="email" id="email" class="email" name="email" placeholder="Enter your email" required>
-
-                    <label for="password" class="form__text">Password</label>
-                    <input type="password" id="password" class="password" name="password" placeholder="Enter your password" required>
-                    <div class="error_message-container"></div>
-                    <div class="footer">
-                        <label for="rememberme">
-                            <input type="checkbox" id="rememberme" name="rememberme" value="rememberme">   Remember me
-                        </label>
-                        <p><a href="#" class="forget">Forget your password?</a></p>
-                    </div>
-                    <button type="submit" class="signin">Sign In</button>
-                    <p class="askAccount">No account yet?<a href="signupseeker.html"class="signup"> Sign up</a></p>
-                </form>
+            <label for="password" class="form__text">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+            <div class="error_message-container"></div>
+            <div class="footer">
+              <label for="rememberme">
+                <input
+                  type="checkbox"
+                  id="rememberme"
+                  name="rememberme"
+                  value="rememberme"
+                />
+                Remember me
+              </label>
+              <p><a href="#" class="forget">Forget your password?</a></p>
             </div>
-        </section>
+            <button type="submit" class="signin">Sign In</button>
+            <p class="askAccount">
+              No account yet?<a href="signupseeker.html" class="signup">
+                Sign up</a
+              >
+            </p>
+          </form>
+        </div>
+      </section>
     </div>
 
-        <section class="footer_copyright">
-            <div class="fotter_line"></div>
-            <p class="footer_text">Copyright @2024 JobBoard. Privilaged and confidential. All right reserved.</p>
-        </section>
+    <section class="footer_copyright">
+      <div class="fotter_line"></div>
+      <p class="footer_text">
+        Copyright @2024 JobBoard. Privilaged and confidential. All right
+        reserved.
+      </p>
+    </section>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="js/login.js"></script>
-</body>
+  </body>
 </html>

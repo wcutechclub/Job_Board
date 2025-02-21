@@ -214,6 +214,10 @@ body {
   position: absolute;
 }
 
+.btns-container {
+  gap: 1.6rem;
+}
+
 .cards-btn {
   display: inline-block;
   color: #fff;
@@ -223,6 +227,7 @@ body {
   padding: 0.8rem 1.6rem;
   color: #fff;
   border-radius: 1.1rem;
+  cursor: pointer;
 }
 
 .edit-btn {
@@ -235,7 +240,6 @@ body {
 
 .job-cards--container {
   padding: 0 3.2rem;
-  overflow-y: auto;
 }
 
 .job-cards {

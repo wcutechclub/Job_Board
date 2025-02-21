@@ -1,10 +1,10 @@
 "use strict";
 
-const token = localStorage.getItem( "authToken" );
-const userId = localStorage.getItem( "userId" );
+const token = localStorage.getItem("authToken");
+const userId = localStorage.getItem("userId");
 
-if ( !token ) {
-  alert( "You need to log in!" );
+if (!token) {
+  alert("You need to log in!");
   window.location.href = "/login.html";
 }
 
@@ -25,9 +25,9 @@ const dropdownLocationContent = document.querySelector(
 
 const jobCard = document.querySelector(".job-cards--container");
 
-const searchInput = document.getElementById( "search" );
+const searchInput = document.getElementById("search");
 
-const logoutBtn = document.querySelector( '.logout-btn' );
+const logoutBtn = document.querySelector(".logout-btn");
 
 //////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
@@ -50,34 +50,34 @@ dropdownLocation.addEventListener("click", function () {
 ////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 const getJobs = async function (sourceLink) {
-  fetch( sourceLink, {
-    method: 'GET',
+  fetch(sourceLink, {
+    method: "GET",
     headers: {
-      "Authorization": `Token ${token}`,
+      Authorization: `Token ${token}`,
       "Content-Type": "application/json",
     },
-  } )
-    .then( response => {
-      if ( response.ok ) return response.json();
-      throw new Error( "Failed to fetch this page" );
-    } )
-    .then( data => {
-      displayJobs(data);
   })
-}
+    .then((response) => {
+      if (response.ok) return response.json();
+      throw new Error("Failed to fetch this page");
+    })
+    .then((data) => {
+      displayJobs(data);
+    });
+};
 
-const displayJobType = type => {
-  if ( type === "CT" ) return "Contractual";
-  if ( type === "FT" ) return "Full Time";
-  if ( type === "PT" ) return "Part Time";
-}
+const displayJobType = (type) => {
+  if (type === "CT") return "Contractual";
+  if (type === "FT") return "Full Time";
+  if (type === "PT") return "Part Time";
+};
 
-const displayJobs = function ( data ) {
-  if ( jobCard.innerHTML ) {
-    jobCard.innerHTML = '';
+const displayJobs = function (data) {
+  if (jobCard.innerHTML) {
+    jobCard.innerHTML = "";
   }
 
-  if ( !data.length ) {
+  if (!data.length) {
     jobCard.insertAdjacentHTML(
       "beforeend",
       `<div class="invalid__job-container">
@@ -85,11 +85,12 @@ const displayJobs = function ( data ) {
       <p>It looks We couldn't find any jobs matching your search.
       Try using different keywords or check our
       popular job categories for more options.
-      </div > ` );
+      </div > `
+    );
     return;
   }
 
-  data.forEach( function ( job ) {
+  data.forEach(function (job) {
     const html = `
   <div class="job-cards flex-col">
             <div class="flex-container">
@@ -118,7 +119,9 @@ const displayJobs = function ( data ) {
               </div>
               <div class="flex-container type">
                 <span class="card-text type">Type -</span>
-                <span class="job-type card-text">${displayJobType(job.type)}</span>
+                <span class="job-type card-text">${displayJobType(
+                  job.type
+                )}</span>
               </div>
             </div>
 
@@ -136,29 +139,29 @@ const displayJobs = function ( data ) {
 // getJobs(displayJobs);
 getJobs("http://localhost:8000/jobs/");
 
-logoutBtn.addEventListener( 'click', async function (e) {
+logoutBtn.addEventListener("click", async function (e) {
   e.preventDefault();
-  await fetch( 'http://localhost:8000/user/logout/', {
-    method: 'POST',
+  await fetch("http://localhost:8000/user/logout/", {
+    method: "POST",
     headers: {
-      "Authorization": `Token ${ token }`,
+      Authorization: `Token ${token}`,
       "Content-Type": "application/json",
     },
-  } ).then( response => {
-    if ( response.ok ) {
+  }).then((response) => {
+    if (response.ok) {
       localStorage.clear(token);
-      localStorage.clear( userId );
-      window.location.href = 'index.html';
+      localStorage.clear(userId);
+      window.location.href = "index.html";
       return;
-    };
-    throw new Error( "Faild to logout." );
-  } )
-} )
+    }
+    throw new Error("Faild to logout.");
+  });
+});
 
-const searchQuery = document.getElementById( 'search' );
+const searchQuery = document.getElementById("search");
 
-searchQuery.addEventListener( 'keydown', async function (e) {
-  if ( e.key === 'Enter' ) {
-    getJobs( `http://localhost:8000/jobs?search=${ this.value }` );
+searchQuery.addEventListener("keydown", async function (e) {
+  if (e.key === "Enter") {
+    getJobs(`http://localhost:8000/jobs?search=${this.value}`);
   }
-} );
+});

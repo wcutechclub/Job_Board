@@ -37,6 +37,26 @@ const statusChangeColor = function (statusValue) {
   }
 };
 
+const token = localStorage.getItem( "authToken" );
+const userId = localStorage.getItem( "userId" );
+
+if ( !token ) {
+  alert( "You need to log in!" );
+  window.location.href = "/login.html";
+}
+
+
+const fetchPostedJobs = async (dispalyJbs) => {
+  const response = await fetch( 'http://localhost:8000/my-jobs/posted', {
+    headers: {
+      'Authorization': `Token ${ token }`,
+      'Content-Type': 'application/json',
+    }
+  } );
+  const postedJobs = await response.json();
+  displayJobs(postedJobs);
+};
+
 const data1 = {
   created_at: "1.12.2024",
   title: "Frontend",
@@ -118,8 +138,7 @@ const displayJobs = function (data) {
               <span class="light-text card-text">Applicants:</span>
               <span class="light-text card-text num-applicants"
                 >${
-                  //Function that gets the number of applicants
-                  "100"
+                  job.total_applicants
                 }</span
               >
               <ion-icon name="caret-down-outline"></ion-icon>
@@ -164,7 +183,7 @@ const displayJobs = function (data) {
   });
 };
 
-displayJobs(data);
+fetchPostedJobs( displayJobs );
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////

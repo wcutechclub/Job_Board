@@ -57,38 +57,38 @@ const fetchPostedJobs = async (dispalyJbs) => {
   displayJobs(postedJobs);
 };
 
-const data1 = {
-  created_at: "1.12.2024",
-  title: "Frontend",
-  job_category: "Software Egineering",
-  salary_range: "$100 - $150",
-  location: "Remote",
-  description: "Engineering",
-  type: "FT",
-  status: "Active",
-};
-const data2 = {
-  created_at: "1.12.2024",
-  title: "Frontend",
-  job_category: "Software Egineering",
-  salary_range: "$100 - $150",
-  location: "Remote",
-  description: "Engineering",
-  type: "FT",
-  status: "Active",
-};
-const data3 = {
-  created_at: "1.12.2024",
-  title: "Frontend",
-  job_category: "Software Egineering",
-  salary_range: "$100 - $150",
-  location: "Remote",
-  description: "Engineering",
-  type: "FT",
-  status: "Close",
-};
+// const data1 = {
+//   created_at: "1.12.2024",
+//   title: "Frontend",
+//   job_category: "Software Egineering",
+//   salary_range: "$100 - $150",
+//   location: "Remote",
+//   description: "Engineering",
+//   type: "FT",
+//   status: "Active",
+// };
+// const data2 = {
+//   created_at: "1.12.2024",
+//   title: "Frontend",
+//   job_category: "Software Egineering",
+//   salary_range: "$100 - $150",
+//   location: "Remote",
+//   description: "Engineering",
+//   type: "FT",
+//   status: "Active",
+// };
+// const data3 = {
+//   created_at: "1.12.2024",
+//   title: "Frontend",
+//   job_category: "Software Egineering",
+//   salary_range: "$100 - $150",
+//   location: "Remote",
+//   description: "Engineering",
+//   type: "FT",
+//   status: "Close",
+// };
 
-const data = [data1, data2, data3];
+// const data = [data1, data2, data3];
 
 const displayJobs = function (data) {
   data.forEach(function (job) {
@@ -176,7 +176,7 @@ const displayJobs = function (data) {
 `;
     jobCard.insertAdjacentHTML("beforeend", html);
 
-    // Chnges te background color of the status
+    // Change the background color of the status
     const statusContent = document.querySelector(".status");
     const newStatus = jobCard.lastElementChild.querySelector(".status");
     statusChangeColor(newStatus);

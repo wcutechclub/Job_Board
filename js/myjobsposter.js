@@ -27,7 +27,7 @@ const dropdown = function (dropdownBtn, iconUp, iconDown) {
 
 const statusChangeColor = function (statusValue) {
   if (statusValue) {
-    if (statusValue.textContent === "Active") {
+    if (statusValue.textContent === "Open") {
       statusValue.classList.add("status-active");
       statusValue.classList.remove("status-close");
       return;
@@ -45,8 +45,53 @@ if ( !token ) {
   window.location.href = "/login.html";
 }
 
+const fetchApplicants = async (applicant) => {
+  const response = await fetch( `http://localhost:8000/user/${ applicant.applicant }`, {
+    headers: {
+      'Authorization': `Token ${ token }`,
+      'Content-Type': 'application/json',
+    }
+  } );
+  const data = await response.json();
+  return data;
+};
 
-const fetchPostedJobs = async (dispalyJbs) => {
+const displayApplicants = async (applicants) => {
+  const applicantHTMLs = await Promise.all(
+    applicants.map(async (applicant) => {
+      const applicantData = await fetchApplicants(applicant);
+      return `
+        <div class="applicant-details">
+          <span class="applicants-name light-text card-text">
+            ${applicantData.first_name} ${applicantData.last_name}
+          </span>
+          <div class="applicant-details__btns">
+            <a href="${applicant.resume_url}" class="light-text card-text resume-link">
+              Show Resume
+            </a>
+            <div class="flex-container accept-reject__container">
+              <a href="#" class="light-text card-text accept-btn status-active applicant-details__btn">
+                Accept
+              </a>
+              <a href="#" class="light-text card-text reject-btn status-close applicant-details__btn">
+                Reject
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+    })
+  );
+
+  return applicantHTMLs.join('');
+};
+
+const applicantInfo = async applicants => {
+  const infoHTML = await displayApplicants( applicants );
+  return infoHTML;
+};
+
+const fetchPostedJobs = async (displayJobs) => {
   const response = await fetch( 'http://localhost:8000/my-jobs/posted', {
     headers: {
       'Authorization': `Token ${ token }`,
@@ -54,44 +99,23 @@ const fetchPostedJobs = async (dispalyJbs) => {
     }
   } );
   const postedJobs = await response.json();
-  displayJobs(postedJobs);
+
+  displayJobs( postedJobs );
 };
 
-// const data1 = {
-//   created_at: "1.12.2024",
-//   title: "Frontend",
-//   job_category: "Software Egineering",
-//   salary_range: "$100 - $150",
-//   location: "Remote",
-//   description: "Engineering",
-//   type: "FT",
-//   status: "Active",
-// };
-// const data2 = {
-//   created_at: "1.12.2024",
-//   title: "Frontend",
-//   job_category: "Software Egineering",
-//   salary_range: "$100 - $150",
-//   location: "Remote",
-//   description: "Engineering",
-//   type: "FT",
-//   status: "Active",
-// };
-// const data3 = {
-//   created_at: "1.12.2024",
-//   title: "Frontend",
-//   job_category: "Software Egineering",
-//   salary_range: "$100 - $150",
-//   location: "Remote",
-//   description: "Engineering",
-//   type: "FT",
-//   status: "Close",
-// };
+const displayJobStatus = ( status )  => {
+  if ( status === 'OP' ) return 'Open';
+  else return 'Closed';
+};
 
-// const data = [data1, data2, data3];
+const displayJobType = (type) => {
+  if (type === "CT") return "Contractual";
+  if (type === "FT") return "Full Time";
+  if (type === "PT") return "Part Time";
+};
 
-const displayJobs = function (data) {
-  data.forEach(function (job) {
+const displayJobs = function ( data ) {
+  data.forEach(async function (job) {
     const html = `
 <div class="job-cards">
           <div class="flex-container">
@@ -120,7 +144,7 @@ const displayJobs = function (data) {
             <div class="flex-container type">
               <span class="card-text type">Type -</span>
               <span class="job-type card-text"
-                >${job.type}</span
+                >${displayJobType(job.type) }</span
               >
             </div>
           </div>
@@ -130,42 +154,19 @@ const displayJobs = function (data) {
           <div class="flex-container">
             <span class="light-text card-text">Status</span>
             <span class="light-text card-text btn status-active status"
-              >${job.status}</span
+              >${displayJobStatus(job.status)}</span
             >
           </div>
           <div class="applicants-container">
             <div class="flex-container applicants-btn">
               <span class="light-text card-text">Applicants:</span>
               <span class="light-text card-text num-applicants"
-                >${
-                  job.total_applicants
-                }</span
+                >${job.total_applicants}</span
               >
               <ion-icon name="caret-down-outline"></ion-icon>
             </div>
-           <div class="applicant-list dropdown__box--active">
-              <div class="applicant-details">
-                <span class="applicants-name light-text card-text"
-                  >Jhon Doe</span
-                >
-                <div class="applicant-details__btns">
-                  <a href="#" class="light-text card-text resume-link"
-                    >Show Resume</a
-                  >
-                  <div class="flex-container accept-reject__container">
-                    <a
-                      href="#"
-                      class="light-text card-text accept-btn status-active applicant-details__btn"
-                      >Accept</a
-                    >
-                    <a
-                      href="#"
-                      class="light-text card-text reject-btn status-close applicant-details__btn"
-                      >Reject</a
-                    >
-                  </div>
-                </div>
-              </div>
+            <div class="applicant-list dropdown__box--active">
+            ${job.applicants.length === 0 ? "<p class='error__card-text'>No applicants yet!</p>" : await (applicantInfo(job.applicants))}
             </div>
           </div>
           <div class="flex-container btns-container">
@@ -173,6 +174,7 @@ const displayJobs = function (data) {
             <span class="btn cards-btn close-btn">Close</span>
           </div>
         </div>
+
 `;
     jobCard.insertAdjacentHTML("beforeend", html);
 

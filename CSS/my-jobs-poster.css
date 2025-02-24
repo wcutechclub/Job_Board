@@ -107,6 +107,10 @@ body {
   align-items: center;
 }
 
+.double-container {
+  margin-left: 2.4rem;
+}
+
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -263,7 +267,7 @@ body {
   font-size: 1.6rem;
 }
 
-.error__card-text{
+.error__card-text {
   font-size: 1.6rem;
   color: #c82333;
 }
@@ -385,4 +389,8 @@ body {
 .resume-link:focus {
   color: var(--dark-blue);
   text-decoration: none;
+}
+
+.btn-status {
+  gap: 18rem;
 }

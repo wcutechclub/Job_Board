@@ -300,3 +300,19 @@ body {
   max-width: 80rem;
   color: #444;
 }
+
+.status {
+  padding: 0.3rem 1rem;
+  color: #fff;
+  border-radius: 11px;
+}
+
+.status-active {
+  background-color: var(--accent-green);
+}
+.status-pen {
+  background-color: var(--yellow);
+}
+.status-close {
+  background-color: var(--red);
+}

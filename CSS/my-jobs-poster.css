@@ -226,26 +226,6 @@ body {
 //////////////////////////////////////////////////////////////////////
  ///////////////////////////// Job Cards  //////////////////////////////////*/
 
-.cards-btn {
-  display: inline-block;
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 600;
-  transition: all 0.3s;
-  padding: 0.8rem 1.6rem;
-  color: #fff;
-  border-radius: 1.1rem;
-  cursor: pointer;
-}
-
-.edit-btn {
-  background-color: var(--primary-color);
-}
-
-.close-btn {
-  background-color: var(--red);
-}
-
 .job-cards--container {
   padding: 0 3.2rem;
 }
@@ -257,6 +237,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  position: relative;
+  max-width: 100rem;
 }
 
 .job-cards:first-child {
@@ -316,21 +298,50 @@ body {
 .description {
   margin-top: 1.2rem;
   letter-spacing: 0.05rem;
+  line-height: 1.6rem;
+  max-width: 80rem;
+  color: #444;
 }
 
 .status {
-  margin-left: 1.6rem;
   padding: 0.3rem 1rem;
   color: #fff;
   border-radius: 11px;
 }
 
+.status-applicants {
+  gap: 1.6rem;
+}
+.cards-btn {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  padding: 0.8rem 1.6rem;
+  color: #fff;
+  border-radius: 1.1rem;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: var(--primary-color);
+}
+
+.close-btn {
+  background-color: var(--red);
+}
 .applicants-container {
   gap: 1.6rem;
 }
 .applicants-btn {
   cursor: pointer;
 }
+
+.btn-title {
+  justify-content: space-between;
+}
+
 .applicant-list {
   display: flex;
   flex-direction: column;
@@ -343,6 +354,10 @@ body {
   align-items: center;
   gap: 10rem;
   transition: all 0.3s;
+}
+
+.applicants-name {
+  width: 30rem;
 }
 
 .status-active {
@@ -389,8 +404,4 @@ body {
 .resume-link:focus {
   color: var(--dark-blue);
   text-decoration: none;
-}
-
-.btn-status {
-  gap: 18rem;
 }

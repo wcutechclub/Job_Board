@@ -85,7 +85,14 @@
             <span class="light-text date">Posted on</span>
             <span class="post-date date light-text">2.4.2025</span>
           </div>
-          <h2 class="job-title card-text">Front End Development</h2>
+          <div class="flex-container btn-title">
+            <h2 class="job-title card-text">Front End Development</h2>
+
+            <div class="flex-container btns-container">
+              <span class="btn cards-btn edit-btn" data-mode="edit">Edit</span>
+              <span class="btn cards-btn close-btn">Close</span>
+            </div>
+          </div>
           <div class="flex-container">
             <span class="job-category card-text">Software Engineering</span>
 
@@ -105,7 +112,7 @@
               </div>
               <div class="flex-container type">
                 <span class="card-text type">Type -</span>
-                <span class="job-type card-text">Full - Time</span>
+                <span class="job-type card-text">FT</span>
               </div>
             </div>
           </div>
@@ -117,24 +124,18 @@
             aliquam beatae.
           </p>
 
-          <div class="flex-container btn-status">
-            <div class="flex-container">
-              <span class="light-text card-text">Status</span>
-              <span class="light-text card-text btn status-active status"
-                >Active</span
-              >
-            </div>
-
-            <div class="flex-container btns-container">
-              <span class="btn cards-btn edit-btn" data-mode="edit">Edit</span>
-              <span class="btn cards-btn close-btn">Close</span>
-            </div>
-          </div>
           <div class="applicants-container">
-            <div class="flex-container applicants-btn">
-              <span class="light-text card-text">Applicants:</span>
-              <span class="light-text card-text num-applicants">100</span>
-              <ion-icon name="caret-down-outline"></ion-icon>
+            <div class="flex-container status-applicants">
+              <div class="flex-container">
+                <span class="light-text card-text btn status-active status"
+                  >Active</span
+                >
+              </div>
+              <div class="flex-container applicants-btn">
+                <span class="light-text card-text">Applicants:</span>
+                <span class="light-text card-text num-applicants">100</span>
+                <ion-icon name="caret-down-outline"></ion-icon>
+              </div>
             </div>
             <div class="applicant-list dropdown__box--active">
               <div class="applicant-details">

@@ -25,6 +25,60 @@
       <div class="main-header-container">
         <h2 class="main-header">MY JOBS</h2>
       </div>
+
+      <div class="filter-box">
+        <div class="dropdown-container">
+          <div class="flex-container filter-dropdown--container">
+            <span class="filter-text">Filter</span>
+            <ion-icon
+              class="icon-down-filter icon-arr"
+              name="caret-down-outline"
+            ></ion-icon>
+            <ion-icon
+              class="icon-up-filter hide-icon icon-arr"
+              name="caret-up-outline"
+            ></ion-icon>
+          </div>
+          <div class="filter-dropdown dropdown">
+            <div class="checkbox">
+              <input type="checkbox" id="all" class="filter-input" />
+              <label class="filter-text" for="all">All Jobs</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="active" class="filter-input" />
+              <label class="filter-text" for="active">Active</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="close" class="filter-input" />
+              <label class="filter-text" for="close">Close</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown-container">
+          <div class="flex-container sort-dropdown--container">
+            <span class="filter-text">Sort By </span>
+            <ion-icon
+              class="icon-down-sort icon-arr"
+              name="caret-down-outline"
+            ></ion-icon>
+            <ion-icon
+              class="icon-up-sort hide-icon icon-arr"
+              name="caret-up-outline"
+            ></ion-icon>
+          </div>
+          <div class="sort-dropdown dropdown">
+            <div class="checkbox">
+              <input type="checkbox" id="date" class="sort-input" />
+              <label class="filter-text" for="date">Date Posted</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="name" class="sort-input" />
+              <label class="filter-text" for="name">Name</label>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <!-- Script -->
     <script

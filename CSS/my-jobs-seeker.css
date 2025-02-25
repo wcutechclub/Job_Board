@@ -238,3 +238,57 @@ body {
   position: relative;
   max-width: 100rem;
 }
+
+.job-cards:first-child {
+  margin-top: 8.2rem;
+}
+
+.card-text {
+  font-size: 1.6rem;
+}
+
+.error__card-text {
+  font-size: 1.6rem;
+  color: #c82333;
+}
+
+.light-text {
+  font-size: 1.6rem;
+  color: var(--text-primary);
+}
+
+.job-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.job-category {
+  background-color: var(--main-background);
+  padding: 1rem 1.6rem;
+  width: fit-content;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  margin-right: 1.6rem;
+}
+
+.date {
+  font-size: 1.3rem;
+}
+
+.cards-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.icon--text {
+  align-items: center;
+}
+
+.type {
+  margin-left: 1.6rem;
+}
+
+.salary-range {
+  font-size: 1.2rem;
+}

@@ -175,3 +175,48 @@ body {
   visibility: hidden;
   display: none;
 }
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: all 0.5s;
+  position: absolute;
+}
+
+.dropdown-container {
+  cursor: pointer;
+}
+
+.filter-dropdown {
+  margin-top: 0.5rem;
+}
+
+.checkbox {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sort-dropdown {
+  margin-top: 0.5rem;
+}
+
+.dropdown__box--active {
+  position: absolute;
+  transform: translateY(0);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-1rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hide-icon {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.btns-container {
+  gap: 1.6rem;
+}

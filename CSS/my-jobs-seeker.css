@@ -292,3 +292,11 @@ body {
 .salary-range {
   font-size: 1.2rem;
 }
+
+.description {
+  margin-top: 1.2rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.6rem;
+  max-width: 80rem;
+  color: #444;
+}

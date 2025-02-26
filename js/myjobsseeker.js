@@ -52,12 +52,12 @@ const displayJobType = (type) => {
 const displayJobStatus = (status) => {
   if (status === "PND") return "Pending";
   if (status === "REJ") return "Rejected";
-  else return "Closed";
+  else return "Accepted";
 };
 
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
-statusChangeColor(statusContent);
+
 const displayJobs = function (data) {
   data.forEach(async function (job) {
     const html = ` <div class="job-cards">
@@ -98,7 +98,7 @@ const displayJobs = function (data) {
           <div class="flex-container">
             <span class="light-text card-text">Status - </span>
             <span class="light-text card-text btn status-pen status"
-              >${displayJobStatus(job.status)}</span
+              >${displayJobStatus(job.applications.status)}</span
             >
           </div>
         </div>
@@ -112,3 +112,5 @@ const displayJobs = function (data) {
     statusChangeColor(newStatus);
   });
 };
+
+displayJobs(data);

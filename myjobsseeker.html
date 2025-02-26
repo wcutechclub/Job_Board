@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/CSS/my-jobs-poster.css" />
+    <link rel="stylesheet" href="/CSS/my-jobs-seeker.css" />
     <link rel="stylesheet" href="/CSS/general.css" />
     <title>My Jobs</title>
   </head>
@@ -25,6 +25,7 @@
       <div class="main-header-container">
         <h2 class="main-header">MY JOBS</h2>
       </div>
+
       <div class="filter-box">
         <div class="dropdown-container">
           <div class="flex-container filter-dropdown--container">
@@ -77,23 +78,16 @@
             </div>
           </div>
         </div>
-
-        <a href="/postJob.html" class="add-job__btn">Add Job</a>
       </div>
-
+      <!-- Job Cards -->
       <div class="job-cards--container">
         <div class="job-cards">
           <div class="flex-container date">
             <span class="light-text date">Posted on</span>
             <span class="post-date date light-text">2.4.2025</span>
           </div>
-          <div class="flex-container btn-title">
-            <h2 class="job-title card-text">Front End Development</h2>
-            <div class="flex-container btns-container">
-              <span class="btn cards-btn edit-btn" data-mode="edit">Edit</span>
-              <span class="btn cards-btn close-btn">Close</span>
-            </div>
-          </div>
+
+          <h2 class="job-title card-text">Front End Development</h2>
 
           <div class="flex-container">
             <span class="job-category card-text">Software Engineering</span>
@@ -125,81 +119,15 @@
             nostrum! Rerum temporibus autem qui numquam? Aspernatur eligendi qui
             aliquam beatae.
           </p>
-
-          <div class="applicants-container">
-            <div class="flex-container status-applicants">
-              <div class="flex-container">
-                <span class="light-text card-text btn status-active status"
-                  >Active</span
-                >
-              </div>
-              <div class="flex-container applicants-btn">
-                <span class="light-text card-text">Applicants:</span>
-                <span class="light-text card-text num-applicants">100</span>
-                <ion-icon name="caret-down-outline"></ion-icon>
-              </div>
-            </div>
-            <div class="applicant-list dropdown__box--active">
-              <div class="applicant-details">
-                <span class="applicants-name light-text card-text">
-                  John Doe
-                </span>
-                <div class="applicant-details__btns">
-                  <a
-                    href="${applicant.resume_url}"
-                    class="light-text card-text resume-link"
-                  >
-                    Show Resume
-                  </a>
-                  <div class="flex-container accept-reject__container">
-                    <a
-                      href="#"
-                      class="light-text card-text accept-btn status-active applicant-details__btn"
-                    >
-                      Accept
-                    </a>
-                    <a
-                      href="#"
-                      class="light-text card-text reject-btn status-close applicant-details__btn"
-                    >
-                      Reject
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="applicant-details">
-                <span class="applicants-name light-text card-text">
-                  Monkey D. Luffy
-                </span>
-                <div class="applicant-details__btns">
-                  <a
-                    href="${applicant.resume_url}"
-                    class="light-text card-text resume-link"
-                  >
-                    Show Resume
-                  </a>
-                  <div class="flex-container accept-reject__container">
-                    <a
-                      href="#"
-                      class="light-text card-text accept-btn status-active applicant-details__btn"
-                    >
-                      Accept
-                    </a>
-                    <a
-                      href="#"
-                      class="light-text card-text reject-btn status-close applicant-details__btn"
-                    >
-                      Reject
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="flex-container">
+            <span class="light-text card-text">Status - </span>
+            <span class="light-text card-text btn status-pen status"
+              >Pending</span
+            >
           </div>
         </div>
       </div>
     </main>
-
     <!-- Script -->
     <script
       type="module"
@@ -209,6 +137,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="/js/myjobsposter.js"></script>
+    <script src="/js/myjobsseeker.js"></script>
   </body>
 </html>

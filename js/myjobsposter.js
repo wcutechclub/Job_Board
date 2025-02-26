@@ -37,21 +37,24 @@ const statusChangeColor = function (statusValue) {
   }
 };
 
-const token = localStorage.getItem( "authToken" );
-const userId = localStorage.getItem( "userId" );
+const token = localStorage.getItem("authToken");
+const userId = localStorage.getItem("userId");
 
-if ( !token ) {
-  alert( "You need to log in!" );
+if (!token) {
+  alert("You need to log in!");
   window.location.href = "/login.html";
 }
 
 const fetchApplicants = async (applicant) => {
-  const response = await fetch( `http://localhost:8000/user/${ applicant.applicant }`, {
-    headers: {
-      'Authorization': `Token ${ token }`,
-      'Content-Type': 'application/json',
+  const response = await fetch(
+    `http://localhost:8000/user/${applicant.applicant}`,
+    {
+      headers: {
+        Authorization: `Token ${token}`,
+        "Content-Type": "application/json",
+      },
     }
-  } );
+  );
   const data = await response.json();
   return data;
 };
@@ -83,29 +86,29 @@ const displayApplicants = async (applicants) => {
     })
   );
 
-  return applicantHTMLs.join('');
+  return applicantHTMLs.join("");
 };
 
-const applicantInfo = async applicants => {
-  const infoHTML = await displayApplicants( applicants );
+const applicantInfo = async (applicants) => {
+  const infoHTML = await displayApplicants(applicants);
   return infoHTML;
 };
 
 const fetchPostedJobs = async (displayJobs) => {
-  const response = await fetch( 'http://localhost:8000/my-jobs/posted', {
+  const response = await fetch("http://localhost:8000/my-jobs/posted", {
     headers: {
-      'Authorization': `Token ${ token }`,
-      'Content-Type': 'application/json',
-    }
-  } );
+      Authorization: `Token ${token}`,
+      "Content-Type": "application/json",
+    },
+  });
   const postedJobs = await response.json();
 
-  displayJobs( postedJobs );
+  displayJobs(postedJobs);
 };
 
-const displayJobStatus = ( status )  => {
-  if ( status === 'OP' ) return 'Open';
-  else return 'Closed';
+const displayJobStatus = (status) => {
+  if (status === "OP") return "Open";
+  else return "Closed";
 };
 
 const displayJobType = (type) => {
@@ -114,67 +117,74 @@ const displayJobType = (type) => {
   if (type === "PT") return "Part Time";
 };
 
-const displayJobs = function ( data ) {
+const displayJobs = function (data) {
   data.forEach(async function (job) {
     const html = `
-<div class="job-cards">
-          <div class="flex-container">
+  <div class="job-cards">
+          <div class="flex-container date">
             <span class="light-text date">Posted on</span>
             <span class="post-date date light-text">${job.created_at}</span>
           </div>
-          <h2 class="job-title card-text">${job.title}</h2>
+
+          <div class="flex-container btn-title">
+            <h2 class="job-title card-text">${job.title}</h2>
+            <div class="flex-container btns-container">
+              <span class="btn cards-btn edit-btn" data-mode="edit">Edit</span>
+              <span class="btn cards-btn close-btn">Close</span>
+            </div>
+          </div>
+
           <div class="flex-container">
             <span class="job-category card-text">${job.job_category}</span>
-
             <div class="flex-container">
               <span class="card-text salary salary-type light-text"
-                >monthly -</span
+                >Monthly -</span
               >
               <span class="salary-range salary card-text light-text">
                 ${job.salary_range}</span
               >
             </div>
-          </div>
 
-          <div class="flex-container">
-            <div class="flex-container icon--text">
-              <ion-icon class="cards-icon" name="location-outline"></ion-icon>
-              <span class="job-location card-text">${job.location}</span>
-            </div>
-            <div class="flex-container type">
-              <span class="card-text type">Type -</span>
-              <span class="job-type card-text"
-                >${displayJobType(job.type) }</span
-              >
+            <div class="flex-container double-container">
+              <div class="flex-container icon--text">
+                <ion-icon class="cards-icon" name="location-outline"></ion-icon>
+                <span class="job-location card-text">${job.location}</span>
+              </div>
+              <div class="flex-container type">
+                <span class="card-text type">Type -</span>
+                <span class="job-type card-text"
+                  >${displayJobType(job.type)}</span
+                >
+              </div>
             </div>
           </div>
 
           <p class="description card-text">${job.description}</p>
 
-          <div class="flex-container">
-            <span class="light-text card-text">Status</span>
-            <span class="light-text card-text btn status-active status"
-              >${displayJobStatus(job.status)}</span
-            >
-          </div>
           <div class="applicants-container">
-            <div class="flex-container applicants-btn">
-              <span class="light-text card-text">Applicants:</span>
-              <span class="light-text card-text num-applicants"
-                >${job.total_applicants}</span
-              >
-              <ion-icon name="caret-down-outline"></ion-icon>
+            <div class="flex-container status-applicants">
+              <div class="flex-container">
+                <span class="light-text card-text btn status-active status"
+                  >${displayJobStatus(job.status)}</span
+                >
+              </div>
+              <div class="flex-container applicants-btn">
+                <span class="light-text card-text">Applicants:</span>
+                <span class="light-text card-text num-applicants"
+                  >${job.total_applicants}</span
+                >
+                <ion-icon name="caret-down-outline"></ion-icon>
+              </div>
             </div>
             <div class="applicant-list dropdown__box--active">
-            ${job.applicants.length === 0 ? "<p class='error__card-text'>No applicants yet!</p>" : await (applicantInfo(job.applicants))}
+               ${
+                 job.applicants.length === 0
+                   ? "<p class='error__card-text'>No applicants yet!</p>"
+                   : await applicantInfo(job.applicants)
+               }
             </div>
           </div>
-          <div class="flex-container btns-container">
-            <span class="btn cards-btn edit-btn" data-mode="edit">Edit</span>
-            <span class="btn cards-btn close-btn">Close</span>
-          </div>
         </div>
-
 `;
     jobCard.insertAdjacentHTML("beforeend", html);
 
@@ -185,7 +195,7 @@ const displayJobs = function ( data ) {
   });
 };
 
-fetchPostedJobs( displayJobs );
+fetchPostedJobs(displayJobs);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -336,3 +346,70 @@ document.addEventListener("click", function (e) {
     saveChanges(jobCard);
   }
 });
+
+/*
+<div class="job-cards">
+          <div class="flex-container date">
+            <span class="light-text date">Posted on</span>
+            <span class="post-date date light-text">${job.created_at}</span>
+          </div>
+
+        <div class="flex-container btn-title">
+          <h2 class="job-title card-text">${job.title}</h2>
+          <div class="flex-container btns-container">
+            <span class="btn cards-btn edit-btn" data-mode="edit">Edit</span>
+            <span class="btn cards-btn close-btn">Close</span>
+          </div>
+        </div>
+
+        <div class="flex-container">
+             <span class="job-category card-text">${job.job_category}</span>
+            <div class="flex-container">
+              <span class="card-text salary salary-type light-text"
+                >monthly -</span>
+              <span class="salary-range salary card-text light-text">
+                ${job.salary_range}</span>
+             </div>
+
+             
+        <div class="flex-container double-container">
+            <div class="flex-container icon--text">
+              <ion-icon class="cards-icon" name="location-outline"></ion-icon>
+              <span class="job-location card-text">${job.location}</span>
+            </div>
+            <div class="flex-container type">
+              <span class="card-text type">Type -</span>
+              <span class="job-type card-text">${displayJobType(
+                job.type
+              )}</span>
+            </div>
+          </div>     
+       </div>
+
+
+          <p class="description card-text">${job.description}</p>
+
+          <div class="flex-container">
+            <span class="light-text card-text">Status</span>
+            <span class="light-text card-text btn status-active status"
+              >${displayJobStatus(job.status)}</span
+            >
+          </div>
+          <div class="applicants-container">
+            <div class="flex-container applicants-btn">
+              <span class="light-text card-text">Applicants:</span>
+              <span class="light-text card-text num-applicants"
+                >${job.total_applicants}</span
+              >
+              <ion-icon name="caret-down-outline"></ion-icon>
+            </div>
+            <div class="applicant-list dropdown__box--active">
+            ${
+              job.applicants.length === 0
+                ? "<p class='error__card-text'>No applicants yet!</p>"
+                : await applicantInfo(job.applicants)
+            }
+            </div>
+          </div>
+        </div>
+*/

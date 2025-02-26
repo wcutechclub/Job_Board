@@ -224,9 +224,10 @@ input:focus {
  ///////////////////////////// Job Cards  //////////////////////////////////*/
 
 .job-cards {
-  padding: 1.6rem 2.4rem;
+  padding: 2.4rem;
   gap: 1.2rem;
   border-bottom: 0.01rem solid #dee2e6;
+  position: relative;
 }
 
 .job-cards:last-child {
@@ -315,4 +316,19 @@ input:focus {
 .invalid__job-container p{
   font-size: 1.6rem;
   text-align: center;
+}
+
+.application-message{
+  position: absolute;
+  right: 2rem;
+  bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.error__application-message{
+  color: red;
+}
+
+.success__application-message{
+  color: green;
 }

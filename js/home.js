@@ -39,8 +39,6 @@ const toggleDropdown = function (btnUp, btnDown, dc) {
 };
 
 dropdownType.addEventListener("click", function () {
-  console.log("Hi");
-
   toggleDropdown(typeUpArrow, typeDownArrow, dropdownTypeContent);
 });
 dropdownLocation.addEventListener("click", function () {
@@ -157,45 +155,72 @@ logoutBtn.addEventListener("click", async function (e) {
   });
 });
 
+
+// Handle job applications
+let observer;
+
+function setupObserver() {
+  observer = new MutationObserver((mutations) => {
+    const applyBtns = document.querySelectorAll('.apply-btn');
+    applyBtns.forEach((applyBtn) => {
+      if (!applyBtn.hasListener) {
+        applyBtn.addEventListener('click', handleApplyClick);
+        applyBtn.hasListener = true;
+      }
+    });
+    if ( applyBtns.length !== 0 ) { observer.disconnect() };
+  });
+
+  observer.observe(document, { childList: true, subtree: true });
+}
+
+async function handleApplyClick() {
+  let applicationMessage = this.nextElementSibling;
+  if ( !applicationMessage || applicationMessage.tagName === 'p') {
+    applicationMessage = document.createElement( 'p' );
+  }
+  applicationMessage.textContent = '';
+  applicationMessage.classList = '';
+  const jobId = this.getAttribute('jobid');
+  const applicationBody = {
+    job: jobId,
+    applicant: userId
+  };
+
+  const response = await fetch('http://localhost:8000/applications/', {
+    method: 'POST',
+    headers: {
+      Authorization: `Token ${token}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(applicationBody)
+  });
+
+  if (response.status === 400) {
+    applicationMessage.classList.add('application-message', 'error__application-message');
+    applicationMessage.textContent = 'You already applied for this job.';
+  } else {
+    applicationMessage.classList.add('application-message', 'success__application-message');
+    applicationMessage.textContent = 'Your application is sent.';
+  }
+  this.insertAdjacentElement( "afterend", applicationMessage );
+};
+
+setupObserver();
+
+function reconnectObserver() {
+  if (observer) {
+    observer.disconnect();
+  }
+  setupObserver();
+}
+
+// Search for Jobs
 const searchQuery = document.getElementById("search");
 
 searchQuery.addEventListener("keydown", async function (e) {
   if (e.key === "Enter") {
     getJobs(`http://localhost:8000/jobs?search=${this.value}`);
-  }
-});
-
-
-// Handle job applications
-const observer = new MutationObserver( ( mutations ) => {
-  const applyBtns = document.querySelectorAll( '.apply-btn' );
-  if ( applyBtns ) {
-    applyBtns.forEach( ( applyBtn ) => {
-
-      applyBtn.addEventListener( 'click', async () => {
-        console.log( applyBtn );
-        const jobId = applyBtn.getAttribute( 'jobid' );
-        const applicationBody = {
-          'job': jobId,
-          'applicant': userId
-        };
-        const response = await fetch( 'http://localhost:8000/applications/', {
-          method: 'POST',
-          headers: {
-            Authorization: `Token ${ token }`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify( applicationBody )
-        } );
-        const data = await response.json();
-        console.log( data );
-
-      } );
-    } );
   };
-} );
-
-observer.observe( document.body, {
-  childList: true, subtree: true
-} );
-
+  setupObserver();
+});

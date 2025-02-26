@@ -307,12 +307,12 @@ body {
   border-radius: 11px;
 }
 
-.status-active {
+.status-accept {
   background-color: var(--accent-green);
 }
 .status-pen {
   background-color: var(--yellow);
 }
-.status-close {
+.status-reject {
   background-color: var(--red);
 }

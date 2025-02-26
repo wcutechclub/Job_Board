@@ -128,8 +128,7 @@ const displayJobs = function (data) {
             <p class="description card-text">
             ${job.description}
             </p>
-
-            <a class="btn apply-btn" href="#">Apply</a>
+            <a jobid="${job.id}" class="btn apply-btn" href="#">Apply</a>
           </div>
 `;
     jobCard.insertAdjacentHTML("beforeend", html);
@@ -165,3 +164,38 @@ searchQuery.addEventListener("keydown", async function (e) {
     getJobs(`http://localhost:8000/jobs?search=${this.value}`);
   }
 });
+
+
+// Handle job applications
+const observer = new MutationObserver( ( mutations ) => {
+  const applyBtns = document.querySelectorAll( '.apply-btn' );
+  if ( applyBtns ) {
+    applyBtns.forEach( ( applyBtn ) => {
+
+      applyBtn.addEventListener( 'click', async () => {
+        console.log( applyBtn );
+        const jobId = applyBtn.getAttribute( 'jobid' );
+        const applicationBody = {
+          'job': jobId,
+          'applicant': userId
+        };
+        const response = await fetch( 'http://localhost:8000/applications/', {
+          method: 'POST',
+          headers: {
+            Authorization: `Token ${ token }`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify( applicationBody )
+        } );
+        const data = await response.json();
+        console.log( data );
+
+      } );
+    } );
+  };
+} );
+
+observer.observe( document.body, {
+  childList: true, subtree: true
+} );
+

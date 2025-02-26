@@ -222,6 +222,22 @@ body {
   gap: 1.6rem;
 }
 
+.add-job__btn:link,
+.add-job__btn:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1.2rem;
+  border-radius: 1.1rem;
+}
+
+.add-job__btn:hover,
+.add-job__btn:focus {
+  background-color: var(--muted-blue);
+}
 /*
 //////////////////////////////////////////////////////////////////////
  ///////////////////////////// Job Cards  //////////////////////////////////*/

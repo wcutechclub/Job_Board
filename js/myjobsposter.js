@@ -138,7 +138,7 @@ const displayJobs = function (data) {
             <span class="job-category card-text">${job.job_category}</span>
             <div class="flex-container">
               <span class="card-text salary salary-type light-text"
-                >monthly -</span
+                >Monthly -</span
               >
               <span class="salary-range salary card-text light-text">
                 ${job.salary_range}</span

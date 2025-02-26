@@ -43,8 +43,72 @@ const statusChangeColor = function (statusContent) {
   }
 };
 
-// Change the background color of the status
-const statusContent = document.querySelector(".status");
-console.log(statusContent.textContent);
-// const newStatus = jobCard.lastElementChild.querySelector(".status");
+const displayJobType = (type) => {
+  if (type === "CT") return "Contractual";
+  if (type === "FT") return "Full Time";
+  if (type === "PT") return "Part Time";
+};
+
+const displayJobStatus = (status) => {
+  if (status === "PND") return "Pending";
+  if (status === "REJ") return "Rejected";
+  else return "Closed";
+};
+
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
 statusChangeColor(statusContent);
+const displayJobs = function (data) {
+  data.forEach(async function (job) {
+    const html = ` <div class="job-cards">
+          <div class="flex-container date">
+            <span class="light-text date">Posted on</span>
+            <span class="post-date date light-text">>${job.created_at}</span>
+          </div>
+
+          <h2 class="job-title card-text">${job.title}</h2>
+
+          <div class="flex-container">
+            <span class="job-category card-text">${job.job_category}</span>
+
+            <div class="flex-container">
+              <span class="card-text salary salary-type light-text"
+                >Monthly -</span
+              >
+              <span class="salary-range salary card-text light-text">
+                ${job.salary_range}</span
+              >
+            </div>
+
+            <div class="flex-container double-container">
+              <div class="flex-container icon--text">
+                <ion-icon class="cards-icon" name="location-outline"></ion-icon>
+                <span class="job-location card-text">${job.location}</span>
+              </div>
+              <div class="flex-container type">
+                <span class="card-text type">Type -</span>
+                <span class="job-type card-text">${displayJobType(
+                  job.type
+                )}</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="description card-text">${job.description}</p>
+          <div class="flex-container">
+            <span class="light-text card-text">Status - </span>
+            <span class="light-text card-text btn status-pen status"
+              >${displayJobStatus(job.status)}</span
+            >
+          </div>
+        </div>
+        `;
+
+    jobCard.insertAdjacentHTML("beforeend", html);
+
+    // Change the background color of the status
+    const statusContent = document.querySelector(".status");
+    const newStatus = jobCard.lastElementChild.querySelector(".status");
+    statusChangeColor(newStatus);
+  });
+};

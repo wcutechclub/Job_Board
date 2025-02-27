@@ -12,6 +12,8 @@ const iconDownSort = document.querySelector(".icon-down-sort");
 const jobCard = document.querySelector( ".job-cards--container" );
 
 
+const token = localStorage.getItem( "authToken" );
+const userId = localStorage.getItem( "userId" );
 const userType = localStorage.getItem("userType");
 
 if (!token || !userId || !userType) {
@@ -113,7 +115,7 @@ const displayJobs = function (data) {
           <div class="flex-container">
             <span class="light-text card-text">Status - </span>
             <span class="light-text card-text btn status-pen status"
-              >${displayJobStatus(job.applications.status)}</span
+              >${displayJobStatus(job.applications[0].status)}</span
             >
           </div>
         </div>
@@ -122,10 +124,23 @@ const displayJobs = function (data) {
     jobCard.insertAdjacentHTML("beforeend", html);
 
     // Change the background color of the status
-    const statusContent = document.querySelector(".status");
+    const statusContent = document.querySelector( ".status" );
     const newStatus = jobCard.lastElementChild.querySelector(".status");
     statusChangeColor(newStatus);
   });
 };
 
-displayJobs(data);
+const fetchJobs = async () => {
+  const response = await fetch( "http://localhost:8000/my-jobs/applied", {
+    headers: {
+      Authorization: `Token ${ token }`,
+      "Content-Type": "application/json",
+    },
+  } );
+  const data = await response.json();
+  console.log(data);
+
+  displayJobs(data);
+};
+
+fetchJobs();

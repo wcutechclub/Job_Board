@@ -9,7 +9,22 @@ const iconDownFilter = document.querySelector(".icon-down-filter");
 const iconUpSort = document.querySelector(".icon-up-sort");
 const iconDownSort = document.querySelector(".icon-down-sort");
 // Card
-const jobCard = document.querySelector(".job-cards--container");
+const jobCard = document.querySelector( ".job-cards--container" );
+
+
+const userType = localStorage.getItem("userType");
+
+if (!token || !userId || !userType) {
+  alert("You need to log in!");
+  window.location.href = "/login.html";
+};
+
+const myJobLink = document.querySelector('.my-jobs__link')
+if ( userType === 'JF' ) {
+  myJobLink.setAttribute('href', 'myjobsseeker.html');
+} else {
+  myJobLink.setAttribute('href', 'myjobsPoster.html');
+};
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////

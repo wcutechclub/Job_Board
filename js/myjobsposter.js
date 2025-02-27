@@ -38,7 +38,21 @@ const statusChangeColor = function (statusValue) {
 };
 
 const token = localStorage.getItem("authToken");
-const userId = localStorage.getItem("userId");
+const userId = localStorage.getItem( "userId" );
+const userType = localStorage.getItem("userType");
+
+if (!token || !userId || !userType) {
+  alert("You need to log in!");
+  window.location.href = "/login.html";
+};
+
+const myJobLink = document.querySelector('.my-jobs__link')
+if ( userType === 'JF' ) {
+  myJobLink.setAttribute('href', 'myjobsseeker.html');
+} else {
+  myJobLink.setAttribute('href', 'myjobsPoster.html');
+};
+
 
 if (!token) {
   alert("You need to log in!");
@@ -371,7 +385,7 @@ document.addEventListener("click", function (e) {
                 ${job.salary_range}</span>
              </div>
 
-             
+
         <div class="flex-container double-container">
             <div class="flex-container icon--text">
               <ion-icon class="cards-icon" name="location-outline"></ion-icon>
@@ -383,7 +397,7 @@ document.addEventListener("click", function (e) {
                 job.type
               )}</span>
             </div>
-          </div>     
+          </div>
        </div>
 
 

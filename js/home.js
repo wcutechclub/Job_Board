@@ -2,11 +2,19 @@
 
 const token = localStorage.getItem("authToken");
 const userId = localStorage.getItem("userId");
+const userType = localStorage.getItem("userType");
 
-if (!token) {
+if (!token || !userId || !userType) {
   alert("You need to log in!");
   window.location.href = "/login.html";
-}
+};
+
+const myJobLink = document.querySelector('.my-jobs__link')
+if ( userType === 'JF' ) {
+  myJobLink.setAttribute('href', 'myjobsseeker.html');
+} else {
+  myJobLink.setAttribute('href', 'myjobsPoster.html');
+};
 
 const dropdownType = document.querySelector(".dropdown-header__box-type");
 const dropdownLocation = document.querySelector(

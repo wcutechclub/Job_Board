@@ -31,8 +31,6 @@ btnLogin.addEventListener("click", async function (e) {
             const data = await response.json();
             console.log("Login successful:", data);
 
-            console.log(data);
-
             localStorage.setItem("authToken", data.token);
             localStorage.setItem( "userId", data.user_id );
             localStorage.setItem( "userType", data.user_type );

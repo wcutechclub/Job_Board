@@ -31,11 +31,11 @@ btnLogin.addEventListener("click", async function (e) {
             const data = await response.json();
             console.log("Login successful:", data);
 
-            const token = data.token;
-            const userId = data.user_id;
+            console.log(data);
 
-            localStorage.setItem("authToken", token);
-            localStorage.setItem("userId", userId);
+            localStorage.setItem("authToken", data.token);
+            localStorage.setItem( "userId", data.user_id );
+            localStorage.setItem( "userType", data.user_type );
 
             window.location.href = "/home.html";
         } else {

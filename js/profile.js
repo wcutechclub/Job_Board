@@ -5,10 +5,21 @@ const bioText = document.querySelector( '.bio' );
 const userEmail = document.querySelector( '.email-link' );
 const userResume = document.querySelector( '.resume-btn' );
 
-const logoutBtn = document.querySelector( '.logout-btn' );
-
 const token = localStorage.getItem( "authToken" );
 const userId = localStorage.getItem( "userId" );
+const userType = localStorage.getItem("userType");
+
+if (!token || !userId || !userType) {
+  alert("You need to log in!");
+  window.location.href = "/login.html";
+};
+
+const myJobLink = document.querySelector('.my-jobs__link')
+if ( userType === 'JF' ) {
+  myJobLink.setAttribute('href', 'myjobsseeker.html');
+} else {
+  myJobLink.setAttribute('href', 'myjobsPoster.html');
+};
 
 if ( !token ) {
   alert( "You need to log in!" );
@@ -35,22 +46,3 @@ fetch("http://localhost:8000/user/me/", {
   profilePic.src = data.profile_pic_url
 })
 .catch(error => console.error("Error:", error));
-
-logoutBtn.addEventListener( 'click', async function (e) {
-  e.preventDefault();
-  await fetch( 'http://localhost:8000/user/logout/', {
-    method: 'POST',
-    headers: {
-      "Authorization": `Token ${ token }`,
-      "Content-Type": "application/json",
-    },
-  } ).then( response => {
-    if ( response.ok ) {
-      localStorage.clear(token);
-      localStorage.clear( userId );
-      window.location.href = 'index.html';
-      return;
-    };
-    throw new Error( "Faild to logout." );
-  } )
-})

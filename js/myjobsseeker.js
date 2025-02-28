@@ -131,16 +131,18 @@ const displayJobs = function (data) {
 };
 
 const fetchJobs = async () => {
-  const response = await fetch( "http://localhost:8000/my-jobs/applied", {
-    headers: {
-      Authorization: `Token ${ token }`,
-      "Content-Type": "application/json",
-    },
-  } );
-  const data = await response.json();
-  console.log(data);
-
-  displayJobs(data);
+  try {
+    const response = await fetch( "http://localhost:8000/my-jobs/applied", {
+      headers: {
+        Authorization: `Token ${ token }`,
+        "Content-Type": "application/json",
+      },
+    } );
+    const data = await response.json();
+    displayJobs(data);
+  } catch (error) {
+    alert( "Something went wrong." );
+  }
 };
 
 fetchJobs();

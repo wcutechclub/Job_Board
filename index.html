@@ -11,13 +11,13 @@
   <body>
     <header class="header" id="header">
       <nav class="nav-bar--container">
-        <a href="#" class="logo">JOB BOARD</a>
+        <a href="#hero" class="logo scroll-btn-hero">JOB BOARD</a>
 
         <div class="nav-btns--container">
-          <a href="#" class="nav-bar--btns btn">Home</a>
-          <a href="#" class="nav-bar--btns btn">Features</a>
-          <a href="#" class="nav-bar--btns btn">Testimonials</a>
-          <a href="#" class="nav-bar--btns btn">How it Works</a>
+          <a href="#hero" class="nav-bar--btns btn">Home</a>
+          <a href="#features" class="nav-bar--btns btn">Features</a>
+          <a href="#testimonials" class="nav-bar--btns btn">Testimonials</a>
+          <a href="#how" class="nav-bar--btns btn">How it Works</a>
         </div>
         <div class="nav-cta--container">
           <a class="nav-signup--btn nav-cta-btn btn" href="signupseeker.html"
@@ -27,8 +27,9 @@
         </div>
       </nav>
     </header>
-    <main>
-      <section class="hero-section" id="hero">
+
+    <main class="main">
+      <section class="hero-section section" id="hero">
         <div class="hero grid-cols--2">
           <div class="hero-text">
             <h1 class="primary-header hero-main--header">
@@ -39,8 +40,12 @@
               careers and businesses to grow .
             </p>
             <div class="hero-btn--container">
-              <a class="hero-btn btn" href="#">Start Your Journey</a>
-              <a class="hero-btn hero-btn2 btn" href="#">Learn More &darr;</a>
+              <a class="hero-btn btn scroll-btn-cta" href="#cta"
+                >Start Your Journey</a
+              >
+              <a class="hero-btn hero-btn2 btn scroll-btn-how" href="#how"
+                >Learn More &darr;</a
+              >
             </div>
           </div>
           <div class="img-box">
@@ -52,7 +57,7 @@
         </div>
       </section>
 
-      <section class="features-section" id="features">
+      <section class="features-section section section--hidden" id="features">
         <div
           class="feat-header--container sec-header--container container margin--bottom">
           <span class="feat-header sec-header">FEATURES</span>
@@ -99,7 +104,7 @@
         </div>
       </section>
 
-      <section class="how-section" id="how">
+      <section class="how-section section section--hidden" id="how">
         <div class="container">
           <h3 class="secondary-header how-header">
             <span class="how-header-1">Find Jobs.</span>
@@ -228,7 +233,10 @@
         </div>
       </section>
 
-      <section class="testimonials-section" id="testimonials">
+      <section
+        class="testimonials-section section section--hidden"
+        id="testimonials"
+      >
         <div
           class="testimonial-header--container sec-header--container container margin--bottom">
           <span class="testimonial-header sec-header">Testimonials</span>
@@ -288,7 +296,7 @@
         </div>
       </section>
 
-      <section class="cta-section">
+      <section class="cta-section section section--hidden" id="cta">
         <div class="cta container grid">
           <div class="container cta-header--container">
             <h2 class="secondary-header cta-header padding--top">
@@ -312,7 +320,7 @@
       </section>
     </main>
 
-    <footer class="footer-section">
+    <footer class="footer-section section section--hidden">
       <div class="container footer-header--container footer-grid">
         <span class="footer-headers">Connect With US</span>
         <span class="footer-headers">About US</span>
@@ -391,6 +399,7 @@
     </footer>
 
     <!-- Script -->
+    <script src="/js/index.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

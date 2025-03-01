@@ -497,6 +497,10 @@ body {
   top: -25%;
 }
 
+.test-card--detail__name {
+  font-weight: 700;
+  font-size: 1.8rem !important;
+}
 .test-card--detail-box {
   margin-top: 1.8rem;
 }

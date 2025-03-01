@@ -1,7 +1,12 @@
 const header = document.querySelector(".header");
 const nav = document.querySelector(".nav-bar--container");
 const main = document.querySelector(".main");
-const btnScroll = document.querySelector(".scroll-btn");
+const btnScrollCta = document.querySelector(".scroll-btn-cta");
+const btnScrollHow = document.querySelector(".scroll-btn-how");
+const btnScrollHero = document.querySelector(".scroll-btn-hero");
+const heroSec = document.querySelector(".hero-section");
+const ctaSec = document.querySelector(".cta-section");
+const howSec = document.querySelector(".how-section");
 
 // Sticky Nav
 const navHeight = nav.getBoundingClientRect().height;
@@ -39,10 +44,6 @@ allSections.forEach(function (section) {
 });
 
 // Smooth Scroll
-// btnScroll.addEventListener('click', function(e) {
-//   const coords =
-// })
-
 document
   .querySelector(".nav-btns--container")
   .addEventListener("click", function (e) {
@@ -57,3 +58,20 @@ document
       });
     }
   });
+
+const smoothScroll = function (btn, section) {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    const navHeight = document.querySelector("nav").offsetHeight;
+    const sectionPosition = section.offsetTop - navHeight;
+
+    window.scrollTo({
+      top: sectionPosition,
+      behavior: "smooth",
+    });
+  });
+};
+
+smoothScroll(btnScrollCta, ctaSec);
+smoothScroll(btnScrollHero, heroSec);
+smoothScroll(btnScrollHow, howSec);

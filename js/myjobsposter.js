@@ -22,7 +22,7 @@ const applicantsList = document.querySelector(".applicant-list");
 const dropdown = function (dropdownBtn, iconUp, iconDown) {
   dropdownBtn.classList.toggle("dropdown__box--active");
   iconUp.classList.toggle("hide-icon");
-  iconDown.classList.toggle("hide-icon");
+  iconDown.classList.toggle( "hide-icon" );
 };
 
 const statusChangeColor = function (statusValue) {
@@ -73,24 +73,25 @@ const fetchApplicants = async (applicant) => {
   return data;
 };
 
-const displayApplicants = async (applicants) => {
+const displayApplicants = async ( applicants ) => {
   const applicantHTMLs = await Promise.all(
     applicants.map(async (applicant) => {
-      const applicantData = await fetchApplicants(applicant);
+      const applicantData = await fetchApplicants( applicant );
+
       return `
         <div class="applicant-details">
           <span class="applicants-name light-text card-text">
             ${applicantData.first_name} ${applicantData.last_name}
           </span>
           <div class="applicant-details__btns">
-            <a href="${applicant.resume_url}" class="light-text card-text resume-link">
+            <a href="#" userId=${applicantData.applicant} class="light-text card-text resume-link">
               Show Resume
             </a>
             <div class="flex-container accept-reject__container">
-              <a href="#" class="light-text card-text accept-btn status-active applicant-details__btn">
+              <a applicationId=${applicant.id} href="#" class="light-text card-text accept-btn status-active applicant-details__btn">
                 Accept
               </a>
-              <a href="#" class="light-text card-text reject-btn status-close applicant-details__btn">
+              <a applicationId=${applicant.id} href="#" class="light-text card-text reject-btn status-close applicant-details__btn">
                 Reject
               </a>
             </div>
@@ -103,7 +104,7 @@ const displayApplicants = async (applicants) => {
   return applicantHTMLs.join("");
 };
 
-const applicantInfo = async (applicants) => {
+const applicantInfo = async ( applicants ) => {
   const infoHTML = await displayApplicants(applicants);
   return infoHTML;
 };
@@ -132,7 +133,7 @@ const displayJobType = (type) => {
 };
 
 const displayJobs = function (data) {
-  data.forEach(async function (job) {
+  data.forEach( async function ( job ) {
     const html = `
   <div class="job-cards">
           <div class="flex-container date">
@@ -359,71 +360,64 @@ document.addEventListener("click", function (e) {
   ) {
     saveChanges(jobCard);
   }
-});
+} );
 
-/*
-<div class="job-cards">
-          <div class="flex-container date">
-            <span class="light-text date">Posted on</span>
-            <span class="post-date date light-text">${job.created_at}</span>
-          </div>
+// Handle Job Application Response
+async function handleApplicationAccept ( event ) {
+  event.preventDefault();
+  const applicationId = this.getAttribute( 'applicationid' );
+  const response = await fetch( `http://localhost:8000/applications/${ applicationId }/update-status/`, {
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token ${ token }`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify( {
+      'status': 'ACP'
+    } )
+  } );
+  const data = await response.json();
+};
 
-        <div class="flex-container btn-title">
-          <h2 class="job-title card-text">${job.title}</h2>
-          <div class="flex-container btns-container">
-            <span class="btn cards-btn edit-btn" data-mode="edit">Edit</span>
-            <span class="btn cards-btn close-btn">Close</span>
-          </div>
-        </div>
-
-        <div class="flex-container">
-             <span class="job-category card-text">${job.job_category}</span>
-            <div class="flex-container">
-              <span class="card-text salary salary-type light-text"
-                >monthly -</span>
-              <span class="salary-range salary card-text light-text">
-                ${job.salary_range}</span>
-             </div>
-
-
-        <div class="flex-container double-container">
-            <div class="flex-container icon--text">
-              <ion-icon class="cards-icon" name="location-outline"></ion-icon>
-              <span class="job-location card-text">${job.location}</span>
-            </div>
-            <div class="flex-container type">
-              <span class="card-text type">Type -</span>
-              <span class="job-type card-text">${displayJobType(
-                job.type
-              )}</span>
-            </div>
-          </div>
-       </div>
+async function handleApplicationReject(event) {
+  event.preventDefault();
+  const applicationId = this.getAttribute( 'applicationid' );
+  const response = await fetch( `http://localhost:8000/applications/${ applicationId }/update-status/`, {
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token ${ token }`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify( {
+      'status': 'REJ'
+    } )
+  } );
+  const data = await response.json();
+};
 
 
-          <p class="description card-text">${job.description}</p>
+let observer;
 
-          <div class="flex-container">
-            <span class="light-text card-text">Status</span>
-            <span class="light-text card-text btn status-active status"
-              >${displayJobStatus(job.status)}</span
-            >
-          </div>
-          <div class="applicants-container">
-            <div class="flex-container applicants-btn">
-              <span class="light-text card-text">Applicants:</span>
-              <span class="light-text card-text num-applicants"
-                >${job.total_applicants}</span
-              >
-              <ion-icon name="caret-down-outline"></ion-icon>
-            </div>
-            <div class="applicant-list dropdown__box--active">
-            ${
-              job.applicants.length === 0
-                ? "<p class='error__card-text'>No applicants yet!</p>"
-                : await applicantInfo(job.applicants)
-            }
-            </div>
-          </div>
-        </div>
-*/
+function setupObserver() {
+  observer = new MutationObserver((mutations) => {
+    const acceptBtns = document.querySelectorAll( '.accept-btn' );
+    const rejectBtns = document.querySelectorAll( '.reject-btn' );
+
+    acceptBtns.forEach((acceptBtn) => {
+      if (!acceptBtn.hasListener) {
+        acceptBtn.addEventListener('click', handleApplicationAccept);
+        acceptBtn.hasListener = true;
+      }
+    });
+    rejectBtns.forEach((rejectBtn) => {
+      if (!rejectBtn.hasListener) {
+        rejectBtn.addEventListener('click', handleApplicationReject);
+        rejectBtn.hasListener = true;
+      }
+    });
+  });
+
+  observer.observe(document, { childList: true, subtree: true });
+};
+
+setupObserver();

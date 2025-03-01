@@ -2,11 +2,19 @@
 
 const token = localStorage.getItem("authToken");
 const userId = localStorage.getItem("userId");
+const userType = localStorage.getItem("userType");
 
-if (!token) {
+if (!token || !userId || !userType) {
   alert("You need to log in!");
   window.location.href = "/login.html";
-}
+};
+
+const myJobLink = document.querySelector('.my-jobs__link')
+if ( userType === 'JF' ) {
+  myJobLink.setAttribute('href', 'myjobsseeker.html');
+} else {
+  myJobLink.setAttribute('href', 'myjobsPoster.html');
+};
 
 const dropdownType = document.querySelector(".dropdown-header__box-type");
 const dropdownLocation = document.querySelector(
@@ -27,7 +35,6 @@ const jobCard = document.querySelector(".job-cards--container");
 
 const searchInput = document.getElementById("search");
 
-const logoutBtn = document.querySelector(".logout-btn");
 
 //////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
@@ -135,26 +142,6 @@ const displayJobs = function (data) {
 
 // getJobs(displayJobs);
 getJobs("http://localhost:8000/jobs/");
-
-logoutBtn.addEventListener("click", async function (e) {
-  e.preventDefault();
-  await fetch("http://localhost:8000/user/logout/", {
-    method: "POST",
-    headers: {
-      Authorization: `Token ${token}`,
-      "Content-Type": "application/json",
-    },
-  }).then((response) => {
-    if (response.ok) {
-      localStorage.clear(token);
-      localStorage.clear(userId);
-      window.location.href = "index.html";
-      return;
-    }
-    throw new Error("Faild to logout.");
-  });
-});
-
 
 // Handle job applications
 let observer;

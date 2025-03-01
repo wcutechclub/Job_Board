@@ -66,17 +66,20 @@ const displayJobType = (type) => {
   if (type === "PT") return "Part Time";
 };
 
-const displayJobStatus = (status) => {
-  if (status === "PND") return "Pending";
-  if (status === "REJ") return "Rejected";
-  else return "Accepted";
+const applicationStatus = ( applications ) => {
+  const selectedApplication = applications.find( application => application.applicant === +userId );
+  if ( selectedApplication ) {
+    if ( selectedApplication.status === "PND" ) return "Pending";
+    if ( selectedApplication.status === "REJ" ) return "Rejected";
+    else return "Accepted";
+  };
 };
 
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
 
 const displayJobs = function (data) {
-  data.forEach(async function (job) {
+  data.forEach( async function ( job ) {
     const html = ` <div class="job-cards">
           <div class="flex-container date">
             <span class="light-text date">Posted on</span>
@@ -115,7 +118,7 @@ const displayJobs = function (data) {
           <div class="flex-container">
             <span class="light-text card-text">Status - </span>
             <span class="light-text card-text btn status-pen status"
-              >${displayJobStatus(job.applications[0].status)}</span
+              >${applicationStatus(job.applications)}</span
             >
           </div>
         </div>

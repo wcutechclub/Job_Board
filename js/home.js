@@ -2,11 +2,19 @@
 
 const token = localStorage.getItem("authToken");
 const userId = localStorage.getItem("userId");
+const userType = localStorage.getItem("userType");
 
-if (!token) {
+if (!token || !userId || !userType) {
   alert("You need to log in!");
   window.location.href = "/login.html";
-}
+};
+
+const myJobLink = document.querySelector('.my-jobs__link')
+if ( userType === 'JF' ) {
+  myJobLink.setAttribute('href', 'myjobsseeker.html');
+} else {
+  myJobLink.setAttribute('href', 'myjobsPoster.html');
+};
 
 const dropdownType = document.querySelector(".dropdown-header__box-type");
 const dropdownLocation = document.querySelector(
@@ -27,7 +35,6 @@ const jobCard = document.querySelector(".job-cards--container");
 
 const searchInput = document.getElementById("search");
 
-const logoutBtn = document.querySelector(".logout-btn");
 
 //////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
@@ -39,8 +46,6 @@ const toggleDropdown = function (btnUp, btnDown, dc) {
 };
 
 dropdownType.addEventListener("click", function () {
-  console.log("Hi");
-
   toggleDropdown(typeUpArrow, typeDownArrow, dropdownTypeContent);
 });
 dropdownLocation.addEventListener("click", function () {
@@ -128,8 +133,7 @@ const displayJobs = function (data) {
             <p class="description card-text">
             ${job.description}
             </p>
-
-            <a class="btn apply-btn" href="#">Apply</a>
+            <a jobid="${job.id}" class="btn apply-btn" href="#">Apply</a>
           </div>
 `;
     jobCard.insertAdjacentHTML("beforeend", html);
@@ -139,29 +143,71 @@ const displayJobs = function (data) {
 // getJobs(displayJobs);
 getJobs("http://localhost:8000/jobs/");
 
-logoutBtn.addEventListener("click", async function (e) {
-  e.preventDefault();
-  await fetch("http://localhost:8000/user/logout/", {
-    method: "POST",
+// Handle job applications
+let observer;
+
+function setupObserver() {
+  observer = new MutationObserver((mutations) => {
+    const applyBtns = document.querySelectorAll('.apply-btn');
+    applyBtns.forEach((applyBtn) => {
+      if (!applyBtn.hasListener) {
+        applyBtn.addEventListener('click', handleApplyClick);
+        applyBtn.hasListener = true;
+      }
+    });
+    if ( applyBtns.length !== 0 ) { observer.disconnect() };
+  });
+
+  observer.observe(document, { childList: true, subtree: true });
+}
+
+async function handleApplyClick() {
+  let applicationMessage = this.nextElementSibling;
+  if ( !applicationMessage || applicationMessage.tagName === 'p') {
+    applicationMessage = document.createElement( 'p' );
+  }
+  applicationMessage.textContent = '';
+  applicationMessage.classList = '';
+  const jobId = this.getAttribute('jobid');
+  const applicationBody = {
+    job: jobId,
+    applicant: userId
+  };
+
+  const response = await fetch('http://localhost:8000/applications/', {
+    method: 'POST',
     headers: {
       Authorization: `Token ${token}`,
       "Content-Type": "application/json",
     },
-  }).then((response) => {
-    if (response.ok) {
-      localStorage.clear(token);
-      localStorage.clear(userId);
-      window.location.href = "index.html";
-      return;
-    }
-    throw new Error("Faild to logout.");
+    body: JSON.stringify(applicationBody)
   });
-});
 
+  if (response.status === 400) {
+    applicationMessage.classList.add('application-message', 'error__application-message');
+    applicationMessage.textContent = 'You already applied for this job.';
+  } else {
+    applicationMessage.classList.add('application-message', 'success__application-message');
+    applicationMessage.textContent = 'Your application is sent.';
+  }
+  this.insertAdjacentElement( "afterend", applicationMessage );
+};
+
+setupObserver();
+
+function reconnectObserver() {
+  if (observer) {
+    observer.disconnect();
+  }
+  setupObserver();
+}
+
+// Search for Jobs
 const searchQuery = document.getElementById("search");
 
 searchQuery.addEventListener("keydown", async function (e) {
   if (e.key === "Enter") {
     getJobs(`http://localhost:8000/jobs?search=${this.value}`);
-  }
+  };
+  setupObserver();
 });

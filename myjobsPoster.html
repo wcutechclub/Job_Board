@@ -10,11 +10,11 @@
   <body>
     <header class="header section">
       <nav class="nav-bar--container">
-        <a class="nav-bar--btns btn" href="#">Home</a>
+        <a class="nav-bar--btns btn" href="home.html">Home</a>
         <div class="nav-btns--container">
-          <a class="nav-bar--btns btn underline" href="#">My Jobs</a>
-          <a class="nav-bar--btns btn" href="#">Profile</a>
-          <a class="nav-bar--btns btn" href="#">
+          <a class="nav-bar--btns btn underline my-jobs__link" href="#">My Jobs</a>
+          <a class="nav-bar--btns btn" href="profile.html">Profile</a>
+          <a class="nav-bar--btns btn logout-btn" href="#">
             <ion-icon class="icons" name="log-out-outline"></ion-icon>
           </a>
         </div>
@@ -82,121 +82,7 @@
       </div>
 
       <div class="job-cards--container">
-        <div class="job-cards">
-          <div class="flex-container date">
-            <span class="light-text date">Posted on</span>
-            <span class="post-date date light-text">2.4.2025</span>
-          </div>
-          <div class="flex-container btn-title">
-            <h2 class="job-title card-text">Front End Development</h2>
-            <div class="flex-container btns-container">
-              <span class="btn cards-btn edit-btn" data-mode="edit">Edit</span>
-              <span class="btn cards-btn close-btn">Close</span>
-            </div>
-          </div>
-
-          <div class="flex-container">
-            <span class="job-category card-text">Software Engineering</span>
-
-            <div class="flex-container">
-              <span class="card-text salary salary-type light-text"
-                >monthly -</span
-              >
-              <span class="salary-range salary card-text light-text">
-                $100 - $200</span
-              >
-            </div>
-
-            <div class="flex-container double-container">
-              <div class="flex-container icon--text">
-                <ion-icon class="cards-icon" name="location-outline"></ion-icon>
-                <span class="job-location card-text">Remote</span>
-              </div>
-              <div class="flex-container type">
-                <span class="card-text type">Type -</span>
-                <span class="job-type card-text">FT</span>
-              </div>
-            </div>
-          </div>
-
-          <p class="description card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quasi
-            consequatur dolorum reiciendis beatae sequi error mollitia rem at
-            nostrum! Rerum temporibus autem qui numquam? Aspernatur eligendi qui
-            aliquam beatae.
-          </p>
-
-          <div class="applicants-container">
-            <div class="flex-container status-applicants">
-              <div class="flex-container">
-                <span class="light-text card-text btn status-active status"
-                  >Active</span
-                >
-              </div>
-              <div class="flex-container applicants-btn">
-                <span class="light-text card-text">Applicants:</span>
-                <span class="light-text card-text num-applicants">100</span>
-                <ion-icon name="caret-down-outline"></ion-icon>
-              </div>
-            </div>
-            <div class="applicant-list dropdown__box--active">
-              <div class="applicant-details">
-                <span class="applicants-name light-text card-text">
-                  John Doe
-                </span>
-                <div class="applicant-details__btns">
-                  <a
-                    href="${applicant.resume_url}"
-                    class="light-text card-text resume-link"
-                  >
-                    Show Resume
-                  </a>
-                  <div class="flex-container accept-reject__container">
-                    <a
-                      href="#"
-                      class="light-text card-text accept-btn status-active applicant-details__btn"
-                    >
-                      Accept
-                    </a>
-                    <a
-                      href="#"
-                      class="light-text card-text reject-btn status-close applicant-details__btn"
-                    >
-                      Reject
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="applicant-details">
-                <span class="applicants-name light-text card-text">
-                  Monkey D. Luffy
-                </span>
-                <div class="applicant-details__btns">
-                  <a
-                    href="${applicant.resume_url}"
-                    class="light-text card-text resume-link"
-                  >
-                    Show Resume
-                  </a>
-                  <div class="flex-container accept-reject__container">
-                    <a
-                      href="#"
-                      class="light-text card-text accept-btn status-active applicant-details__btn"
-                    >
-                      Accept
-                    </a>
-                    <a
-                      href="#"
-                      class="light-text card-text reject-btn status-close applicant-details__btn"
-                    >
-                      Reject
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      
       </div>
     </main>
 
@@ -210,5 +96,6 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script src="/js/myjobsposter.js"></script>
+    <script defer src="/js/logout.js"></script>
   </body>
 </html>

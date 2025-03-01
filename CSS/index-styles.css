@@ -168,8 +168,14 @@ body {
   text-transform: uppercase;
 }
 
-/* /////////////////////////////////////////////////////
-/////////////////////////////////////////////////////// /*/
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.section {
+  transition: transform 1s, opacity 1s;
+}
 
 /*
 ////////////////////////////////////////////////
@@ -178,15 +184,23 @@ body {
 */
 .header {
   background-color: var(--main-background);
+  height: 9.6rem;
 }
 
 .nav-bar--container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
   padding: 0 4.8rem;
   height: 9.6rem;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-bar--container.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
 }
 
 .nav-btns--container {

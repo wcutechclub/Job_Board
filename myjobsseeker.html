@@ -10,11 +10,11 @@
   <body>
     <header class="header section">
       <nav class="nav-bar--container">
-        <a class="nav-bar--btns btn" href="#">Home</a>
+        <a class="nav-bar--btns btn" href="home.html">Home</a>
         <div class="nav-btns--container">
-          <a class="nav-bar--btns btn underline" href="#">My Jobs</a>
-          <a class="nav-bar--btns btn" href="#">Profile</a>
-          <a class="nav-bar--btns btn" href="#">
+          <a class="nav-bar--btns btn underline my-jobs__link" href="">My Jobs</a>
+          <a class="nav-bar--btns btn" href="profile.html">Profile</a>
+          <a class="nav-bar--btns btn logout-btn" href="#">
             <ion-icon class="icons" name="log-out-outline"></ion-icon>
           </a>
         </div>
@@ -81,51 +81,6 @@
       </div>
       <!-- Job Cards -->
       <div class="job-cards--container">
-        <div class="job-cards">
-          <div class="flex-container date">
-            <span class="light-text date">Posted on</span>
-            <span class="post-date date light-text">2.4.2025</span>
-          </div>
-
-          <h2 class="job-title card-text">Front End Development</h2>
-
-          <div class="flex-container">
-            <span class="job-category card-text">Software Engineering</span>
-
-            <div class="flex-container">
-              <span class="card-text salary salary-type light-text"
-                >monthly -</span
-              >
-              <span class="salary-range salary card-text light-text">
-                $100 - $200</span
-              >
-            </div>
-
-            <div class="flex-container double-container">
-              <div class="flex-container icon--text">
-                <ion-icon class="cards-icon" name="location-outline"></ion-icon>
-                <span class="job-location card-text">Remote</span>
-              </div>
-              <div class="flex-container type">
-                <span class="card-text type">Type -</span>
-                <span class="job-type card-text">FT</span>
-              </div>
-            </div>
-          </div>
-
-          <p class="description card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quasi
-            consequatur dolorum reiciendis beatae sequi error mollitia rem at
-            nostrum! Rerum temporibus autem qui numquam? Aspernatur eligendi qui
-            aliquam beatae.
-          </p>
-          <div class="flex-container">
-            <span class="light-text card-text">Status - </span>
-            <span class="light-text card-text btn status-pen status"
-              >Pending</span
-            >
-          </div>
-        </div>
       </div>
     </main>
     <!-- Script -->
@@ -138,5 +93,6 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script src="/js/myjobsseeker.js"></script>
+    <script defer src="/js/logout.js"></script>
   </body>
 </html>

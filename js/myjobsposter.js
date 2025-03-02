@@ -77,14 +77,13 @@ const displayApplicants = async ( applicants ) => {
   const applicantHTMLs = await Promise.all(
     applicants.map(async (applicant) => {
       const applicantData = await fetchApplicants( applicant );
-
       return `
         <div class="applicant-details">
           <span class="applicants-name light-text card-text">
             ${applicantData.first_name} ${applicantData.last_name}
           </span>
           <div class="applicant-details__btns">
-            <a href="#" userId=${applicantData.applicant} class="light-text card-text resume-link">
+            <a href="${applicant.resume_url}" userId=${applicantData.applicant} class="light-text card-text resume-link">
               Show Resume
             </a>
             <div class="flex-container accept-reject__container">

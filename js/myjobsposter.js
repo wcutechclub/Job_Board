@@ -83,7 +83,7 @@ const displayApplicants = async ( applicants ) => {
             ${applicantData.first_name} ${applicantData.last_name}
           </span>
           <div class="applicant-details__btns">
-            <a href="${applicant.resume_url}" userId=${applicantData.applicant} class="light-text card-text resume-link">
+            <a href="${applicantData.resume_url}" userId=${applicantData.id} class="light-text card-text resume-link">
               Show Resume
             </a>
             <div class="flex-container accept-reject__container">

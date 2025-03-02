@@ -414,10 +414,11 @@ body {
 .resume-link:visited {
   color: var(--primary-color);
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .resume-link:hover,
 .resume-link:focus {
   color: var(--dark-blue);
-  text-decoration: none;
+  text-decoration: underline;
 }

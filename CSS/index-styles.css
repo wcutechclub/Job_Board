@@ -210,7 +210,8 @@ body {
 }
 
 .nav-bar--btns:link,
-.nav-bar--btns:visited {
+.nav-bar--btns:visited,
+.nav-bar--btns:active {
   padding: 1.6rem;
 }
 

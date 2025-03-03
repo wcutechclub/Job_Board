@@ -1,48 +1,49 @@
-"use strict"
+"use strict";
 
 const inputEmail = document.querySelector(".email");
 const inputPassword = document.querySelector(".password");
-const btnLogin = document.querySelector( ".signin" );
-const errorMessage = document.querySelector( ".error_message-container" );
+const btnLogin = document.querySelector(".signin");
+const errorMessage = document.querySelector(".error_message-container");
 
 let headers = {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
-}
+  Accept: "application/json",
+  "Content-Type": "application/json",
+};
 
 btnLogin.addEventListener("click", async function (e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    const loginData = {
-        email: inputEmail.value,
-        password: inputPassword.value,
-    };
+  const loginData = {
+    email: inputEmail.value,
+    password: inputPassword.value,
+  };
 
-    try {
-        const response = await fetch('http://localhost:8000/user/login/', {
-            method: 'POST',
-            body: JSON.stringify(loginData),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
+  try {
+    const response = await fetch("http://localhost:8000/user/login/", {
+      method: "POST",
+      body: JSON.stringify(loginData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-        if (response.ok) {
-            const data = await response.json();
-            console.log("Login successful:", data);
+    if (response.ok) {
+      const data = await response.json();
+      console.log("Login successful:", data);
 
-            localStorage.setItem("authToken", data.token);
-            localStorage.setItem( "userId", data.user_id );
-            localStorage.setItem( "userType", data.user_type );
+      localStorage.setItem("authToken", data.token);
+      localStorage.setItem("userId", data.user_id);
+      localStorage.setItem("userType", data.user_type);
 
-            window.location.href = "/home.html";
-        } else {
-            inputEmail.classList.add( 'error' );
-            inputPassword.classList.add( 'error' );
-            errorMessage.innerHTML = '<p>Please ensure that your email and password are correct.</p>';
-        }
-    } catch (error) {
-        console.error("Error: ", error);
-        alert("An unexpected error occurred. Please try again later.");
+      window.location.href = "home.html";
+    } else {
+      inputEmail.classList.add("error");
+      inputPassword.classList.add("error");
+      errorMessage.innerHTML =
+        "<p>Please ensure that your email and password are correct.</p>";
     }
+  } catch (error) {
+    console.error("Error: ", error);
+    alert("An unexpected error occurred. Please try again later.");
+  }
 });

@@ -22,7 +22,7 @@ const applicantsList = document.querySelector(".applicant-list");
 const dropdown = function (dropdownBtn, iconUp, iconDown) {
   dropdownBtn.classList.toggle("dropdown__box--active");
   iconUp.classList.toggle("hide-icon");
-  iconDown.classList.toggle( "hide-icon" );
+  iconDown.classList.toggle("hide-icon");
 };
 
 const statusChangeColor = function (statusValue) {
@@ -38,25 +38,24 @@ const statusChangeColor = function (statusValue) {
 };
 
 const token = localStorage.getItem("authToken");
-const userId = localStorage.getItem( "userId" );
+const userId = localStorage.getItem("userId");
 const userType = localStorage.getItem("userType");
 
 if (!token || !userId || !userType) {
   alert("You need to log in!");
-  window.location.href = "/login.html";
-};
+  window.location.href = "login.html";
+}
 
-const myJobLink = document.querySelector('.my-jobs__link')
-if ( userType === 'JF' ) {
-  myJobLink.setAttribute('href', 'myjobsseeker.html');
+const myJobLink = document.querySelector(".my-jobs__link");
+if (userType === "JF") {
+  myJobLink.setAttribute("href", "myjobsseeker.html");
 } else {
-  myJobLink.setAttribute('href', 'myjobsPoster.html');
-};
-
+  myJobLink.setAttribute("href", "myjobsPoster.html");
+}
 
 if (!token) {
   alert("You need to log in!");
-  window.location.href = "/login.html";
+  window.location.href = "login.html";
 }
 
 const fetchApplicants = async (applicant) => {
@@ -73,10 +72,10 @@ const fetchApplicants = async (applicant) => {
   return data;
 };
 
-const displayApplicants = async ( applicants ) => {
+const displayApplicants = async (applicants) => {
   const applicantHTMLs = await Promise.all(
     applicants.map(async (applicant) => {
-      const applicantData = await fetchApplicants( applicant );
+      const applicantData = await fetchApplicants(applicant);
 
       return `
         <div class="applicant-details">
@@ -104,7 +103,7 @@ const displayApplicants = async ( applicants ) => {
   return applicantHTMLs.join("");
 };
 
-const applicantInfo = async ( applicants ) => {
+const applicantInfo = async (applicants) => {
   const infoHTML = await displayApplicants(applicants);
   return infoHTML;
 };
@@ -133,7 +132,7 @@ const displayJobType = (type) => {
 };
 
 const displayJobs = function (data) {
-  data.forEach( async function ( job ) {
+  data.forEach(async function (job) {
     const html = `
   <div class="job-cards">
           <div class="flex-container date">
@@ -360,64 +359,69 @@ document.addEventListener("click", function (e) {
   ) {
     saveChanges(jobCard);
   }
-} );
+});
 
 // Handle Job Application Response
-async function handleApplicationAccept ( event ) {
+async function handleApplicationAccept(event) {
   event.preventDefault();
-  const applicationId = this.getAttribute( 'applicationid' );
-  const response = await fetch( `http://localhost:8000/applications/${ applicationId }/update-status/`, {
-    method: 'PATCH',
-    headers: {
-      Authorization: `Token ${ token }`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify( {
-      'status': 'ACP'
-    } )
-  } );
+  const applicationId = this.getAttribute("applicationid");
+  const response = await fetch(
+    `http://localhost:8000/applications/${applicationId}/update-status/`,
+    {
+      method: "PATCH",
+      headers: {
+        Authorization: `Token ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        status: "ACP",
+      }),
+    }
+  );
   const data = await response.json();
-};
+}
 
 async function handleApplicationReject(event) {
   event.preventDefault();
-  const applicationId = this.getAttribute( 'applicationid' );
-  const response = await fetch( `http://localhost:8000/applications/${ applicationId }/update-status/`, {
-    method: 'PATCH',
-    headers: {
-      Authorization: `Token ${ token }`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify( {
-      'status': 'REJ'
-    } )
-  } );
+  const applicationId = this.getAttribute("applicationid");
+  const response = await fetch(
+    `http://localhost:8000/applications/${applicationId}/update-status/`,
+    {
+      method: "PATCH",
+      headers: {
+        Authorization: `Token ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        status: "REJ",
+      }),
+    }
+  );
   const data = await response.json();
-};
-
+}
 
 let observer;
 
 function setupObserver() {
   observer = new MutationObserver((mutations) => {
-    const acceptBtns = document.querySelectorAll( '.accept-btn' );
-    const rejectBtns = document.querySelectorAll( '.reject-btn' );
+    const acceptBtns = document.querySelectorAll(".accept-btn");
+    const rejectBtns = document.querySelectorAll(".reject-btn");
 
     acceptBtns.forEach((acceptBtn) => {
       if (!acceptBtn.hasListener) {
-        acceptBtn.addEventListener('click', handleApplicationAccept);
+        acceptBtn.addEventListener("click", handleApplicationAccept);
         acceptBtn.hasListener = true;
       }
     });
     rejectBtns.forEach((rejectBtn) => {
       if (!rejectBtn.hasListener) {
-        rejectBtn.addEventListener('click', handleApplicationReject);
+        rejectBtn.addEventListener("click", handleApplicationReject);
         rejectBtn.hasListener = true;
       }
     });
   });
 
   observer.observe(document, { childList: true, subtree: true });
-};
+}
 
 setupObserver();

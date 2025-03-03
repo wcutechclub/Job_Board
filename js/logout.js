@@ -1,21 +1,21 @@
-const logoutBtn = document.querySelector( '.logout-btn' );
+const logoutBtn = document.querySelector(".logout-btn");
 
-logoutBtn.addEventListener( 'click', async function (e) {
+logoutBtn.addEventListener("click", async function (e) {
   e.preventDefault();
-  await fetch( 'http://localhost:8000/user/logout/', {
-    method: 'POST',
+  await fetch("http://localhost:8000/user/logout/", {
+    method: "POST",
     headers: {
-      "Authorization": `Token ${ token }`,
+      Authorization: `Token ${token}`,
       "Content-Type": "application/json",
     },
-  } ).then( response => {
-    if ( response.ok ) {
+  }).then((response) => {
+    if (response.ok) {
       localStorage.clear(token);
-      localStorage.clear( userId );
-      localStorage.clear( userType );
-      window.location.href = 'index.html';
+      localStorage.clear(userId);
+      localStorage.clear(userType);
+      window.location.href = "../index.html";
       return;
-    };
-    throw new Error( "Faild to logout." );
-  } )
-})
+    }
+    throw new Error("Faild to logout.");
+  });
+});

@@ -75,15 +75,19 @@ const fetchApplicants = async (applicant) => {
 const displayApplicants = async (applicants) => {
   const applicantHTMLs = await Promise.all(
     applicants.map(async (applicant) => {
+<<<<<<< HEAD
       const applicantData = await fetchApplicants(applicant);
 
+=======
+      const applicantData = await fetchApplicants( applicant );
+>>>>>>> b9cbc8df3049e975ba4c1222e04ce1a80ddc7d58
       return `
         <div class="applicant-details">
           <span class="applicants-name light-text card-text">
             ${applicantData.first_name} ${applicantData.last_name}
           </span>
           <div class="applicant-details__btns">
-            <a href="#" userId=${applicantData.applicant} class="light-text card-text resume-link">
+            <a href="${applicantData.resume_url}" userId=${applicantData.id} class="light-text card-text resume-link">
               Show Resume
             </a>
             <div class="flex-container accept-reject__container">

@@ -21,7 +21,7 @@ const btn = document.querySelector(".signup_btn");
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
-  if ( confirmPasswordInput.value === passwordInput.value ) {
+  if (confirmPasswordInput.value === passwordInput.value) {
     const signUpData = {
       first_name: inputFirstName.value,
       last_name: inputLastName.value,
@@ -35,27 +35,30 @@ form.addEventListener("submit", async function (e) {
       user_type: "JF",
     };
     console.log(signUpData);
-    
-    try {
-      const response = await fetch( 'http://localhost:8000/user/create/', {
-        method: 'POST',
-        body: JSON.stringify( signUpData ),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      } );
 
-      if ( response.ok ) {
+    try {
+      const response = await fetch("http://localhost:8000/user/create/", {
+        method: "POST",
+        body: JSON.stringify(signUpData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
         const data = await response.json();
         console.log("Sign up Successful: ", data);
-        window.location.href = "/login.html";
+        window.location.href = "login.html";
       } else {
         const errorData = await response.json();
-        alert("Sign Up failed: "+ errorData.detail || "Please check your signup form.")
+        alert(
+          "Sign Up failed: " + errorData.detail ||
+            "Please check your signup form."
+        );
       }
-    } catch(error) {
+    } catch (error) {
       console.log("Error: ", error);
-      alert("An unexpected error occurred. Please try again later.")
+      alert("An unexpected error occurred. Please try again later.");
     }
   }
 });

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/CSS/my-jobs-seeker.css" />
-    <link rel="stylesheet" href="/CSS/general.css" />
+    <link rel="stylesheet" href="../css/my-jobs-seeker.css" />
+    <link rel="stylesheet" href="../css/general.css" />
     <title>My Jobs</title>
   </head>
   <body>
@@ -12,7 +12,9 @@
       <nav class="nav-bar--container">
         <a class="nav-bar--btns btn" href="home.html">Home</a>
         <div class="nav-btns--container">
-          <a class="nav-bar--btns btn underline my-jobs__link" href="">My Jobs</a>
+          <a class="nav-bar--btns btn underline my-jobs__link" href=""
+            >My Jobs</a
+          >
           <a class="nav-bar--btns btn" href="profile.html">Profile</a>
           <a class="nav-bar--btns btn logout-btn" href="#">
             <ion-icon class="icons" name="log-out-outline"></ion-icon>
@@ -32,12 +34,10 @@
             <span class="filter-text">Filter</span>
             <ion-icon
               class="icon-down-filter icon-arr"
-              name="caret-down-outline"
-            ></ion-icon>
+              name="caret-down-outline"></ion-icon>
             <ion-icon
               class="icon-up-filter hide-icon icon-arr"
-              name="caret-up-outline"
-            ></ion-icon>
+              name="caret-up-outline"></ion-icon>
           </div>
           <div class="filter-dropdown dropdown">
             <div class="checkbox">
@@ -60,12 +60,10 @@
             <span class="filter-text">Sort By </span>
             <ion-icon
               class="icon-down-sort icon-arr"
-              name="caret-down-outline"
-            ></ion-icon>
+              name="caret-down-outline"></ion-icon>
             <ion-icon
               class="icon-up-sort hide-icon icon-arr"
-              name="caret-up-outline"
-            ></ion-icon>
+              name="caret-up-outline"></ion-icon>
           </div>
           <div class="sort-dropdown dropdown">
             <div class="checkbox">
@@ -80,19 +78,16 @@
         </div>
       </div>
       <!-- Job Cards -->
-      <div class="job-cards--container">
-      </div>
+      <div class="job-cards--container"></div>
     </main>
     <!-- Script -->
     <script
       type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script
       nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="/js/myjobsseeker.js"></script>
-    <script defer src="/js/logout.js"></script>
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../js/myjobsseeker.js"></script>
+    <script defer src="../js/logout.js"></script>
   </body>
 </html>

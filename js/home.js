@@ -6,15 +6,15 @@ const userType = localStorage.getItem("userType");
 
 if (!token || !userId || !userType) {
   alert("You need to log in!");
-  window.location.href = "/login.html";
-};
+  window.location.href = "login.html";
+}
 
-const myJobLink = document.querySelector('.my-jobs__link')
-if ( userType === 'JF' ) {
-  myJobLink.setAttribute('href', 'myjobsseeker.html');
+const myJobLink = document.querySelector(".my-jobs__link");
+if (userType === "JF") {
+  myJobLink.setAttribute("href", "myjobsseeker.html");
 } else {
-  myJobLink.setAttribute('href', 'myjobsPoster.html');
-};
+  myJobLink.setAttribute("href", "myjobsPoster.html");
+}
 
 const dropdownType = document.querySelector(".dropdown-header__box-type");
 const dropdownLocation = document.querySelector(
@@ -34,7 +34,6 @@ const dropdownLocationContent = document.querySelector(
 const jobCard = document.querySelector(".job-cards--container");
 
 const searchInput = document.getElementById("search");
-
 
 //////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
@@ -148,14 +147,16 @@ let observer;
 
 function setupObserver() {
   observer = new MutationObserver((mutations) => {
-    const applyBtns = document.querySelectorAll('.apply-btn');
+    const applyBtns = document.querySelectorAll(".apply-btn");
     applyBtns.forEach((applyBtn) => {
       if (!applyBtn.hasListener) {
-        applyBtn.addEventListener('click', handleApplyClick);
+        applyBtn.addEventListener("click", handleApplyClick);
         applyBtn.hasListener = true;
       }
     });
-    if ( applyBtns.length !== 0 ) { observer.disconnect() };
+    if (applyBtns.length !== 0) {
+      observer.disconnect();
+    }
   });
 
   observer.observe(document, { childList: true, subtree: true });
@@ -163,35 +164,41 @@ function setupObserver() {
 
 async function handleApplyClick() {
   let applicationMessage = this.nextElementSibling;
-  if ( !applicationMessage || applicationMessage.tagName === 'p') {
-    applicationMessage = document.createElement( 'p' );
+  if (!applicationMessage || applicationMessage.tagName === "p") {
+    applicationMessage = document.createElement("p");
   }
-  applicationMessage.textContent = '';
-  applicationMessage.classList = '';
-  const jobId = this.getAttribute('jobid');
+  applicationMessage.textContent = "";
+  applicationMessage.classList = "";
+  const jobId = this.getAttribute("jobid");
   const applicationBody = {
     job: jobId,
-    applicant: userId
+    applicant: userId,
   };
 
-  const response = await fetch('http://localhost:8000/applications/', {
-    method: 'POST',
+  const response = await fetch("http://localhost:8000/applications/", {
+    method: "POST",
     headers: {
       Authorization: `Token ${token}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(applicationBody)
+    body: JSON.stringify(applicationBody),
   });
 
   if (response.status === 400) {
-    applicationMessage.classList.add('application-message', 'error__application-message');
-    applicationMessage.textContent = 'You already applied for this job.';
+    applicationMessage.classList.add(
+      "application-message",
+      "error__application-message"
+    );
+    applicationMessage.textContent = "You already applied for this job.";
   } else {
-    applicationMessage.classList.add('application-message', 'success__application-message');
-    applicationMessage.textContent = 'Your application is sent.';
+    applicationMessage.classList.add(
+      "application-message",
+      "success__application-message"
+    );
+    applicationMessage.textContent = "Your application is sent.";
   }
-  this.insertAdjacentElement( "afterend", applicationMessage );
-};
+  this.insertAdjacentElement("afterend", applicationMessage);
+}
 
 setupObserver();
 
@@ -208,6 +215,6 @@ const searchQuery = document.getElementById("search");
 searchQuery.addEventListener("keydown", async function (e) {
   if (e.key === "Enter") {
     getJobs(`http://localhost:8000/jobs?search=${this.value}`);
-  };
+  }
   setupObserver();
 });
